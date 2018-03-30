@@ -125,6 +125,8 @@ ffi.cdef([[  typedef void MagickWand;
     const InterlaceType interlace_scheme);
 
   MagickBooleanType MagickAutoOrientImage(MagickWand *wand);
+  MagickBooleanType MagickAutoGammaImage(MagickWand *wand);
+  MagickBooleanType MagickAutoLevelImage(MagickWand *wand);
 
   MagickBooleanType MagickResetImagePage(MagickWand *wand, const char *page);
 
@@ -139,6 +141,33 @@ ffi.cdef([[  typedef void MagickWand;
 
   MagickBooleanType MagickResizeImage(MagickWand*,const size_t, const size_t,
   const FilterType, const double);
+
+  MagickBooleanType MagickAnimateImages(MagickWand *wand,const char *server_name);
+
+  MagickBooleanType MagickBlackThresholdImage(MagickWand *wand,
+  const PixelWand *threshold);
+
+  MagickBooleanType MagickBlueShiftImage(MagickWand *wand,
+  const double factor);
+
+  MagickBooleanType MagickBorderImage(MagickWand *wand,
+  const PixelWand *bordercolor,const size_t width,
+  const size_t height,const CompositeOperator compose);
+
+  MagickBooleanType MagickCharcoalImage(MagickWand *wand,
+  const double radius,const double sigma);
+
+  MagickBooleanType MagickChopImage(MagickWand *wand,
+  const size_t width,const size_t height,const ssize_t x,
+  const ssize_t y);
+
+  MagickBooleanType MagickClampImage(MagickWand *wand);
+  MagickBooleanType MagickClipImage(MagickWand *wand);
+  MagickBooleanType MagickClipImagePath(MagickWand *wand,
+  const char *pathname,const MagickBooleanType inside);
+
+  MagickBooleanType MagickCommentImage(MagickWand *wand,
+  const char *comment);
 
 ]])
 

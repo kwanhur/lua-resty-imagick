@@ -331,12 +331,63 @@ _M.auto_orient = function(self)
     return handle_result(self, lib.MagickAutoOrientImage(self.wand))
 end
 
+_M.auto_gama = function(self)
+    return handle_result(self, lib.MagickAutoGammaImage(self.wand))
+end
+
+_M.auto_level = function(self)
+    return handle_result(self, lib.MagickAutoLevelImage(self.wand))
+end
+
+
 _M.reset_page = function(self)
     return handle_result(self, lib.MagickResetImagePage(self.wand, nil))
 end
 
 _M.__tostring = function(self)
     return "Image<" .. tostring(self.path) .. ", " .. tostring(self.wand) .. ">"
+end
+
+_M.animate = function(self, server_name)
+    return handle_result(self, lib.MagickAnimateImages(self.wand, server_name))
+end
+
+_M.black_threshold = function(self, threshold)
+    return handle_result(self, lib.MagickBlackThresholdImage(self.wand, threshold))
+end
+
+_M.blue_shift = function(self, factor)
+    return handle_result(self, lib.MagickBlueShiftImage(self.wand, factor))
+end
+
+_M.border = function(self, border_color, w, h, compose)
+    w, h = self:_keep_aspect(w, h)
+    return handle_result(self, lib.MagickBorderImage(self.wand, border_color, w, h, compose))
+end
+
+_M.charoal = function(self, sigma, radius)
+    return handle_result(self, lib.MagickCharcoalImage(self.wand, radius, sigma))
+end
+
+_M.chop = function(self, w, h, x, y)
+    w, h = self:_keep_aspect(w, h)
+    return handle_result(self, lib.MagickChopImage(self.wand, w, h, x, y))
+end
+
+_M.clamp = function(self)
+    return handle_result(self, lib.MagickClampImage(self.wand))
+end
+
+_M.chip = function(self)
+    return handle_result(self, lib.MagickClipImage(self.wand))
+end
+
+_M.chip_path = function(self, path, inside)
+    return handle_result(self, lib.MagickClipImagePath(self.wand, path, inside))
+end
+
+_M.comment = function(self, comment)
+    return handle_result(self, lib.MagickCommentImage(self.wand, comment))
 end
 
 _M._keep_aspect = function(self, w, h)
