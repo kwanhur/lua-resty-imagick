@@ -144,6 +144,25 @@ _M.adaptive_resize = function(self, w, h)
     return handle_result(self, lib.MagickAdaptiveResizeImage(self.wand, w, h))
 end
 
+_M.adaptive_blur = function(self, sigma, radius)
+    if radius == nil then
+        radius = 0
+    end
+    return handle_result(self, lib.MagickAdaptiveBlurImage(self.wand, radius, sigma))
+end
+
+_M.adaptive_sharpen = function(self, sigma, radius)
+    if radius == nil then
+        radius = 0
+    end
+    return handle_result(self, lib.MagickAdaptiveSharpenImage(self.wand, radius, sigma))
+end
+
+_M.adaptive_threshold = function(self, w, h, bias)
+    w, h = self:_keep_aspect(w, h)
+    return handle_result(self, lib.MagickAdaptiveThresholdImage(self.wand, w, h, bias))
+end
+
 _M.scale = function(self, w, h)
     w, h = self:_keep_aspect(w, h)
     return handle_result(self, lib.MagickScaleImage(self.wand, w, h))

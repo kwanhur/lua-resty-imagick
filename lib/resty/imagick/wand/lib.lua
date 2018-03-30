@@ -39,7 +39,10 @@ ffi.cdef([[  typedef void MagickWand;
 
   MagickBooleanType MagickAddImage(MagickWand*, const MagickWand*);
 
+  MagickBooleanType MagickAdaptiveBlurImage(MagickWand *wand,const double radius,const double sigma);
   MagickBooleanType MagickAdaptiveResizeImage(MagickWand*, const size_t, const size_t);
+  MagickBooleanType MagickAdaptiveSharpenImage(MagickWand *wand,const double radius,const double sigma);
+  MagickBooleanType MagickAdaptiveThresholdImage(MagickWand *wand,const size_t width,const size_t height,const double bias);
 
   MagickBooleanType MagickWriteImage(MagickWand*, const char*);
 
