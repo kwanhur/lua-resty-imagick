@@ -169,6 +169,12 @@ ffi.cdef([[  typedef void MagickWand;
   MagickBooleanType MagickCommentImage(MagickWand *wand,
   const char *comment);
 
+  MagickBooleanType MagickContrastImage(MagickWand *wand,
+  const MagickBooleanType sharpen);
+
+  MagickBooleanType MagickContrastStretchImage(MagickWand *wand,
+  const double black_point,const double white_point);
+
 ]])
 
 local get_flags

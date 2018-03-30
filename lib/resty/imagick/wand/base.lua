@@ -390,6 +390,14 @@ _M.comment = function(self, comment)
     return handle_result(self, lib.MagickCommentImage(self.wand, comment))
 end
 
+_M.contrast = function(self, sharpen)
+    return handle_result(self, lib.MagickContrastImage(self.wand, sharpen))
+end
+
+_M.contrast_stretch = function(self, black, white)
+    return handle_result(self, lib.MagickContrastStretchImage(self.wand, black, white))
+end
+
 _M._keep_aspect = function(self, w, h)
     if not w and h then
         return self:get_width() / self:get_height() * h, h
