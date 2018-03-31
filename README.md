@@ -219,7 +219,7 @@ Gets the image gravity type.
 
 Sets the image's gravity type:
 
-`gravity` can be one of the values listed in [data.moon](https://github.com/kwanhur/lua-resty-imagick/blob/master/resty/imagick/wand/data.lua#L77)
+`gravity` can be one of the values listed in [data.lua](https://github.com/kwanhur/lua-resty-imagick/blob/master/lib/resty/imagick/wand/data.lua#L81)
 
 `img:get_option(magick, key)`
 -----
@@ -248,7 +248,7 @@ This un-optimized animated images to make them suitable for other methods.
 
 Composite another image onto another at the specified offset `x`, `y`.
 
-`compose` can be one of the values listed in [data.moon](https://github.com/kwanhur/lua-resty-imagick/blob/master/resty/imagick/wand/data.lua#L5)
+`compose` can be one of the values listed in [data.lua](https://github.com/kwanhur/lua-resty-imagick/blob/master/lib/resty/imagick/wand/data.lua#L10)
 
 `img:strip()`
 -----
