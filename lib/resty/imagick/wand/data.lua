@@ -112,7 +112,7 @@ local interlace = enum({
     "JPEGInterlace",
     "PNGInterlace"
 })
-local filtertype = enum({
+local filter_type = enum({
     [0] = "UndefinedFilter",
     "PointFilter",
     "BoxFilter",
@@ -148,6 +148,17 @@ local filtertype = enum({
     "SentinelFilter"
 })
 
+local storage_type = enum({
+    [0] = "UndefinedPixel",
+    "CharPixel",
+    "DoublePixel",
+    "FloatPixel",
+    "LongPixel",
+    "LongLongPixel",
+    "QuantumPixel",
+    "ShortPixel"
+})
+
 _M.composite_operators = composite_operators
 
 _M.gravity = gravity
@@ -156,6 +167,8 @@ _M.orientation = orientation
 
 _M.interlace = interlace
 
-_M.filtertype = filtertype
+_M.filter_type = filter_type
+
+_M.storage_type = storage_type
 
 return _M

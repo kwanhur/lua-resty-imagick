@@ -24,6 +24,7 @@ ffi.cdef([[  typedef void MagickWand;
   typedef int OrientationType;
   typedef int InterlaceType;
   typedef int FilterType;
+  typedef int StorageType;
 
   void MagickWandGenesis();
   MagickWand* NewMagickWand();
@@ -174,6 +175,16 @@ ffi.cdef([[  typedef void MagickWand;
 
   MagickBooleanType MagickContrastStretchImage(MagickWand *wand,
   const double black_point,const double white_point);
+
+  MagickBooleanType MagickCycleColormapImage(MagickWand *wand,
+  const ssize_t displace);
+
+  MagickBooleanType MagickConstituteImage(MagickWand *wand,
+  const size_t columns,const size_t rows,const char *map,
+  const StorageType storage,void *pixels);
+
+  MagickBooleanType MagickDecipherImage(MagickWand *wand,
+  const char *passphrase);
 
 ]])
 

@@ -15,7 +15,8 @@ local wand_data = require("resty.imagick.wand.data")
 local lib = wand_lib.lib
 local can_resize = wand_lib.can_resize
 local gravity = wand_data.gravity
-local filtertype = wand_data.filtertype
+local filter_type = wand_data.filter_type
+local storage_type = wand_data.storage_type
 local composite_operators = wand_data.composite_operators
 local orientation = wand_data.orientation
 local interlace = wand_data.interlace
@@ -136,7 +137,7 @@ _M.resize = function(self, w, h, f, blur)
         error("Failed to load filter list, can't resize")
     end
     w, h = self:_keep_aspect(w, h)
-    return handle_result(self, lib.MagickResizeImage(self.wand, w, h, filtertype:to_int(f .. 'Filter'), blur))
+    return handle_result(self, lib.MagickResizeImage(self.wand, w, h, filter_type:to_int(f .. 'Filter'), blur))
 end
 
 _M.adaptive_resize = function(self, w, h)
@@ -396,6 +397,18 @@ end
 
 _M.contrast_stretch = function(self, black, white)
     return handle_result(self, lib.MagickContrastStretchImage(self.wand, black, white))
+end
+
+_M.circle_colormap = function(self, displace)
+    return handle_result(self, lib.MagickCycleColormapImage(self.wand, displace))
+end
+
+_M.consitute = function(self, columns, rows, map, storage, pixels)
+    return handle_result(self, lib.MagickConstituteImage(self.wand, columns, rows, map, storage_type:to_int(storage), pixels))
+end
+
+_M.decipher = function(self, passphrase)
+    return handle_result(self, lib.MagickDecipherImage(self.wand, passphrase))
 end
 
 _M._keep_aspect = function(self, w, h)
