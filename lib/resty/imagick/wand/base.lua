@@ -411,6 +411,26 @@ _M.decipher = function(self, passphrase)
     return handle_result(self, lib.MagickDecipherImage(self.wand, passphrase))
 end
 
+_M.deconstruct = function(self)
+    return lib.MagickDeconstructImages(self.wand)
+end
+
+_M.deskew = function(self, threshold)
+    return handle_result(self, lib.MagickDeskewImage(self.wand, threshold))
+end
+
+_M.despeckle = function(self)
+    return handle_result(self, lib.MagickDespeckleImage(self.wand))
+end
+
+_M.display = function(self, server_name)
+    return handle_result(self, lib.MagickDisplayImage(self.wand, server_name))
+end
+
+_M.display_multi = function(self, server_name)
+    return handle_result(self, lib.MagickDisplayImages(self.wand, server_name))
+end
+
 _M._keep_aspect = function(self, w, h)
     if not w and h then
         return self:get_width() / self:get_height() * h, h

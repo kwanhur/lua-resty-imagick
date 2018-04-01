@@ -186,6 +186,19 @@ ffi.cdef([[  typedef void MagickWand;
   MagickBooleanType MagickDecipherImage(MagickWand *wand,
   const char *passphrase);
 
+  MagickWand *MagickDeconstructImages(MagickWand *wand);
+
+  MagickBooleanType MagickDeskewImage(MagickWand *wand,
+  const double threshold);
+
+  MagickBooleanType MagickDespeckleImage(MagickWand *wand);
+
+  MagickBooleanType MagickDisplayImage(MagickWand *wand,
+  const char *server_name);
+
+  MagickBooleanType MagickDisplayImages(MagickWand *wand,
+  const char *server_name);
+
 ]])
 
 local get_flags
