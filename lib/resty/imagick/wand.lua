@@ -11,6 +11,7 @@ lib.MagickWandGenesis()
 
 local image = require("resty.imagick.wand.image")
 local make_thumb = require("resty.imagick.thumb").make_thumb
+local pixel = require("resty.imagick.wand.pixel")
 
 _M.mode = "image_magick"
 
@@ -21,5 +22,7 @@ _M.load_image = image.load
 _M.thumb = make_thumb(image.load)
 
 _M.load_image_from_blob = image.load_from_blob
+
+_M.Pixel = pixel.new
 
 return _M
