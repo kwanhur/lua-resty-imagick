@@ -291,6 +291,8 @@ ffi.cdef([[  typedef void MagickWand;
 
   CompositeOperator MagickGetImageCompose(MagickWand *wand);
 
+  CompressionType MagickGetImageCompression(MagickWand *wand);
+
 ]])
 
 local get_flags

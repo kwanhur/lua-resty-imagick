@@ -24,6 +24,7 @@ local orientation = wand_data.orientation
 local interlace = wand_data.interlace
 local functions = wand_data.functions
 local colorspace_type = wand_data.colorspace_type
+local compression_type = wand_data.compression_type
 
 local setmetatable = setmetatable
 local tonumber = tonumber
@@ -621,6 +622,10 @@ end
 
 _M.get_compose = function(self)
     return composite_operators:to_str(lib.MagickGetImageCompose(self.wand))
+end
+
+_M.get_compression = function(self)
+    return compression_type:to_str(lib.MagickGetImageCompression(self.wand))
 end
 
 return _M

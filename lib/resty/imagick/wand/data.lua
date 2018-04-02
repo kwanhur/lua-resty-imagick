@@ -263,6 +263,31 @@ local colorspace_type = enum({
     "YDbDrColorspace"
 })
 
+local compression_type = enum({
+    [0] = "UndefinedCompression",
+    "B44ACompression",
+    "B44Compression",
+    "BZipCompression",
+    "DXT1Compression",
+    "DXT3Compression",
+    "DXT5Compression",
+    "FaxCompression",
+    "Group4Compression",
+    "JBIG1Compression",
+    "JBIG2Compression",
+    "JPEG2000Compression",
+    "JPEGCompression",
+    "LosslessJPEGCompression",
+    "LZMACompression",
+    "LZWCompression",
+    "NoCompression",
+    "PizCompression",
+    "Pxr24Compression",
+    "RLECompression",
+    "ZipCompression",
+    "ZipSCompression"
+})
+
 _M.composite_operators = composite_operators
 
 _M.gravity = gravity
@@ -282,5 +307,7 @@ _M.evaluate_operator = evaluate_operator
 _M.functions = functions
 
 _M.colorspace_type = colorspace_type
+
+_M.compression_type = compression_type
 
 return _M

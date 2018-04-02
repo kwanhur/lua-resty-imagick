@@ -537,6 +537,10 @@ Gets the image colorspace.
 -----
 Returns the composite operator associated with the image.
 
+`img:get_compression()`
+-----
+Gets the image compression.
+
 [Back to TOC](#table-of-contents)
 
 Authors
