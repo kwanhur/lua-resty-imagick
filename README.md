@@ -541,6 +541,10 @@ Returns the composite operator associated with the image.
 -----
 Gets the image compression.
 
+`img:get_delay()`
+-----
+Gets the image delay.
+
 [Back to TOC](#table-of-contents)
 
 Authors

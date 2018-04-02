@@ -628,4 +628,8 @@ _M.get_compression = function(self)
     return compression_type:to_str(lib.MagickGetImageCompression(self.wand))
 end
 
+_M.get_delay = function(self)
+    return lib.MagickGetImageDelay(self.wand)
+end
+
 return _M
