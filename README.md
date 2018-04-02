@@ -466,6 +466,14 @@ to increase or decrease contrast in an image, or to produce the "negative" of an
 -----
 Evaluate expression for each pixel in the image.
 
+`img:gamma(gamma)`
+-----
+Gamma-corrects an image. The same image viewed on different devices will have perceptual differences in the way 
+the image's intensities are represented on the screen. Specify individual gamma levels for the red, green, 
+and blue channels, or adjust all three with the gamma parameter. Values typically range from 0.8 to 2.3.
+
+You can also reduce the influence of a particular channel with a gamma value of 0.
+
 [Back to TOC](#table-of-contents)
 
 Authors

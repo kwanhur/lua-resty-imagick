@@ -550,4 +550,8 @@ _M.fx = function(self, expression)
     return lib.MagickFxImage(self.wand, expression)
 end
 
+_M.gamma = function(self, gamma)
+    return handle_result(self, lib.MagickGammaImage(self.wand, gamma))
+end
+
 return _M
