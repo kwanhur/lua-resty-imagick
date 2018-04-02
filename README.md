@@ -488,6 +488,10 @@ Gets the image at the current image index.
 -----
 Returns False if the image alpha channel is not activated. That is, the image is RGB rather than RGBA or CMYK rather than CMYKA.
 
+`img:get_mask()`
+-----
+Gets the image clip mask at the current image index.
+
 [Back to TOC](#table-of-contents)
 
 Authors

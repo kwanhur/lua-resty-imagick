@@ -566,4 +566,8 @@ _M.get_alpha_channel = function(self)
     return handle_result(self, lib.MagickGetImageAlphaChannel(self.wand))
 end
 
+_M.get_mask = function(self)
+    return lib.MagickGetImageMask(self.wand)
+end
+
 return _M
