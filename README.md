@@ -403,6 +403,10 @@ Returns a grayscale image with a three-dimensional effect. We convolve the image
 radius and standard deviation (sigma). For reasonable results, radius should be larger than sigma. 
 Use a radius of 0 and Emboss() selects a suitable radius for you.
 
+`img:encipher(passphrase)`
+-----
+Converts plaint pixels to cipher pixels.
+
 [Back to TOC](#table-of-contents)
 
 Authors

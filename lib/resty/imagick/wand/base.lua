@@ -504,4 +504,8 @@ _M.emboss = function(self, radius, sigma)
     return handle_result(self, lib.MagickEmbossImage(self.wand, radius, sigma))
 end
 
+_M.encipher = function(self, passphrase)
+    return handle_result(self, lib.MagickEncipherImage(self.wand, passphrase))
+end
+
 return _M
