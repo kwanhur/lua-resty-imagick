@@ -505,6 +505,10 @@ The format of the image determines the format of the returned blob (GIF, JPEG, P
 -----
 Returns the chromaticy blue primary point for the image.
 
+`img:get_red_primary(x, y, z)`
+-----
+Returns the chromaticy red primary point.
+
 `img:get_border_color(border_color)`
 -----
 Returns the image border color.
