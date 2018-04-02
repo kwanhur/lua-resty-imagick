@@ -496,6 +496,11 @@ Gets the image clip mask at the current image index.
 -----
 Returns the image background color.
 
+`img:get_blobs()`
+-----
+Implements direct to memory image formats. It returns the image sequence as a blob and its length. 
+The format of the image determines the format of the returned blob (GIF, JPEG, PNG, etc.).
+
 [Back to TOC](#table-of-contents)
 
 Authors

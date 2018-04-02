@@ -574,4 +574,10 @@ _M.get_background_color = function(self, background_color)
     return handle_result(self, lib.MagickGetImageBackgroundColor(self.wand, background_color))
 end
 
+_M.get_blobs = function(self)
+    local len = ffi.new("size_t[1]", 0)
+    local blob = ffi.gc(lib.MagickGetImagesBlob(self.wand, len), lib.MagickRelinquishMemory)
+    return ffi.string(blob, len[0])
+end
+
 return _M
