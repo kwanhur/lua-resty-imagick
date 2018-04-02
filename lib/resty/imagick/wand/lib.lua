@@ -326,6 +326,8 @@ ffi.cdef([[  typedef void MagickWand;
   MagickWand *MagickGetImageRegion(MagickWand *wand,
   const size_t width,const size_t height,const ssize_t x,
   const ssize_t y);
+
+  RenderingIntent MagickGetImageRenderingIntent(MagickWand *wand);
 ]])
 
 local get_flags

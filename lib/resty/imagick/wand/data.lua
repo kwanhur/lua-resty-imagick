@@ -317,6 +317,14 @@ local pixel_interpolate_method = enum({
     "SplineInterpolatePixel"
 })
 
+local rendering_intent = enum({
+    [0] = "UndefinedIntent",
+    "SaturationIntent",
+    "PerceptualIntent",
+    "AbsoluteIntent",
+    "RelativeIntent"
+})
+
 _M.composite_operators = composite_operators
 
 _M.gravity = gravity
@@ -344,5 +352,7 @@ _M.dispose_type = dispose_type
 _M.endian_type = endian_type
 
 _M.pixel_interpolate_method = pixel_interpolate_method
+
+_M.rendering_intent = rendering_intent
 
 return _M

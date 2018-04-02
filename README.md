@@ -597,6 +597,10 @@ Returns the color of the specified pixel.
 -----
 Extracts a region of the image and returns it as a a new wand.
 
+`img:get_rendering_intent()`
+-----
+Gets the image rendering intent.
+
 [Back to TOC](#table-of-contents)
 
 Authors

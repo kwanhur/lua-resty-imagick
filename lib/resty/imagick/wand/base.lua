@@ -28,6 +28,7 @@ local compression_type = wand_data.compression_type
 local dispose_type = wand_data.dispose_type
 local endian_type = wand_data.endian_type
 local pixel_interpolate_method = wand_data.pixel_interpolate_method
+local rendering_intent = wand_data.rendering_intent
 
 local setmetatable = setmetatable
 local tonumber = tonumber
@@ -696,6 +697,10 @@ end
 
 _M.get_region = function(self, w, h, x, y)
     return lib.MagickGetImageRegion(self.wand, w, h, x, y)
+end
+
+_M.get_rendering_intent = function(self)
+    return rendering_intent:to_str(lib.MagickGetImageRenderingIntent(self.wand))
 end
 
 return _M
