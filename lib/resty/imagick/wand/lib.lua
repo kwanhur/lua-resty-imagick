@@ -273,6 +273,9 @@ ffi.cdef([[  typedef void MagickWand;
   MagickBooleanType MagickGetImageBorderColor(MagickWand *wand,
   PixelWand *border_color);
 
+  MagickBooleanType MagickGetImageKurtosis(MagickWand *wand,
+  double *kurtosis,double *skewness);
+
 ]])
 
 local get_flags

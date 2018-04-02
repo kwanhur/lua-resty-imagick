@@ -509,6 +509,10 @@ Returns the chromaticy blue primary point for the image.
 -----
 Returns the image border color.
 
+`img:get_kurtosis(kurtosis, skewness)`
+-----
+Gets the kurtosis and skewness of one or more image channels.
+
 [Back to TOC](#table-of-contents)
 
 Authors

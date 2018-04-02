@@ -588,4 +588,8 @@ _M.get_border_color = function(self, border_color)
     return handle_result(self, lib.MagickGetImageBorderColor(self.wand, border_color))
 end
 
+_M.get_kurtosis = function(self, kurtosis, skewness)
+    return handle_result(self, lib.MagickGetImageKurtosis(kurtosis, skewness))
+end
+
 return _M
