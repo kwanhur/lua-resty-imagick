@@ -605,6 +605,10 @@ Gets the image rendering intent.
 -----
 Gets the image X and Y resolution.
 
+`img:get_scene()`
+-----
+Gets the image scene.
+
 [Back to TOC](#table-of-contents)
 
 Authors

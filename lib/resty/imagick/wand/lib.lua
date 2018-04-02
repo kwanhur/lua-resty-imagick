@@ -331,6 +331,8 @@ ffi.cdef([[  typedef void MagickWand;
 
   MagickBooleanType MagickGetImageResolution(MagickWand *wand,double *x,
   double *y);
+
+  size_t MagickGetImageScene(MagickWand *wand);
 ]])
 
 local get_flags

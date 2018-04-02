@@ -707,4 +707,8 @@ _M.get_resolution = function(self, x, y)
     return handle_result(self, lib.MagickGetImageResolution(self.wand, x, y))
 end
 
+_M.get_scene = function(self)
+    return lib.MagickGetImageScene(self.wand)
+end
+
 return _M
