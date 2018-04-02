@@ -262,6 +262,9 @@ ffi.cdef([[  typedef void MagickWand;
 
   MagickWand *MagickGetImageMask(MagickWand *wand);
 
+  MagickBooleanType MagickGetImageBackgroundColor(MagickWand *wand,
+  PixelWand *background_color);
+
 ]])
 
 local get_flags

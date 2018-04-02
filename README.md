@@ -492,6 +492,10 @@ Returns False if the image alpha channel is not activated. That is, the image is
 -----
 Gets the image clip mask at the current image index.
 
+`img:get_background_color(background_color)`
+-----
+Returns the image background color.
+
 [Back to TOC](#table-of-contents)
 
 Authors

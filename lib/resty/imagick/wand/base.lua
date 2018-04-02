@@ -570,4 +570,8 @@ _M.get_mask = function(self)
     return lib.MagickGetImageMask(self.wand)
 end
 
+_M.get_background_color = function(self, background_color)
+    return handle_result(self, lib.MagickGetImageBackgroundColor(self.wand, background_color))
+end
+
 return _M
