@@ -703,4 +703,8 @@ _M.get_rendering_intent = function(self)
     return rendering_intent:to_str(lib.MagickGetImageRenderingIntent(self.wand))
 end
 
+_M.get_resolution = function(self, x, y)
+    return handle_result(self, lib.MagickGetImageResolution(self.wand, x, y))
+end
+
 return _M

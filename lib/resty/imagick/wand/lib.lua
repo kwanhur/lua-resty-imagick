@@ -328,6 +328,9 @@ ffi.cdef([[  typedef void MagickWand;
   const ssize_t y);
 
   RenderingIntent MagickGetImageRenderingIntent(MagickWand *wand);
+
+  MagickBooleanType MagickGetImageResolution(MagickWand *wand,double *x,
+  double *y);
 ]])
 
 local get_flags

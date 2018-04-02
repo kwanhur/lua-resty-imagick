@@ -601,6 +601,10 @@ Extracts a region of the image and returns it as a a new wand.
 -----
 Gets the image rendering intent.
 
+`img:get_resolution(x, y)`
+-----
+Gets the image X and Y resolution.
+
 [Back to TOC](#table-of-contents)
 
 Authors
