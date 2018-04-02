@@ -279,6 +279,9 @@ ffi.cdef([[  typedef void MagickWand;
   MagickBooleanType MagickGetImageMean(MagickWand *wand,double *mean,
   double *standard_deviation);
 
+  MagickBooleanType MagickGetImageRange(MagickWand *wand,double *minima,
+  double *maxima);
+
 ]])
 
 local get_flags

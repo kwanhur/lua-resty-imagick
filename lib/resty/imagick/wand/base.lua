@@ -596,4 +596,8 @@ _M.get_mean = function(self, mean, standard_deviation)
     return handle_result(self, lib.MagickGetImageMean(self.wand, mean, standard_deviation))
 end
 
+_M.get_range = function(self, minima, maxima)
+    return handle_result(self, lib.MagickGetImageRange(self.wand, minima, maxima))
+end
+
 return _M

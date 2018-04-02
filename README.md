@@ -517,6 +517,10 @@ Gets the kurtosis and skewness of one or more image channels.
 -----
 Gets the mean and standard deviation of one or more image channels.
 
+`img:get_range(minima, maxima)`
+-----
+Gets the range for one or more image channels.
+
 [Back to TOC](#table-of-contents)
 
 Authors
