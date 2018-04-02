@@ -434,6 +434,10 @@ img:export_pixels(0, 0, 640, 1, "RGB", "Char", pixels)
 Extends the image as defined by the geometry, gravity, and wand background color. Set the (x,y) offset of the geometry 
 to move the original wand relative to the extended wand.
 
+`img:flip()`
+-----
+Creates a vertical mirror image by reflecting the pixels around the central x-axis.
+
 [Back to TOC](#table-of-contents)
 
 Authors
