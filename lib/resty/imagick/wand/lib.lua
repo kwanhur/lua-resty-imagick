@@ -287,6 +287,8 @@ ffi.cdef([[  typedef void MagickWand;
 
   size_t MagickGetImageColors(MagickWand *wand);
 
+  ColorspaceType MagickGetImageColorspace(MagickWand *wand);
+
 ]])
 
 local get_flags

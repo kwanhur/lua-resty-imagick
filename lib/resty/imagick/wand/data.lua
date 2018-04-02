@@ -226,6 +226,43 @@ local functions = enum({
     "SinusoidFunction"
 })
 
+local colorspace_type = enum({
+    [0] = "UndefinedColorspace",
+    "RGBColorspace",
+    "GRAYColorspace",
+    "TransparentColorspace",
+    "OHTAColorspace",
+    "LabColorspace",
+    "XYZColorspace",
+    "YCbCrColorspace",
+    "YCCColorspace",
+    "YIQColorspace",
+    "YPbPrColorspace",
+    "YUVColorspace",
+    "CMYKColorspace",
+    "sRGBColorspace",
+    "HSBColorspace",
+    "HSLColorspace",
+    "HWBColorspace",
+    "Rec601LumaColorspace",
+    "Rec601YCbCrColorspace",
+    "Rec709LumaColorspace",
+    "Rec709YCbCrColorspace",
+    "LogColorspace",
+    "CMYColorspace",
+    "LuvColorspace",
+    "HCLColorspace",
+    "LCHColorspace",
+    "LMSColorspace",
+    "LCHabColorspace",
+    "LCHuvColorspace",
+    "scRGBColorspace",
+    "HSIColorspace",
+    "HSVColorspace",
+    "HCLpColorspace",
+    "YDbDrColorspace"
+})
+
 _M.composite_operators = composite_operators
 
 _M.gravity = gravity
@@ -243,5 +280,7 @@ _M.distort_method = distort_method
 _M.evaluate_operator = evaluate_operator
 
 _M.functions = functions
+
+_M.colorspace_type = colorspace_type
 
 return _M

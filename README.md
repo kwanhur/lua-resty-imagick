@@ -529,6 +529,10 @@ Returns the color of the specified colormap index.
 -----
 Gets the number of unique colors in the image.
 
+`img:get_colorspace()`
+-----
+Gets the image colorspace.
+
 [Back to TOC](#table-of-contents)
 
 Authors

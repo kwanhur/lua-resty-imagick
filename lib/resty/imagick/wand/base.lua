@@ -23,6 +23,7 @@ local composite_operators = wand_data.composite_operators
 local orientation = wand_data.orientation
 local interlace = wand_data.interlace
 local functions = wand_data.functions
+local colorspace_type = wand_data.colorspace_type
 
 local setmetatable = setmetatable
 local tonumber = tonumber
@@ -612,6 +613,10 @@ end
 
 _M.get_colors = function(self)
     return lib.MagickGetImageColors(self.wand)
+end
+
+_M.get_colorspace = function(self)
+    return colorspace_type:to_str(lib.MagickGetImageColorspace(self.wand))
 end
 
 return _M
