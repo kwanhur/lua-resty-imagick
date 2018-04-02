@@ -673,4 +673,17 @@ _M.get_matte_color = function(self, matte_color)
     return handle_result(self, lib.MagickGetImageMatteColor(self.wand, matte_color))
 end
 
+_M.get_page = function(self)
+    local w = ffi.new("size_t[1]", 0)
+    local h = ffi.new("size_t[1]", 0)
+    local x = ffi.new("ssize_t[1]", 0)
+    local y = ffi.new("ssize_t[1]", 0)
+    local ok, msg, code = handle_result(self, lib.MagickGetImagePage(self.wand, w, h, x, y))
+    if ok then
+        return w, h, x, y
+    else
+        return nil, msg, code
+    end
+end
+
 return _M

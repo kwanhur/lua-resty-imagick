@@ -581,6 +581,10 @@ Gets the image iterations.
 -----
 Returns the image matte color.
 
+`img:get_page()`
+-----
+Returns the page geometry associated with the image.
+
 [Back to TOC](#table-of-contents)
 
 Authors
