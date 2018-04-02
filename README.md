@@ -423,7 +423,7 @@ to increase or decrease contrast in an image, or to produce the "negative" of an
 `img:export_pixels(x, y, columns, rows, map, storage, pixels)`
 -----
 Extracts pixel data from an image and returns it to you. 
-The method returns MagickTrue on success otherwise MagickFalse if an error is encountered. 
+The method returns True on success otherwise False if an error is encountered. 
 The data is returned as char, short int, int, ssize_t, float, or double in the order specified by map.
 
 Suppose you want to extract the first scanline of a 640x480 image as character data in red-green-blue order:
@@ -483,6 +483,10 @@ Use a radius of 0 and gaussian_blur() selects a suitable radius for you.
 `img:get_image()`
 -----
 Gets the image at the current image index.
+
+`img:get_alpha_channel()`
+-----
+Returns False if the image alpha channel is not activated. That is, the image is RGB rather than RGBA or CMYK rather than CMYKA.
 
 [Back to TOC](#table-of-contents)
 

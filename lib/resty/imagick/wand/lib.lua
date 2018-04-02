@@ -258,6 +258,8 @@ ffi.cdef([[  typedef void MagickWand;
 
   MagickWand *MagickGetImage(MagickWand *wand);
 
+  MagickBooleanType MagickGetImageAlphaChannel(MagickWand *wand);
+
 ]])
 
 local get_flags
