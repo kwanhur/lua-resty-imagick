@@ -577,6 +577,10 @@ Returns the interpolation method for the sepcified image.
 -----
 Gets the image iterations.
 
+`img:get_matte_color()`
+-----
+Returns the image matte color.
+
 [Back to TOC](#table-of-contents)
 
 Authors

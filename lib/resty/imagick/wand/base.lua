@@ -669,4 +669,14 @@ _M.get_iterations = function(self)
     return lib.MagickGetImageIterations(self.wand)
 end
 
+_M.get_matte_color = function(self)
+    local color = self:new_pixel_wand()
+    local ok, msg, code = handle_result(self, lib.MagickGetImageMatteColor(self.wand, color))
+    if ok then
+        return color
+    else
+        return ok, msg, color
+    end
+end
+
 return _M
