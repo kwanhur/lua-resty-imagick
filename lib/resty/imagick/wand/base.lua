@@ -580,4 +580,8 @@ _M.get_blobs = function(self)
     return ffi.string(blob, len[0])
 end
 
+_M.get_blue_primary = function(self, x, y, z)
+    return handle_result(self, lib.MagickGetImageBluePrimary(self.wand, x, y, z))
+end
+
 return _M

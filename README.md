@@ -501,6 +501,10 @@ Returns the image background color.
 Implements direct to memory image formats. It returns the image sequence as a blob and its length. 
 The format of the image determines the format of the returned blob (GIF, JPEG, PNG, etc.).
 
+`img:get_blue_primary(x, y, z)`
+-----
+Returns the chromaticy blue primary point for the image.
+
 [Back to TOC](#table-of-contents)
 
 Authors
