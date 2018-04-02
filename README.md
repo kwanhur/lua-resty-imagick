@@ -565,6 +565,10 @@ Gets the image fuzz.
 -----
 Gets the image gamma.
 
+`img:get_histogram(num_colors)`
+-----
+Returns the image histogram as an array of PixelWand wands.
+
 [Back to TOC](#table-of-contents)
 
 Authors

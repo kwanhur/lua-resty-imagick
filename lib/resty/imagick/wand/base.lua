@@ -655,4 +655,9 @@ _M.get_gamma = function(self)
     return lib.MagickGetImageGamma(self.wand)
 end
 
+_M.get_histogram = function(self, num_colors)
+    local num = ffi.new("size_t[1]", num_colors)
+    return lib.MagickGetImageHistogram(self.wand, num)
+end
+
 return _M
