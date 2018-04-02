@@ -229,6 +229,9 @@ ffi.cdef([[  typedef void MagickWand;
   const size_t rows,const char *map,const StorageType storage,
   void *pixels);
 
+  MagickBooleanType MagickExtentImage(MagickWand *wand,const size_t width,
+  const size_t height,const ssize_t x,const ssize_t y);
+
 ]])
 
 local get_flags

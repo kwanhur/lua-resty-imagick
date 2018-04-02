@@ -522,7 +522,11 @@ _M.evaluate = function(self, operator, value)
 end
 
 _M.export_pixels = function(self, x, y, columns, rows, map, storage, pixels)
-    return handle_result(self, lib.MagickExportImagePixels(x, y, columns, rows, map, storage_type:to_int(storage .. "Pixel"), pixels))
+    return handle_result(self, lib.MagickExportImagePixels(self.wand, x, y, columns, rows, map, storage_type:to_int(storage .. "Pixel"), pixels))
+end
+
+_M.extent = function(self, w, h, x, y)
+    return handle_result(self, lib.MagickExtentImage(self.wand, w, h, x, y))
 end
 
 return _M

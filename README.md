@@ -429,6 +429,11 @@ The data is returned as char, short int, int, ssize_t, float, or double in the o
 Suppose you want to extract the first scanline of a 640x480 image as character data in red-green-blue order:
 img:export_pixels(0, 0, 640, 1, "RGB", "Char", pixels)
 
+`img:extent(w, h, x, y)`
+-----
+Extends the image as defined by the geometry, gravity, and wand background color. Set the (x,y) offset of the geometry 
+to move the original wand relative to the extended wand.
+
 [Back to TOC](#table-of-contents)
 
 Authors
