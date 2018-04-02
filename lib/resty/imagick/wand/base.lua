@@ -651,4 +651,8 @@ _M.get_fuzz = function(self)
     return lib.MagickGetImageFuzz(self.wand)
 end
 
+_M.get_gamma = function(self)
+    return lib.MagickGetImageGamma(self.wand)
+end
+
 return _M

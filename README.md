@@ -561,6 +561,10 @@ Returns the filename of a particular image in a sequence.
 -----
 Gets the image fuzz.
 
+`img:get_gamma()`
+-----
+Gets the image gamma.
+
 [Back to TOC](#table-of-contents)
 
 Authors
