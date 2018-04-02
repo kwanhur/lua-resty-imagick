@@ -549,6 +549,10 @@ Gets the image delay.
 -----
 Gets the image disposal method.
 
+`img:get_endian()`
+-----
+Gets the image endian.
+
 [Back to TOC](#table-of-contents)
 
 Authors

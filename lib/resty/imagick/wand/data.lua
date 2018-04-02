@@ -296,6 +296,12 @@ local dispose_type = enum({
     [3] = "PreviousDispose"
 })
 
+local endian_type = enum({
+    [0] = "UndefinedEndian",
+    "LSBEndian",
+    "MSBEndian"
+})
+
 _M.composite_operators = composite_operators
 
 _M.gravity = gravity
@@ -319,5 +325,7 @@ _M.colorspace_type = colorspace_type
 _M.compression_type = compression_type
 
 _M.dispose_type = dispose_type
+
+_M.endian_type = endian_type
 
 return _M

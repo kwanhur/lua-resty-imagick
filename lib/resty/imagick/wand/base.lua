@@ -26,6 +26,7 @@ local functions = wand_data.functions
 local colorspace_type = wand_data.colorspace_type
 local compression_type = wand_data.compression_type
 local dispose_type = wand_data.dispose_type
+local endian_type = wand_data.endian_type
 
 local setmetatable = setmetatable
 local tonumber = tonumber
@@ -635,6 +636,10 @@ end
 
 _M.get_dispose = function(self)
     return dispose_type:to_str(lib.MagickGetImageDispose(self.wand))
+end
+
+_M.get_endian = function(self)
+    return endian_type:to_str(lib.MagickGetImageEndian(self.wand))
 end
 
 return _M

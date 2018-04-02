@@ -297,6 +297,8 @@ ffi.cdef([[  typedef void MagickWand;
 
   DisposeType MagickGetImageDispose(MagickWand *wand);
 
+  EndianType MagickGetImageEndian(MagickWand *wand);
+
 ]])
 
 local get_flags
