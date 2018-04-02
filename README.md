@@ -553,6 +553,10 @@ Gets the image disposal method.
 -----
 Gets the image endian.
 
+`img:get_filename()`
+-----
+Returns the filename of a particular image in a sequence.
+
 [Back to TOC](#table-of-contents)
 
 Authors

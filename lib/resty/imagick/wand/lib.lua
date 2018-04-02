@@ -299,6 +299,8 @@ ffi.cdef([[  typedef void MagickWand;
 
   EndianType MagickGetImageEndian(MagickWand *wand);
 
+  char *MagickGetImageFilename(MagickWand *wand);
+
 ]])
 
 local get_flags

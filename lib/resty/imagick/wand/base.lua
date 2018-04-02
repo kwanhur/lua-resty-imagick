@@ -642,4 +642,9 @@ _M.get_endian = function(self)
     return endian_type:to_str(lib.MagickGetImageEndian(self.wand))
 end
 
+_M.get_filename = function(self)
+    local fname = lib.MagickGetImageFilename(self.wand)
+    return ffi.string(fname)
+end
+
 return _M
