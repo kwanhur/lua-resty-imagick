@@ -558,4 +558,8 @@ _M.gaussian_blur = function(self, radius, sigma)
     return handle_result(self, lib.MagickGaussianBlurImage(radius, sigma))
 end
 
+_M.get_image = function(self)
+    return lib.MagickGetImage(self.wand)
+end
+
 return _M

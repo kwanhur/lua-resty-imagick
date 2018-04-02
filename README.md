@@ -480,6 +480,10 @@ Blurs an image. We convolve the image with a Gaussian operator of the given radi
 For reasonable results, the radius should be larger than sigma. 
 Use a radius of 0 and gaussian_blur() selects a suitable radius for you.
 
+`img:get_image()`
+-----
+Gets the image at the current image index.
+
 [Back to TOC](#table-of-contents)
 
 Authors
