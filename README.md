@@ -569,6 +569,10 @@ Gets the image gamma.
 -----
 Returns the image histogram as an array of PixelWand wands.
 
+`img:get_interpolate_method()`
+-----
+Returns the interpolation method for the sepcified image.
+
 [Back to TOC](#table-of-contents)
 
 Authors

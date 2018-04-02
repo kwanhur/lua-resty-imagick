@@ -27,6 +27,7 @@ local colorspace_type = wand_data.colorspace_type
 local compression_type = wand_data.compression_type
 local dispose_type = wand_data.dispose_type
 local endian_type = wand_data.endian_type
+local pixel_interpolate_method = wand_data.pixel_interpolate_method
 
 local setmetatable = setmetatable
 local tonumber = tonumber
@@ -658,6 +659,10 @@ end
 _M.get_histogram = function(self, num_colors)
     local num = ffi.new("size_t[1]", num_colors)
     return lib.MagickGetImageHistogram(self.wand, num)
+end
+
+_M.get_interpolate_method = function(self)
+    return pixel_interpolate_method:to_str(lib.MagickGetImageInterpolateMethod(self.wand))
 end
 
 return _M

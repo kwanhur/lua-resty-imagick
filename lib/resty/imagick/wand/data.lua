@@ -302,6 +302,21 @@ local endian_type = enum({
     "MSBEndian"
 })
 
+local pixel_interpolate_method = enum({
+    [0] = "UndefinedInterpolatePixel",
+    "AverageInterpolatePixel",
+    "Average9InterpolatePixel",
+    "Average16InterpolatePixel",
+    "BackgroundInterpolatePixel",
+    "BilinearInterpolatePixel",
+    "BlendInterpolatePixel",
+    "CatromInterpolatePixel",
+    "IntegerInterpolatePixel",
+    "MeshInterpolatePixel",
+    "NearestInterpolatePixel",
+    "SplineInterpolatePixel"
+})
+
 _M.composite_operators = composite_operators
 
 _M.gravity = gravity
@@ -327,5 +342,7 @@ _M.compression_type = compression_type
 _M.dispose_type = dispose_type
 
 _M.endian_type = endian_type
+
+_M.pixel_interpolate_method = pixel_interpolate_method
 
 return _M
