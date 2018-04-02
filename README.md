@@ -462,6 +462,10 @@ vertical and horizontal sides of the frame. The inner and outer bevels indicate 
 Applys an arithmetic, relational, or logical expression to an image. Use these operators to lighten or darken an image, 
 to increase or decrease contrast in an image, or to produce the "negative" of an image.
 
+`img:fx(expression)`
+-----
+Evaluate expression for each pixel in the image.
+
 [Back to TOC](#table-of-contents)
 
 Authors

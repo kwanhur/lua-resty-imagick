@@ -546,4 +546,8 @@ _M.funtion = function(self, func, num_args, args)
     return handle_result(self, lib.MagickFunctionImage(self.wand, functions:to_int(func .. "Function"), num_args, args))
 end
 
+_M.fx = function(self, expression)
+    return lib.MagickFxImage(self.wand, expression)
+end
+
 return _M

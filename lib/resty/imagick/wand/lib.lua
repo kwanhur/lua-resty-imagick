@@ -249,6 +249,8 @@ ffi.cdef([[  typedef void MagickWand;
   const MagickFunction function,const size_t number_arguments,
   const double *arguments);
 
+  MagickWand *MagickFxImage(MagickWand *wand,const char *expression);
+
 ]])
 
 local get_flags
