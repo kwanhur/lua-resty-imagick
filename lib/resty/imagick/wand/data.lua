@@ -167,7 +167,7 @@ local distort_method = enum({
     "PerspectiveDistortion",
     "PerspectiveProjectionDistortion",
     "BilinearForwardDistortion",
---    BilinearDistortion = BilinearForwardDistortion,
+    --    BilinearDistortion = BilinearForwardDistortion,
     "BilinearReverseDistortion",
     "PolynomialDistortion",
     "ArcDistortion",
@@ -218,6 +218,14 @@ local evaluate_operator = enum({
     "XorEvaluateOperator"
 })
 
+local functions = enum({
+    [0] = "UndefinedFunction",
+    "ArcsinFunction",
+    "ArctanFunction",
+    "PolynomialFunction",
+    "SinusoidFunction"
+})
+
 _M.composite_operators = composite_operators
 
 _M.gravity = gravity
@@ -233,5 +241,7 @@ _M.storage_type = storage_type
 _M.distort_method = distort_method
 
 _M.evaluate_operator = evaluate_operator
+
+_M.functions = functions
 
 return _M

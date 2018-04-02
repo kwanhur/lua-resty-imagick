@@ -457,6 +457,11 @@ Implements the discrete Fourier transform (DFT) of the image either as a magnitu
 Adds a simulated three-dimensional border around the image. The width and height specify the border width of the 
 vertical and horizontal sides of the frame. The inner and outer bevels indicate the width of the inner and outer shadows of the frame.
 
+`img:function(func, num_args, args)`
+-----
+Applys an arithmetic, relational, or logical expression to an image. Use these operators to lighten or darken an image, 
+to increase or decrease contrast in an image, or to produce the "negative" of an image.
+
 [Back to TOC](#table-of-contents)
 
 Authors

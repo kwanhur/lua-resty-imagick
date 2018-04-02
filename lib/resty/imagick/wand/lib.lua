@@ -28,6 +28,7 @@ ffi.cdef([[  typedef void MagickWand;
   typedef int StorageType;
   typedef int DistortMethod;
   typedef int MagickEvaluateOperator;
+  typedef int MagickFunction;
 
   void MagickWandGenesis();
   MagickWand* NewMagickWand();
@@ -243,6 +244,10 @@ ffi.cdef([[  typedef void MagickWand;
   const PixelWand *matte_color,const size_t width,
   const size_t height,const ssize_t inner_bevel,
   const ssize_t outer_bevel,const CompositeOperator compose);
+
+  MagickBooleanType MagickFunctionImage(MagickWand *wand,
+  const MagickFunction function,const size_t number_arguments,
+  const double *arguments);
 
 ]])
 

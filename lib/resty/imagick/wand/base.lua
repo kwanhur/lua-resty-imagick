@@ -22,6 +22,7 @@ local evaluate_operator = wand_data.evaluate_operator
 local composite_operators = wand_data.composite_operators
 local orientation = wand_data.orientation
 local interlace = wand_data.interlace
+local functions = wand_data.functions
 
 local setmetatable = setmetatable
 local tonumber = tonumber
@@ -534,11 +535,15 @@ _M.flood_fill_paint = function(self, fill, fuzz, border_color, x, y, invert)
 end
 
 _M.forward_fourier_transform = function(self, magnitude)
-    return handle_result(self, lib.MagickForwardFourierTransformImage(magnitude))
+    return handle_result(self, lib.MagickForwardFourierTransformImage(self.wand, magnitude))
 end
 
 _M.frame = function(self, matte_color, w, h, inner_level, outer_level, compose)
-    return handle_result(self, lib.MagickFrameImage(matte_color, w, h, inner_level, outer_level, composite_operators:to_int(compose .. "CompositeOp")))
+    return handle_result(self, lib.MagickFrameImage(self.wand, matte_color, w, h, inner_level, outer_level, composite_operators:to_int(compose .. "CompositeOp")))
+end
+
+_M.funtion = function(self, func, num_args, args)
+    return handle_result(self, lib.MagickFunctionImage(self.wand, functions:to_int(func .. "Function"), num_args, args))
 end
 
 return _M
