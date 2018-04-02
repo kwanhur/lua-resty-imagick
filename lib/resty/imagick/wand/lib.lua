@@ -15,6 +15,7 @@ local error = error
 
 ffi.cdef([[  typedef void MagickWand;
   typedef void PixelWand;
+  typedef void DrawingWand;
 
   typedef int MagickBooleanType;
   typedef int ExceptionType;
@@ -203,6 +204,9 @@ ffi.cdef([[  typedef void MagickWand;
   MagickBooleanType MagickDistortImage(MagickWand *wand,
   const DistortMethod method,const size_t number_arguments,
   const double *arguments,const MagickBooleanType bestfit);
+
+  MagickBooleanType MagickDrawImage(MagickWand *wand,
+  const DrawingWand *drawing_wand);
 
 ]])
 

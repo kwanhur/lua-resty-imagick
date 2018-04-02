@@ -388,6 +388,10 @@ If 'bestfit' is enabled, and distortion allows it, the destination image is adju
 will just fit within the final destination image, which will be sized and offset accordingly. 
 Also in many cases the virtual offset of the source image will be taken into account in the mapping.
 
+`img:draw(draw)`
+-----
+Renders the drawing wand on the current image.
+
 [Back to TOC](#table-of-contents)
 
 Authors

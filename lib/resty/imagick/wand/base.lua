@@ -492,4 +492,8 @@ _M.thumb = function(self, size_str)
     return true
 end
 
+_M.draw = function(self, draw)
+    return handle_result(self, lib.MagickDrawImage(self.wand, draw))
+end
+
 return _M
