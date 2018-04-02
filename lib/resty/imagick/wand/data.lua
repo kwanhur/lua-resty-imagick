@@ -182,6 +182,42 @@ local distort_method = enum({
     "SentinelDistortion"
 })
 
+local evaluate_operator = enum({
+    [0] = "UndefinedEvaluateOperator",
+    "AbsEvaluateOperator",
+    "AddEvaluateOperator",
+    "AddModulusEvaluateOperator",
+    "AndEvaluateOperator",
+    "CosineEvaluateOperator",
+    "DivideEvaluateOperator",
+    "ExponentialEvaluateOperator",
+    "GaussianNoiseEvaluateOperator",
+    "ImpulseNoiseEvaluateOperator",
+    "LaplacianNoiseEvaluateOperator",
+    "LeftShiftEvaluateOperator",
+    "LogEvaluateOperator",
+    "MaxEvaluateOperator",
+    "MeanEvaluateOperator",
+    "MedianEvaluateOperator",
+    "MinEvaluateOperator",
+    "MultiplicativeNoiseEvaluateOperator",
+    "MultiplyEvaluateOperator",
+    "OrEvaluateOperator",
+    "PoissonNoiseEvaluateOperator",
+    "PowEvaluateOperator",
+    "RightShiftEvaluateOperator",
+    "RootMeanSquareEvaluateOperator",
+    "SetEvaluateOperator",
+    "SineEvaluateOperator",
+    "SubtractEvaluateOperator",
+    "SumEvaluateOperator",
+    "ThresholdBlackEvaluateOperator",
+    "ThresholdEvaluateOperator",
+    "ThresholdWhiteEvaluateOperator",
+    "UniformNoiseEvaluateOperator",
+    "XorEvaluateOperator"
+})
+
 _M.composite_operators = composite_operators
 
 _M.gravity = gravity
@@ -195,5 +231,7 @@ _M.filter_type = filter_type
 _M.storage_type = storage_type
 
 _M.distort_method = distort_method
+
+_M.evaluate_operator = evaluate_operator
 
 return _M

@@ -27,6 +27,7 @@ ffi.cdef([[  typedef void MagickWand;
   typedef int FilterType;
   typedef int StorageType;
   typedef int DistortMethod;
+  typedef int MagickEvaluateOperator;
 
   void MagickWandGenesis();
   MagickWand* NewMagickWand();
@@ -219,6 +220,9 @@ ffi.cdef([[  typedef void MagickWand;
   MagickBooleanType MagickEnhanceImage(MagickWand *wand);
 
   MagickBooleanType MagickEqualizeImage(MagickWand *wand);
+
+  MagickBooleanType MagickEvaluateImage(MagickWand *wand,
+  const MagickEvaluateOperator operator,const double value);
 
 ]])
 

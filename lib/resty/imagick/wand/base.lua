@@ -18,6 +18,7 @@ local gravity = wand_data.gravity
 local filter_type = wand_data.filter_type
 local storage_type = wand_data.storage_type
 local distort_method = wand_data.distort_method
+local evaluate_operator = wand_data.evaluate_operator
 local composite_operators = wand_data.composite_operators
 local orientation = wand_data.orientation
 local interlace = wand_data.interlace
@@ -514,6 +515,10 @@ end
 
 _M.equalize = function(self)
     return handle_result(self, lib.MagickEqualizeImage(self.wand))
+end
+
+_M.evaluate = function(self, operator, value)
+    return handle_result(self, lib.MagickEvaluateImage(self.wand, evaluate_operator:to_int(operator .. "EvaluateOperator"), value))
 end
 
 return _M

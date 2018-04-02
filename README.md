@@ -415,6 +415,11 @@ Applies a digital filter that improves the quality of a noisy image.
 -----
 Equalizes the image histogram.
 
+`img:evaluate(operator, value)`
+-----
+Applys an arithmetic, relational, or logical expression to an image. Use these operators to lighten or darken an image, 
+to increase or decrease contrast in an image, or to produce the "negative" of an image.
+
 [Back to TOC](#table-of-contents)
 
 Authors
