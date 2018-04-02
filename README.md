@@ -438,6 +438,12 @@ to move the original wand relative to the extended wand.
 -----
 Creates a vertical mirror image by reflecting the pixels around the central x-axis.
 
+`img:flood_fill_paint(fill, fuzz, border_color, x, y, invert)`
+-----
+Changes the color value of any pixel that matches target and is an immediate neighbor. 
+If the method FillToBorderMethod is specified, the color value is changed for any neighbor pixel that does not match 
+the bordercolor member of image.
+
 [Back to TOC](#table-of-contents)
 
 Authors

@@ -529,4 +529,8 @@ _M.extent = function(self, w, h, x, y)
     return handle_result(self, lib.MagickExtentImage(self.wand, w, h, x, y))
 end
 
+_M.flood_fill_paint = function(self, fill, fuzz, border_color, x, y, invert)
+    return handle_result(self, lib.MagickFloodfillPaintImage(self.wand, fill, fuzz, border_color, x, y, invert))
+end
+
 return _M
