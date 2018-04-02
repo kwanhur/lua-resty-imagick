@@ -557,6 +557,10 @@ Gets the image endian.
 -----
 Returns the filename of a particular image in a sequence.
 
+`img:get_fuzz()`
+-----
+Gets the image fuzz.
+
 [Back to TOC](#table-of-contents)
 
 Authors

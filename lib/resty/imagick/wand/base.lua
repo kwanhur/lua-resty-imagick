@@ -647,4 +647,8 @@ _M.get_filename = function(self)
     return filename
 end
 
+_M.get_fuzz = function(self)
+    return lib.MagickGetImageFuzz(self.wand)
+end
+
 return _M

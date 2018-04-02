@@ -301,6 +301,8 @@ ffi.cdef([[  typedef void MagickWand;
 
   char *MagickGetImageFilename(MagickWand *wand);
 
+  double MagickGetImageFuzz(MagickWand *wand);
+
 ]])
 
 local get_flags
