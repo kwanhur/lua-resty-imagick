@@ -295,6 +295,90 @@ Immediately frees the memory associated with the image, it is invalid to use the
 image after calling this method. It is unecessary to call this method normally
 as images are tracked by the garbage collector.
 
+`img:animate(server_name)`
+-----
+Animates an image or image sequence.
+
+`img:black_threshold(threshold)`
+-----
+Like MagickThresholdImage() but forces all pixels below the threshold into black 
+while leaving all pixels above the threshold unchanged.
+
+`img:border(border_color, width, height, compose)`
+-----
+Surrounds the image with a border of the color defined by the bordercolor pixel wand.
+
+`img:charcoal(sigma, radius)`
+-----
+Simulates a charcoal drawing.
+
+`img:chop(width, height, x, y)`
+-----
+Removes a region of an image and collapses the image to occupy the removed portion.
+
+`img:clamp()`
+-----
+Restricts the color range from 0 to the quantum depth.
+
+`img:clip()`
+-----
+Clips along the first path from the 8BIM profile, if present.
+
+`img:clip_path(path, inside)`
+-----
+Clips along the named paths from the 8BIM profile, if present. Later operations take effect 
+inside the path. Id may be a number if preceded with #, to work on a numbered path, e.g., "#1" to use the first path.
+
+`img:comment(comment)`
+-----
+Adds a comment to your image.
+
+`img:contrast(sharpen)`
+-----
+Enhances the intensity differences between the lighter and darker elements of the image. 
+Set sharpen to a value other than 0 to increase the image contrast otherwise the contrast is reduced.
+
+`img:contrast_stretch(black_point, white_point)`
+-----
+Enhances the contrast of a color image by adjusting the pixels color to span the entire range of colors available. 
+You can also reduce the influence of a particular channel with a gamma value of 0.
+
+`img:cycle_colormap(displace)`
+-----
+Displaces an image's colormap by a given number of positions. 
+If you cycle the colormap a number of times you can produce a psychodelic effect.
+
+`img:constitute(columns, rows, map, storage, pixels)`
+-----
+Adds an image to the wand comprised of the pixel data you supply. The pixel data must be in scanline order top-to-bottom. 
+The data can be char, short int, int, float, or double. Float and double require the pixels to be normalized [0..1], 
+otherwise [0..Max], where Max is the maximum value the type can accomodate (e.g. 255 for char). 
+
+`img:decipher(passphrase)`
+-----
+Converts cipher pixels to plain pixels.
+
+`img:deconstruct()`
+-----
+Compares each image with the next in a sequence and returns the maximum bounding region of any pixel differences it discovers.
+
+`img:deskew(threshold)`
+-----
+Removes skew from the image. Skew is an artifact that occurs in scanned images because of the camera being misaligned, 
+imperfections in the scanning or surface, or simply because the paper was not placed completely flat when scanned.
+
+`img:despeckle()`
+-----
+Reduces the speckle noise in an image while perserving the edges of the original image.
+
+`img:display(server_name)`
+-----
+Displays an image.
+
+`img:display_multi(server_name)`
+-----
+Displays an image or image sequence.
+
 [Back to TOC](#table-of-contents)
 
 Authors
