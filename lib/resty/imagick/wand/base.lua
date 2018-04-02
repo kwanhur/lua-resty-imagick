@@ -521,4 +521,8 @@ _M.evaluate = function(self, operator, value)
     return handle_result(self, lib.MagickEvaluateImage(self.wand, evaluate_operator:to_int(operator .. "EvaluateOperator"), value))
 end
 
+_M.export_pixels = function(self, x, y, columns, rows, map, storage, pixels)
+    return handle_result(self, lib.MagickExportImagePixels(x, y, columns, rows, map, storage_type:to_int(storage .. "Pixel"), pixels))
+end
+
 return _M

@@ -224,6 +224,11 @@ ffi.cdef([[  typedef void MagickWand;
   MagickBooleanType MagickEvaluateImage(MagickWand *wand,
   const MagickEvaluateOperator operator,const double value);
 
+  MagickBooleanType MagickExportImagePixels(MagickWand *wand,
+  const ssize_t x,const ssize_t y,const size_t columns,
+  const size_t rows,const char *map,const StorageType storage,
+  void *pixels);
+
 ]])
 
 local get_flags

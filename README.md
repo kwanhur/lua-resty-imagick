@@ -420,6 +420,15 @@ Equalizes the image histogram.
 Applys an arithmetic, relational, or logical expression to an image. Use these operators to lighten or darken an image, 
 to increase or decrease contrast in an image, or to produce the "negative" of an image.
 
+`img:export_pixels(x, y, columns, rows, map, storage, pixels)`
+-----
+Extracts pixel data from an image and returns it to you. 
+The method returns MagickTrue on success otherwise MagickFalse if an error is encountered. 
+The data is returned as char, short int, int, ssize_t, float, or double in the order specified by map.
+
+Suppose you want to extract the first scanline of a 640x480 image as character data in red-green-blue order:
+img:export_pixels(0, 0, 640, 1, "RGB", "Char", pixels)
+
 [Back to TOC](#table-of-contents)
 
 Authors
