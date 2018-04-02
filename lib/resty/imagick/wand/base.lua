@@ -589,7 +589,11 @@ _M.get_border_color = function(self, border_color)
 end
 
 _M.get_kurtosis = function(self, kurtosis, skewness)
-    return handle_result(self, lib.MagickGetImageKurtosis(kurtosis, skewness))
+    return handle_result(self, lib.MagickGetImageKurtosis(self.wand, kurtosis, skewness))
+end
+
+_M.get_mean = function(self, mean, standard_deviation)
+    return handle_result(self, lib.MagickGetImageMean(self.wand, mean, standard_deviation))
 end
 
 return _M

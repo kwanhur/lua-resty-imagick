@@ -513,6 +513,10 @@ Returns the image border color.
 -----
 Gets the kurtosis and skewness of one or more image channels.
 
+`img:get_mean(mean, standard_deviation)`
+-----
+Gets the mean and standard deviation of one or more image channels.
+
 [Back to TOC](#table-of-contents)
 
 Authors

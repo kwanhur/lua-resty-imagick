@@ -276,6 +276,9 @@ ffi.cdef([[  typedef void MagickWand;
   MagickBooleanType MagickGetImageKurtosis(MagickWand *wand,
   double *kurtosis,double *skewness);
 
+  MagickBooleanType MagickGetImageMean(MagickWand *wand,double *mean,
+  double *standard_deviation);
+
 ]])
 
 local get_flags
