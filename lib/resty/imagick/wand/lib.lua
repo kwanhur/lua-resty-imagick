@@ -253,6 +253,9 @@ ffi.cdef([[  typedef void MagickWand;
 
   MagickBooleanType MagickGammaImage(MagickWand *wand,const double gamma);
 
+  MagickBooleanType MagickGaussianBlurImage(MagickWand *wand,
+  const double radius,const double sigma);
+
 ]])
 
 local get_flags

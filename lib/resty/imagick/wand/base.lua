@@ -554,4 +554,8 @@ _M.gamma = function(self, gamma)
     return handle_result(self, lib.MagickGammaImage(self.wand, gamma))
 end
 
+_M.gaussian_blur = function(self, radius, sigma)
+    return handle_result(self, lib.MagickGaussianBlurImage(radius, sigma))
+end
+
 return _M

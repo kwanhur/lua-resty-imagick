@@ -474,6 +474,12 @@ and blue channels, or adjust all three with the gamma parameter. Values typicall
 
 You can also reduce the influence of a particular channel with a gamma value of 0.
 
+`img:gaussian_blur(radius, sigma)`
+-----
+Blurs an image. We convolve the image with a Gaussian operator of the given radius and standard deviation (sigma). 
+For reasonable results, the radius should be larger than sigma. 
+Use a radius of 0 and gaussian_blur() selects a suitable radius for you.
+
 [Back to TOC](#table-of-contents)
 
 Authors
