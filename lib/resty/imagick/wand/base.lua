@@ -686,4 +686,8 @@ _M.get_page = function(self)
     end
 end
 
+_M.get_pixel_color = function(self, x, y, color)
+    return handle_result(self, lib.MagickGetImagePixelColor(self.wand, x, y, color))
+end
+
 return _M

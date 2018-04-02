@@ -317,6 +317,9 @@ ffi.cdef([[  typedef void MagickWand;
 
   MagickBooleanType MagickGetImagePage(MagickWand *wand,
   size_t *width,size_t *height,ssize_t *x,ssize_t *y);
+
+  MagickBooleanType MagickGetImagePixelColor(MagickWand *wand,
+  const ssize_t x,const ssize_t y,PixelWand *color);
 ]])
 
 local get_flags

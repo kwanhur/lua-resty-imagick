@@ -577,13 +577,17 @@ Returns the interpolation method for the sepcified image.
 -----
 Gets the image iterations.
 
-`img:get_matte_color()`
+`img:get_matte_color(matte_color)`
 -----
 Returns the image matte color.
 
 `img:get_page()`
 -----
 Returns the page geometry associated with the image.
+
+`img:get_pixel_color(x,y,color)`
+-----
+Returns the color of the specified pixel.
 
 [Back to TOC](#table-of-contents)
 
