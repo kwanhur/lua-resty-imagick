@@ -444,6 +444,10 @@ Changes the color value of any pixel that matches target and is an immediate nei
 If the method FillToBorderMethod is specified, the color value is changed for any neighbor pixel that does not match 
 the bordercolor member of image.
 
+`img:flop()`
+-----
+Creates a horizontal mirror image by reflecting the pixels around the central y-axis.
+
 [Back to TOC](#table-of-contents)
 
 Authors
