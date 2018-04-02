@@ -26,11 +26,23 @@ Installation
 You'll need both LuaJIT (any version) and MagickWand.
 
 
-On Ubuntu, to use ImageMagick, you might run:
+To use ImageMagick, you might run:
+
+On Ubuntu
 
 ```bash
-$ sudo apt-get install luajit
 $ sudo apt-get install libmagickwand-dev
+```
+
+On Centos
+
+```bash
+$ sudo yum install ImageMagick ImageMagick-devel
+```
+
+On MacOS
+```bash
+$ brew install imagemagick
 ```
 
 It's recommended to use opm to install **lua-resty-imagick**.
@@ -117,7 +129,7 @@ call `destroy` on the image object as soon as possible.
 Load ImageMagick directly:
 
 ```lua
-magick = requrie "resty.magick.wand"
+magick = requrie "resty.imagick.wand"
 local img = magick.load_image("some_image.png")
 ```
 
