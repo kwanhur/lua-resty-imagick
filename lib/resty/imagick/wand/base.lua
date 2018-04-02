@@ -600,4 +600,14 @@ _M.get_range = function(self, minima, maxima)
     return handle_result(self, lib.MagickGetImageRange(self.wand, minima, maxima))
 end
 
+_M.get_colormap_color = function(self, color)
+    local index = ffi.new("size_t[1]", 0)
+    local ok, msg, code handle_result(self, lib.MagickGetImageColormapColor(self.wand, index, color))
+    if ok then
+        return index
+    else
+        return nil, msg, code
+    end
+end
+
 return _M

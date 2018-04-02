@@ -521,6 +521,10 @@ Gets the mean and standard deviation of one or more image channels.
 -----
 Gets the range for one or more image channels.
 
+`img:get_colormap_color(color)`
+-----
+Returns the color of the specified colormap index.
+
 [Back to TOC](#table-of-contents)
 
 Authors
