@@ -68,11 +68,9 @@ end
 
 _M.get_format = function(self)
     local format = lib.MagickGetImageFormat(self.wand)
-    do
-        local _with_0 = ffi.string(format):lower()
-        lib.MagickRelinquishMemory(format)
-        return _with_0
-    end
+    local fmat = ffi.string(format):lower()
+    lib.MagickRelinquishMemory(format)
+    return fmat
 end
 
 _M.set_format = function(self, format)
@@ -644,7 +642,9 @@ end
 
 _M.get_filename = function(self)
     local fname = lib.MagickGetImageFilename(self.wand)
-    return ffi.string(fname)
+    local filename = ffi.string(fname)
+    lib.MagickRelinquishMemory(fname)
+    return filename
 end
 
 return _M
