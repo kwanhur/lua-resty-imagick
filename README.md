@@ -392,6 +392,11 @@ Also in many cases the virtual offset of the source image will be taken into acc
 -----
 Renders the drawing wand on the current image.
 
+`img:edge(radius)`
+-----
+Enhance edges within the image with a convolution filter of the given radius. 
+Use a radius of 0 and Edge() selects a suitable radius for you.
+
 [Back to TOC](#table-of-contents)
 
 Authors

@@ -496,4 +496,8 @@ _M.draw = function(self, draw)
     return handle_result(self, lib.MagickDrawImage(self.wand, draw))
 end
 
+_M.edge = function(self, radius)
+    return handle_result(self, lib.MagickEdgeImage(self.wand, radius))
+end
+
 return _M
