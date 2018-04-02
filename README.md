@@ -593,6 +593,10 @@ Returns the page geometry associated with the image.
 -----
 Returns the color of the specified pixel.
 
+`img:get_region(w, h, x, y)`
+-----
+Extracts a region of the image and returns it as a a new wand.
+
 [Back to TOC](#table-of-contents)
 
 Authors

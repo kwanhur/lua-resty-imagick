@@ -694,4 +694,8 @@ _M.get_pixel_color = function(self, x, y, color)
     return handle_result(self, lib.MagickGetImagePixelColor(self.wand, x, y, color))
 end
 
+_M.get_region = function(self, w, h, x, y)
+    return lib.MagickGetImageRegion(self.wand, w, h, x, y)
+end
+
 return _M
