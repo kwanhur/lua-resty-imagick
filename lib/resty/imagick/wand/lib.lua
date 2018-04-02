@@ -308,7 +308,9 @@ ffi.cdef([[  typedef void MagickWand;
   PixelWand **MagickGetImageHistogram(MagickWand *wand,
   size_t *number_colors);
 
-  PixelInterpolateMethod MagickGetImageInterpolateMethod(MagickWand *wand)
+  PixelInterpolateMethod MagickGetImageInterpolateMethod(MagickWand *wand);
+
+  size_t MagickGetImageIterations(MagickWand *wand);
 ]])
 
 local get_flags

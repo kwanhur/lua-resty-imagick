@@ -665,4 +665,8 @@ _M.get_interpolate_method = function(self)
     return pixel_interpolate_method:to_str(lib.MagickGetImageInterpolateMethod(self.wand))
 end
 
+_M.get_iterations = function(self)
+    return lib.MagickGetImageIterations(self.wand)
+end
+
 return _M

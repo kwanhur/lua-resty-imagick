@@ -573,6 +573,10 @@ Returns the image histogram as an array of PixelWand wands.
 -----
 Returns the interpolation method for the sepcified image.
 
+`img:get_iterations()`
+-----
+Gets the image iterations.
+
 [Back to TOC](#table-of-contents)
 
 Authors
