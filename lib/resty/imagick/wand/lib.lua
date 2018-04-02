@@ -210,6 +210,9 @@ ffi.cdef([[  typedef void MagickWand;
 
   MagickBooleanType MagickEdgeImage(MagickWand *wand,const double radius);
 
+  MagickBooleanType MagickEmbossImage(MagickWand *wand,const double radius,
+  const double sigma);
+
 ]])
 
 local get_flags

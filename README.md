@@ -397,6 +397,12 @@ Renders the drawing wand on the current image.
 Enhance edges within the image with a convolution filter of the given radius. 
 Use a radius of 0 and Edge() selects a suitable radius for you.
 
+`img:emboss(radius, sigma)`
+-----
+Returns a grayscale image with a three-dimensional effect. We convolve the image with a Gaussian operator of the given 
+radius and standard deviation (sigma). For reasonable results, radius should be larger than sigma. 
+Use a radius of 0 and Emboss() selects a suitable radius for you.
+
 [Back to TOC](#table-of-contents)
 
 Authors

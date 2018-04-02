@@ -500,4 +500,8 @@ _M.edge = function(self, radius)
     return handle_result(self, lib.MagickEdgeImage(self.wand, radius))
 end
 
+_M.emboss = function(self, radius, sigma)
+    return handle_result(self, lib.MagickEmbossImage(self.wand, radius, sigma))
+end
+
 return _M
