@@ -17,6 +17,7 @@ local can_resize = wand_lib.can_resize
 local gravity = wand_data.gravity
 local filter_type = wand_data.filter_type
 local storage_type = wand_data.storage_type
+local distort_method = wand_data.distort_method
 local composite_operators = wand_data.composite_operators
 local orientation = wand_data.orientation
 local interlace = wand_data.interlace
@@ -404,7 +405,8 @@ _M.circle_colormap = function(self, displace)
 end
 
 _M.consitute = function(self, columns, rows, map, storage, pixels)
-    return handle_result(self, lib.MagickConstituteImage(self.wand, columns, rows, map, storage_type:to_int(storage), pixels))
+    return handle_result(self, lib.MagickConstituteImage(self.wand, columns, rows, map,
+        storage_type:to_int(storage .. 'Pixel'), pixels))
 end
 
 _M.decipher = function(self, passphrase)
@@ -429,6 +431,10 @@ end
 
 _M.display_multi = function(self, server_name)
     return handle_result(self, lib.MagickDisplayImages(self.wand, server_name))
+end
+
+_M.distort = function(self, method, num_args, args, bestfit)
+    return handle_result(self, lib.MagickDistortImage(distort_method:to_int(method .. 'Distortion'), num_args, args, bestfit))
 end
 
 _M._keep_aspect = function(self, w, h)

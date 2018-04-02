@@ -159,6 +159,29 @@ local storage_type = enum({
     "ShortPixel"
 })
 
+local distort_method = enum({
+    [0] = "UndefinedDistortion",
+    "AffineDistortion",
+    "AffineProjectionDistortion",
+    "ScaleRotateTranslateDistortion",
+    "PerspectiveDistortion",
+    "PerspectiveProjectionDistortion",
+    "BilinearForwardDistortion",
+--    BilinearDistortion = BilinearForwardDistortion,
+    "BilinearReverseDistortion",
+    "PolynomialDistortion",
+    "ArcDistortion",
+    "PolarDistortion",
+    "DePolarDistortion",
+    "Cylinder2PlaneDistortion",
+    "Plane2CylinderDistortion",
+    "BarrelDistortion",
+    "BarrelInverseDistortion",
+    "ShepardsDistortion",
+    "ResizeDistortion",
+    "SentinelDistortion"
+})
+
 _M.composite_operators = composite_operators
 
 _M.gravity = gravity
@@ -170,5 +193,7 @@ _M.interlace = interlace
 _M.filter_type = filter_type
 
 _M.storage_type = storage_type
+
+_M.distort_method = distort_method
 
 return _M

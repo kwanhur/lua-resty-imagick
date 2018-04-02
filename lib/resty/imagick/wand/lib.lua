@@ -25,6 +25,7 @@ ffi.cdef([[  typedef void MagickWand;
   typedef int InterlaceType;
   typedef int FilterType;
   typedef int StorageType;
+  typedef int DistortMethod;
 
   void MagickWandGenesis();
   MagickWand* NewMagickWand();
@@ -198,6 +199,10 @@ ffi.cdef([[  typedef void MagickWand;
 
   MagickBooleanType MagickDisplayImages(MagickWand *wand,
   const char *server_name);
+
+  MagickBooleanType MagickDistortImage(MagickWand *wand,
+  const DistortMethod method,const size_t number_arguments,
+  const double *arguments,const MagickBooleanType bestfit);
 
 ]])
 

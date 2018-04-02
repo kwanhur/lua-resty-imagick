@@ -379,6 +379,15 @@ Displays an image.
 -----
 Displays an image or image sequence.
 
+`img:distort(method, num_args, args, bestfit)`
+-----
+Distorts an image using various distortion methods, by mapping color lookups of the source image to a new destination 
+image usally of the same size as the source image, unless 'bestfit' is set to true.
+
+If 'bestfit' is enabled, and distortion allows it, the destination image is adjusted to ensure the whole source 'image' 
+will just fit within the final destination image, which will be sized and offset accordingly. 
+Also in many cases the virtual offset of the source image will be taken into account in the mapping.
+
 [Back to TOC](#table-of-contents)
 
 Authors
