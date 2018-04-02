@@ -216,6 +216,8 @@ ffi.cdef([[  typedef void MagickWand;
   MagickBooleanType MagickEncipherImage(MagickWand *wand,
   const char *passphrase);
 
+  MagickBooleanType MagickEnhanceImage(MagickWand *wand);
+
 ]])
 
 local get_flags

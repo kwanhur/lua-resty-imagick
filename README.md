@@ -407,6 +407,10 @@ Use a radius of 0 and Emboss() selects a suitable radius for you.
 -----
 Converts plaint pixels to cipher pixels.
 
+`img:enhance()`
+-----
+Applies a digital filter that improves the quality of a noisy image.
+
 [Back to TOC](#table-of-contents)
 
 Authors

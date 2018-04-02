@@ -508,4 +508,8 @@ _M.encipher = function(self, passphrase)
     return handle_result(self, lib.MagickEncipherImage(self.wand, passphrase))
 end
 
+_M.enhance = function(self)
+    return handle_result(self, lib.MagickEnhanceImage(self.wand))
+end
+
 return _M
