@@ -619,4 +619,8 @@ _M.get_colorspace = function(self)
     return colorspace_type:to_str(lib.MagickGetImageColorspace(self.wand))
 end
 
+_M.get_compose = function(self)
+    return composite_operators:to_str(lib.MagickGetImageCompose(self.wand))
+end
+
 return _M

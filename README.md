@@ -533,6 +533,10 @@ Gets the number of unique colors in the image.
 -----
 Gets the image colorspace.
 
+`img:get_compose()`
+-----
+Returns the composite operator associated with the image.
+
 [Back to TOC](#table-of-contents)
 
 Authors
