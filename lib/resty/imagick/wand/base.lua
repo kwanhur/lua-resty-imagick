@@ -584,4 +584,8 @@ _M.get_blue_primary = function(self, x, y, z)
     return handle_result(self, lib.MagickGetImageBluePrimary(self.wand, x, y, z))
 end
 
+_M.get_border_color = function(self, border_color)
+    return handle_result(self, lib.MagickGetImageBorderColor(self.wand, border_color))
+end
+
 return _M
