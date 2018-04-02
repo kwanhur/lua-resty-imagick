@@ -288,6 +288,14 @@ local compression_type = enum({
     "ZipSCompression"
 })
 
+local dispose_type = enum({
+    [-1] = "UnrecognizedDispose",
+    [0] = "UndefinedDispose",
+    [1] = "NoneDispose",
+    [2] = "BackgroundDispose",
+    [3] = "PreviousDispose"
+})
+
 _M.composite_operators = composite_operators
 
 _M.gravity = gravity
@@ -309,5 +317,7 @@ _M.functions = functions
 _M.colorspace_type = colorspace_type
 
 _M.compression_type = compression_type
+
+_M.dispose_type = dispose_type
 
 return _M

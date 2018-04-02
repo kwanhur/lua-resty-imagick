@@ -545,6 +545,10 @@ Gets the image compression.
 -----
 Gets the image delay.
 
+`img:get_dispose()`
+-----
+Gets the image disposal method.
+
 [Back to TOC](#table-of-contents)
 
 Authors
