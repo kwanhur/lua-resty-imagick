@@ -610,4 +610,8 @@ _M.get_colormap_color = function(self, color)
     end
 end
 
+_M.get_colors = function(self)
+    return lib.MagickGetImageColors(self.wand)
+end
+
 return _M

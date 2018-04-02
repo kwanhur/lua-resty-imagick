@@ -525,6 +525,10 @@ Gets the range for one or more image channels.
 -----
 Returns the color of the specified colormap index.
 
+`img:get_colors()`
+-----
+Gets the number of unique colors in the image.
+
 [Back to TOC](#table-of-contents)
 
 Authors
