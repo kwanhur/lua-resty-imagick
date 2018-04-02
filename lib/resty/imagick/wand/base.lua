@@ -533,4 +533,8 @@ _M.flood_fill_paint = function(self, fill, fuzz, border_color, x, y, invert)
     return handle_result(self, lib.MagickFloodfillPaintImage(self.wand, fill, fuzz, border_color, x, y, invert))
 end
 
+_M.forward_fourier_transform = function(self, magnitude)
+    return handle_result(self, lib.MagickForwardFourierTransformImage(magnitude))
+end
+
 return _M

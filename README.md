@@ -448,6 +448,10 @@ the bordercolor member of image.
 -----
 Creates a horizontal mirror image by reflecting the pixels around the central y-axis.
 
+`img:forward_fourier_transform(mangitude)`
+-----
+Implements the discrete Fourier transform (DFT) of the image either as a magnitude / phase or real / imaginary image pair.
+
 [Back to TOC](#table-of-contents)
 
 Authors

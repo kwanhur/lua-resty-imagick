@@ -236,6 +236,9 @@ ffi.cdef([[  typedef void MagickWand;
   const PixelWand *fill,const double fuzz,const PixelWand *bordercolor,
   const ssize_t x,const ssize_t y,const MagickBooleanType invert);
 
+  MagickBooleanType MagickForwardFourierTransformImage(MagickWand *wand,
+  const MagickBooleanType magnitude);
+
 ]])
 
 local get_flags
