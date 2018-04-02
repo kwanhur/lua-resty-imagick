@@ -411,6 +411,10 @@ Converts plaint pixels to cipher pixels.
 -----
 Applies a digital filter that improves the quality of a noisy image.
 
+`img:equalize()`
+-----
+Equalizes the image histogram.
+
 [Back to TOC](#table-of-contents)
 
 Authors

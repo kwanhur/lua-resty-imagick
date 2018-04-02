@@ -512,4 +512,8 @@ _M.enhance = function(self)
     return handle_result(self, lib.MagickEnhanceImage(self.wand))
 end
 
+_M.equalize = function(self)
+    return handle_result(self, lib.MagickEqualizeImage(self.wand))
+end
+
 return _M
