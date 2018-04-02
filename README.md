@@ -452,6 +452,11 @@ Creates a horizontal mirror image by reflecting the pixels around the central y-
 -----
 Implements the discrete Fourier transform (DFT) of the image either as a magnitude / phase or real / imaginary image pair.
 
+`img:frame(matte_color, w, h, inner_level, outer_level, compose)`
+-----
+Adds a simulated three-dimensional border around the image. The width and height specify the border width of the 
+vertical and horizontal sides of the frame. The inner and outer bevels indicate the width of the inner and outer shadows of the frame.
+
 [Back to TOC](#table-of-contents)
 
 Authors
