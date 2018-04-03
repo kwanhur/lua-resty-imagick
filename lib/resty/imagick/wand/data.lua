@@ -7,7 +7,7 @@ _M._NAME = modulename
 
 local enum = require("resty.imagick.enum").enum
 
-local composite_operators = enum({
+local CompositeOperators = enum({
     [0] = "UndefinedCompositeOp",
     "NoCompositeOp",
     "ModulusAddCompositeOp",
@@ -112,7 +112,7 @@ local interlace = enum({
     "JPEGInterlace",
     "PNGInterlace"
 })
-local filter_type = enum({
+local FilterType = enum({
     [0] = "UndefinedFilter",
     "PointFilter",
     "BoxFilter",
@@ -148,7 +148,7 @@ local filter_type = enum({
     "SentinelFilter"
 })
 
-local storage_type = enum({
+local StorageType = enum({
     [0] = "UndefinedPixel",
     "CharPixel",
     "DoublePixel",
@@ -159,7 +159,7 @@ local storage_type = enum({
     "ShortPixel"
 })
 
-local distort_method = enum({
+local DistortMethod = enum({
     [0] = "UndefinedDistortion",
     "AffineDistortion",
     "AffineProjectionDistortion",
@@ -182,7 +182,7 @@ local distort_method = enum({
     "SentinelDistortion"
 })
 
-local evaluate_operator = enum({
+local EvaluateOperator = enum({
     [0] = "UndefinedEvaluateOperator",
     "AbsEvaluateOperator",
     "AddEvaluateOperator",
@@ -226,7 +226,7 @@ local functions = enum({
     "SinusoidFunction"
 })
 
-local colorspace_type = enum({
+local ColorspaceType = enum({
     [0] = "UndefinedColorspace",
     "RGBColorspace",
     "GRAYColorspace",
@@ -263,7 +263,7 @@ local colorspace_type = enum({
     "YDbDrColorspace"
 })
 
-local compression_type = enum({
+local CompressionType = enum({
     [0] = "UndefinedCompression",
     "B44ACompression",
     "B44Compression",
@@ -288,7 +288,7 @@ local compression_type = enum({
     "ZipSCompression"
 })
 
-local dispose_type = enum({
+local DisposeType = enum({
     [-1] = "UnrecognizedDispose",
     [0] = "UndefinedDispose",
     [1] = "NoneDispose",
@@ -296,13 +296,28 @@ local dispose_type = enum({
     [3] = "PreviousDispose"
 })
 
-local endian_type = enum({
+local EndianType = enum({
     [0] = "UndefinedEndian",
     "LSBEndian",
     "MSBEndian"
 })
 
-local pixel_interpolate_method = enum({
+local ImageType = enum({
+    [0] = "UndefinedType",
+    "BilevelType",
+    "GrayscaleType",
+    "GrayscaleAlphaType",
+    "PaletteType",
+    "PaletteAlphaType",
+    "TrueColorType",
+    "TrueColorAlphaType",
+    "ColorSeparationType",
+    "ColorSeparationAlphaType",
+    "OptimizeType",
+    "PaletteBilevelAlphaType"
+})
+
+local PixelInterpolateMethod = enum({
     [0] = "UndefinedInterpolatePixel",
     "AverageInterpolatePixel",
     "Average9InterpolatePixel",
@@ -317,7 +332,7 @@ local pixel_interpolate_method = enum({
     "SplineInterpolatePixel"
 })
 
-local rendering_intent = enum({
+local RenderingIntent = enum({
     [0] = "UndefinedIntent",
     "SaturationIntent",
     "PerceptualIntent",
@@ -325,7 +340,7 @@ local rendering_intent = enum({
     "RelativeIntent"
 })
 
-_M.composite_operators = composite_operators
+_M.composite_operators = CompositeOperators
 
 _M.gravity = gravity
 
@@ -333,26 +348,28 @@ _M.orientation = orientation
 
 _M.interlace = interlace
 
-_M.filter_type = filter_type
+_M.filter_type = FilterType
 
-_M.storage_type = storage_type
+_M.storage_type = StorageType
 
-_M.distort_method = distort_method
+_M.distort_method = DistortMethod
 
-_M.evaluate_operator = evaluate_operator
+_M.evaluate_operator = EvaluateOperator
 
 _M.functions = functions
 
-_M.colorspace_type = colorspace_type
+_M.colorspace_type = ColorspaceType
 
-_M.compression_type = compression_type
+_M.compression_type = CompressionType
 
-_M.dispose_type = dispose_type
+_M.dispose_type = DisposeType
 
-_M.endian_type = endian_type
+_M.endian_type = EndianType
 
-_M.pixel_interpolate_method = pixel_interpolate_method
+_M.image_type = ImageType
 
-_M.rendering_intent = rendering_intent
+_M.pixel_interpolate_method = PixelInterpolateMethod
+
+_M.rendering_intent = RenderingIntent
 
 return _M
