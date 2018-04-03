@@ -621,6 +621,10 @@ Gets the image ticks-per-second.
 -----
 Gets the potential image type
 
+`img:get_units()`
+-----
+Gets the image units of resolution.
+
 [Back to TOC](#table-of-contents)
 
 Authors

@@ -728,4 +728,8 @@ _M.get_image_type = function(self)
     return image_type:to_str(lib.MagickGetImageType(self.wand))
 end
 
+_M.get_units = function(self)
+    return resolution_type:to_str(lib.MagickGetImageUnits(self.wand))
+end
+
 return _M
