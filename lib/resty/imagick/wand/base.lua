@@ -741,4 +741,8 @@ _M.get_white_point = function(self, x, y, z)
     return handle_result(self, lib.MagickGetImageWhitePoint(self.wand, x, y, z))
 end
 
+_M.get_number = function(self)
+    return lib.MagickGetNumberImages(self.wand)
+end
+
 return _M

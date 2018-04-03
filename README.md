@@ -633,6 +633,10 @@ Returns the virtual pixel method for the sepcified image.
 -----
 Returns the chromaticy white point.
 
+`img:get_number()`
+-----
+Returns the number of images associated with a magick wand.
+
 [Back to TOC](#table-of-contents)
 
 Authors
