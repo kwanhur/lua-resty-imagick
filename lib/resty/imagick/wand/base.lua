@@ -776,4 +776,8 @@ _M.implode = function(self, radius, method)
     return handle_result(self, lib.MagickImplodeImage(self.wand, radius, pixel_interpolate_method:to_int(method .. "InterpolatePixel")))
 end
 
+_M.import_pixels = function(self, x, y, columns, rows, map, storage, pixels)
+    return handle_result(self, lib.MagickImportImagePixels(self.wand, x, y, columns, rows, map, storage_type:to_int(storage .. "Pixel"), pixels))
+end
+
 return _M

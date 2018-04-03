@@ -668,6 +668,16 @@ Bilevel Grayscale GrayscaleMatte Palette PaletteMatte TrueColor TrueColorMatte C
 Creates a new image that is a copy of an existing one with the image pixels "implode" by the specified percentage. 
 It allocates the memory necessary for the new Image structure and returns a pointer to the new image.
 
+`img:import_pixels(x, y, columns, rows, map, storage, pixels)`
+-----
+Accepts pixel datand stores it in the image at the location you specify. The method returns False on success 
+otherwise True if an error is encountered. 
+The pixel data can be either char, short int, int, ssize_t, float, or double in the order specified by map.
+
+Suppose your want to upload the first scanline of a 640x480 image from character data in red-green-blue order:
+
+img:import_pixels(0,0,640,1,"RGB","Char",pixels);
+
 [Back to TOC](#table-of-contents)
 
 Authors
