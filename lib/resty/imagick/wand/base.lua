@@ -788,4 +788,8 @@ _M.interpolative_resize = function(self, columns, rows, method)
     return handle_result(self, lib.MagickInterpolativeResizeImage(self.wand, columns, rows, pixel_interpolate_method:to_int(method .. "InterpolatePixel")))
 end
 
+_M.label = function(self, label)
+    return handle_result(self, lib.MagickLabelImage(self.wand, label))
+end
+
 return _M

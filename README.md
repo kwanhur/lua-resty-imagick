@@ -686,6 +686,10 @@ img:import_pixels(0,0,640,1,"RGB","Char",pixels);
 -----
 Resize image using a interpolative method.
 
+`img:label(label)`
+-----
+Adds a label to your image.
+
 [Back to TOC](#table-of-contents)
 
 Authors
