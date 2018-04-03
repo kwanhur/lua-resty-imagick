@@ -711,4 +711,11 @@ _M.get_scene = function(self)
     return lib.MagickGetImageScene(self.wand)
 end
 
+_M.get_signature = function(self)
+    local sig = lib.MagickGetImageSignature(self.wand)
+    local signature = ffi.string(sig)
+    lib.MagickRelinquishMemory(sig)
+    return signature
+end
+
 return _M

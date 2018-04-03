@@ -609,6 +609,10 @@ Gets the image X and Y resolution.
 -----
 Gets the image scene.
 
+`img:get_signature()`
+-----
+Generates an SHA-256 message digest for the image pixel stream.
+
 [Back to TOC](#table-of-contents)
 
 Authors
