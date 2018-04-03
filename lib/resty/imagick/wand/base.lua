@@ -737,4 +737,8 @@ _M.get_virtual_pixel_method = function(self)
     return virtual_pixel_method:to_str(lib.MagickGetImageVirtualPixelMethod(self.wand))
 end
 
+_M.get_white_point = function(self, x, y, z)
+    return handle_result(self, lib.MagickGetImageWhitePoint(self.wand, x, y, z))
+end
+
 return _M

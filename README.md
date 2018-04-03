@@ -629,6 +629,10 @@ Gets the image units of resolution.
 -----
 Returns the virtual pixel method for the sepcified image.
 
+`img:get_white_point(x, y, z)`
+-----
+Returns the chromaticy white point.
+
 [Back to TOC](#table-of-contents)
 
 Authors
