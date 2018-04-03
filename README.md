@@ -651,6 +651,10 @@ Returns True if the wand has more images when traversing the list in the forward
 -----
 Returns True if the wand has more images when traversing the list in the reverse direction.
 
+`img:identify()`
+-----
+Identifies an image by printing its attributes to the file. Attributes include the image width, height, size, and others.
+
 [Back to TOC](#table-of-contents)
 
 Authors

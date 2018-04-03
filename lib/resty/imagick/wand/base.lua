@@ -761,4 +761,11 @@ _M.has_previous = function(self)
     return handle_result(self, lib.MagickHasPreviousImage(self.wand))
 end
 
+_M.identify = function(self)
+    local ide = lib.MagickIdentifyImage(self.wand)
+    local iden = ffi.string(ide)
+    lib.MagickRelinquishMemory(ide)
+    return iden
+end
+
 return _M
