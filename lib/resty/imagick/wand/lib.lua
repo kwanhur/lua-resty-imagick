@@ -376,7 +376,10 @@ ffi.cdef([[  typedef void MagickWand;
   MagickBooleanType MagickLabelImage(MagickWand *wand,const char *label);
 
   MagickBooleanType MagickLevelImage(MagickWand *wand,
-  const double black_point,const double gamma,const double white_point)；
+  const double black_point,const double gamma,const double white_point);
+
+  MagickBooleanType MagickLinearStretchImage(MagickWand *wand,
+  const double black_point,const double white_point);
 ]])
 
 local get_flags

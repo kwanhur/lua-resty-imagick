@@ -698,6 +698,10 @@ The black point specifies the darkest color in the image. Colors darker than the
 Mid point specifies a gamma correction to apply to the image. White point specifies the lightest color in the image. 
 Colors brighter than the white point are set to the maximum quantum value.
 
+`img:linear_stretch(black_point, white_point)`
+-----
+Stretches with saturation the image intensity.
+
 [Back to TOC](#table-of-contents)
 
 Authors

@@ -796,4 +796,8 @@ _M.level = function(self, black_point, gamma, white_point)
     return handle_result(self, lib.MagickLevelImage(black_point, gamma, white_point))
 end
 
+_M.linear_stretch = function(self, black_point, white_point)
+    return handle_result(self, lib.MagickLinearStretchImage(self.wand, black_point, white_point))
+end
+
 return _M
