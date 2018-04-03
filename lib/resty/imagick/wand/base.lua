@@ -18,6 +18,7 @@ local gravity = wand_data.gravity
 local filter_type = wand_data.filter_type
 local storage_type = wand_data.storage_type
 local distort_method = wand_data.distort_method
+local virtual_pixel_method = wand_data.virtual_pixel_method
 local evaluate_operator = wand_data.evaluate_operator
 local composite_operators = wand_data.composite_operators
 local orientation = wand_data.orientation

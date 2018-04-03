@@ -182,6 +182,26 @@ local DistortMethod = enum({
     "SentinelDistortion"
 })
 
+local VirtualPixelMethod = enum({
+    [0] = "UndefinedVirtualPixelMethod",
+    "BackgroundVirtualPixelMethod",
+    "DitherVirtualPixelMethod",
+    "EdgeVirtualPixelMethod",
+    "MirrorVirtualPixelMethod",
+    "RandomVirtualPixelMethod",
+    "TileVirtualPixelMethod",
+    "TransparentVirtualPixelMethod",
+    "MaskVirtualPixelMethod",
+    "BlackVirtualPixelMethod",
+    "GrayVirtualPixelMethod",
+    "WhiteVirtualPixelMethod",
+    "HorizontalTileVirtualPixelMethod",
+    "VerticalTileVirtualPixelMethod",
+    "HorizontalTileEdgeVirtualPixelMethod",
+    "VerticalTileEdgeVirtualPixelMethod",
+    "CheckerTileVirtualPixelMethod"
+})
+
 local EvaluateOperator = enum({
     [0] = "UndefinedEvaluateOperator",
     "AbsEvaluateOperator",
@@ -359,6 +379,8 @@ _M.filter_type = FilterType
 _M.storage_type = StorageType
 
 _M.distort_method = DistortMethod
+
+_M.virtual_pixel_method = VirtualPixelMethod
 
 _M.evaluate_operator = EvaluateOperator
 
