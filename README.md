@@ -643,6 +643,10 @@ Replaces colors in the image from a Hald color lookup table. A Hald color lookup
 mapped to 2 dimensions. Create it with the HALD coder. You can apply any color transformation to the Hald image and 
 then use this method to apply the transform to the image.
 
+`img:has_next()`
+-----
+Returns True if the wand has more images when traversing the list in the forward direction.
+
 [Back to TOC](#table-of-contents)
 
 Authors

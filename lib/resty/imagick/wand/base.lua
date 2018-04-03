@@ -753,4 +753,8 @@ _M.hald_clut = function(self, hald_wand)
     return handle_result(self, lib.MagickHaldClutImage(self.wand, hald_wand))
 end
 
+_M.has_next = function(self)
+    return handle_result(self, lib.MagickHasNextImage(self.wand))
+end
+
 return _M
