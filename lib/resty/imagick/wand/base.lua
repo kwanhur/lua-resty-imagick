@@ -28,6 +28,7 @@ local compression_type = wand_data.compression_type
 local dispose_type = wand_data.dispose_type
 local endian_type = wand_data.endian_type
 local image_type = wand_data.image_type
+local resolution_type = wand_data.resolution_type
 local pixel_interpolate_method = wand_data.pixel_interpolate_method
 local rendering_intent = wand_data.rendering_intent
 

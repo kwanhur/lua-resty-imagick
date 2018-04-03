@@ -317,6 +317,12 @@ local ImageType = enum({
     "PaletteBilevelAlphaType"
 })
 
+local ResolutionType = enum({
+    [0] = "UndefinedResolution",
+    "PixelsPerInchResolution",
+    "PixelsPerCentimeterResolution"
+})
+
 local PixelInterpolateMethod = enum({
     [0] = "UndefinedInterpolatePixel",
     "AverageInterpolatePixel",
@@ -367,6 +373,8 @@ _M.dispose_type = DisposeType
 _M.endian_type = EndianType
 
 _M.image_type = ImageType
+
+_M.resolution_type = ResolutionType
 
 _M.pixel_interpolate_method = PixelInterpolateMethod
 
