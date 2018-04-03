@@ -733,4 +733,8 @@ _M.get_units = function(self)
     return resolution_type:to_str(lib.MagickGetImageUnits(self.wand))
 end
 
+_M.get_virtual_pixel_method = function(self)
+    return virtual_pixel_method:to_str(lib.MagickGetImageVirtualPixelMethod(self.wand))
+end
+
 return _M

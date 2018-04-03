@@ -625,6 +625,10 @@ Gets the potential image type
 -----
 Gets the image units of resolution.
 
+`img:get_virtual_pixel_method()`
+-----
+Returns the virtual pixel method for the sepcified image.
+
 [Back to TOC](#table-of-contents)
 
 Authors
