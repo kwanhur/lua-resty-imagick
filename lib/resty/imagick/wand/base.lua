@@ -780,4 +780,8 @@ _M.import_pixels = function(self, x, y, columns, rows, map, storage, pixels)
     return handle_result(self, lib.MagickImportImagePixels(self.wand, x, y, columns, rows, map, storage_type:to_int(storage .. "Pixel"), pixels))
 end
 
+_M.interpolative_resize = function(self, columns, rows, method)
+    return handle_result(self, lib.MagickInterpolativeResizeImage(self.wand, columns, rows, pixel_interpolate_method:to_int(method .. "InterpolatePixel")))
+end
+
 return _M

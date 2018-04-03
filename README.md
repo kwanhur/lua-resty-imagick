@@ -678,6 +678,10 @@ Suppose your want to upload the first scanline of a 640x480 image from character
 
 img:import_pixels(0,0,640,1,"RGB","Char",pixels);
 
+`img:interpolative_resize(columns, rows, method)`
+-----
+Resize image using a interpolative method.
+
 [Back to TOC](#table-of-contents)
 
 Authors
