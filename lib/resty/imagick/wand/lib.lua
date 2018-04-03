@@ -350,6 +350,9 @@ ffi.cdef([[  typedef void MagickWand;
   size_t MagickGetNumberImages(MagickWand *wand);
 
   double MagickGetImageTotalInkDensity(MagickWand *wand);
+
+  MagickBooleanType MagickHaldClutImage(MagickWand *wand,
+  const MagickWand *hald_wand);
 ]])
 
 local get_flags

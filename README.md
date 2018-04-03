@@ -637,6 +637,12 @@ Returns the chromaticy white point.
 -----
 Returns the number of images associated with a magick wand.
 
+`img:hald_clut(hald_wand)`
+-----
+Replaces colors in the image from a Hald color lookup table. A Hald color lookup table is a 3-dimensional color cube 
+mapped to 2 dimensions. Create it with the HALD coder. You can apply any color transformation to the Hald image and 
+then use this method to apply the transform to the image.
+
 [Back to TOC](#table-of-contents)
 
 Authors

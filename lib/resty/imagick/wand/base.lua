@@ -749,4 +749,8 @@ _M.get_total_ink_density = function(self)
     return lib.MagickGetImageTotalInkDensity(self.wand)
 end
 
+_M.hald_clut = function(self, hald_wand)
+    return handle_result(self, lib.MagickHaldClutImage(self.wand, hald_wand))
+end
+
 return _M
