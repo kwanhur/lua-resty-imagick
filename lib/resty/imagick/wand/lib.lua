@@ -239,6 +239,9 @@ ffi.cdef([[  typedef void MagickWand;
 
   MagickBooleanType MagickForwardFourierTransformImage(MagickWand *wand,
   const MagickBooleanType magnitude);
+  MagickBooleanType MagickInverseFourierTransformImage(
+  MagickWand *magnitude_wand,MagickWand *phase_wand,
+  const MagickBooleanType magnitude);
 
   MagickBooleanType MagickFrameImage(MagickWand *wand,
   const PixelWand *matte_color,const size_t width,

@@ -545,6 +545,10 @@ _M.forward_fourier_transform = function(self, magnitude)
     return handle_result(self, lib.MagickForwardFourierTransformImage(self.wand, magnitude))
 end
 
+_M.inverse_fourier_transform = function(self, phase_wand, magnitude)
+    return handle_result(self, lib.MagickInverseFourierTransformImage(self.wand, phase_wand, magnitude))
+end
+
 _M.frame = function(self, matte_color, w, h, inner_level, outer_level, compose)
     return handle_result(self, lib.MagickFrameImage(self.wand, matte_color, w, h, inner_level, outer_level, composite_operators:to_int(compose .. "CompositeOp")))
 end

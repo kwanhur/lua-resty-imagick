@@ -448,9 +448,13 @@ the bordercolor member of image.
 -----
 Creates a horizontal mirror image by reflecting the pixels around the central y-axis.
 
-`img:forward_fourier_transform(mangitude)`
+`img:forward_fourier_transform(magnitude)`
 -----
 Implements the discrete Fourier transform (DFT) of the image either as a magnitude / phase or real / imaginary image pair.
+
+`img:inverse_fourier_transform(phase_wand, magnitude)`
+-----
+Implements the inverse discrete Fourier transform (DFT) of the image either as a magnitude / phase or real / imaginary image pair.
 
 `img:frame(matte_color, w, h, inner_level, outer_level, compose)`
 -----
