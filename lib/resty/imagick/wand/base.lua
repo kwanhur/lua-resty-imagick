@@ -723,4 +723,8 @@ _M.get_ticks_per_second = function(self)
     return lib.MagickGetImageTicksPerSecond(self.wand)
 end
 
+_M.get_image_type = function(self)
+    return image_type:to_str(lib.MagickGetImageType(self.wand))
+end
+
 return _M
