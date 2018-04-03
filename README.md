@@ -690,6 +690,14 @@ Resize image using a interpolative method.
 -----
 Adds a label to your image.
 
+`img:level(black_point, gamma, white_point)`
+-----
+Adjusts the levels of an image by scaling the colors falling between specified white and black points to 
+the full available quantum range. The parameters provided represent the black, mid, and white points. 
+The black point specifies the darkest color in the image. Colors darker than the black point are set to zero. 
+Mid point specifies a gamma correction to apply to the image. White point specifies the lightest color in the image. 
+Colors brighter than the white point are set to the maximum quantum value.
+
 [Back to TOC](#table-of-contents)
 
 Authors

@@ -374,6 +374,9 @@ ffi.cdef([[  typedef void MagickWand;
   MagickBooleanType MagickInterpolativeResizeImage(MagickWand *wand, const size_t columns,const size_t rows, const PixelInterpolateMethod method);
 
   MagickBooleanType MagickLabelImage(MagickWand *wand,const char *label);
+
+  MagickBooleanType MagickLevelImage(MagickWand *wand,
+  const double black_point,const double gamma,const double white_point)；
 ]])
 
 local get_flags
