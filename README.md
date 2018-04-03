@@ -619,7 +619,9 @@ Gets the image ticks-per-second.
 
 `img:get_image_type()`
 -----
-Gets the potential image type
+Gets the potential image type:
+
+Bilevel Grayscale GrayscaleMatte Palette PaletteMatte TrueColor TrueColorMatte ColorSeparation ColorSeparationMatte
 
 `img:get_units()`
 -----
@@ -654,6 +656,12 @@ Returns True if the wand has more images when traversing the list in the reverse
 `img:identify()`
 -----
 Identifies an image by printing its attributes to the file. Attributes include the image width, height, size, and others.
+
+`img:identify_type()`
+-----
+Gets the potential image type:
+
+Bilevel Grayscale GrayscaleMatte Palette PaletteMatte TrueColor TrueColorMatte ColorSeparation ColorSeparationMatte
 
 [Back to TOC](#table-of-contents)
 

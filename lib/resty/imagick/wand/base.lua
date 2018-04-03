@@ -768,4 +768,8 @@ _M.identify = function(self)
     return iden
 end
 
+_M.identify_type = function(self)
+    return image_type:to_str(lib.MagickIdentifyImageType(self.wand))
+end
+
 return _M
