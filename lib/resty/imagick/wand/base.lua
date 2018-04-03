@@ -800,4 +800,8 @@ _M.linear_stretch = function(self, black_point, white_point)
     return handle_result(self, lib.MagickLinearStretchImage(self.wand, black_point, white_point))
 end
 
+_M.liquid_rescale = function(self, columns, rows, delta_x, rigidity)
+    return handle_result(self, lib.MagickLiquidRescaleImage(columns, rows, delta_x, rigidity))
+end
+
 return _M

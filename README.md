@@ -702,6 +702,10 @@ Colors brighter than the white point are set to the maximum quantum value.
 -----
 Stretches with saturation the image intensity.
 
+`img:liquid_rescale(columns, rows, delta_x, rigidity)`
+-----
+Rescales image with seam carving.
+
 [Back to TOC](#table-of-contents)
 
 Authors
