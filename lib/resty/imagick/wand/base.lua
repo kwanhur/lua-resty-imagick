@@ -745,4 +745,8 @@ _M.get_number = function(self)
     return lib.MagickGetNumberImages(self.wand)
 end
 
+_M.get_total_ink_density = function(self)
+    return lib.MagickGetImageTotalInkDensity(self.wand)
+end
+
 return _M
