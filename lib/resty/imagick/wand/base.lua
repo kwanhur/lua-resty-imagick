@@ -718,4 +718,8 @@ _M.get_signature = function(self)
     return signature
 end
 
+_M.get_ticks_per_second = function(self)
+    return lib.MagickGetImageTicksPerSecond(self.wand)
+end
+
 return _M

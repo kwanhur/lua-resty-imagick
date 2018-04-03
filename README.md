@@ -613,6 +613,10 @@ Gets the image scene.
 -----
 Generates an SHA-256 message digest for the image pixel stream.
 
+`img:get_ticks_per_second()`
+-----
+Gets the image ticks-per-second.
+
 [Back to TOC](#table-of-contents)
 
 Authors

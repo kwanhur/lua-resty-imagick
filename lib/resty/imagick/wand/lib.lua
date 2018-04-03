@@ -335,6 +335,8 @@ ffi.cdef([[  typedef void MagickWand;
   size_t MagickGetImageScene(MagickWand *wand);
 
   char *MagickGetImageSignature(MagickWand *wand);
+
+  size_t MagickGetImageTicksPerSecond(MagickWand *wand);
 ]])
 
 local get_flags
