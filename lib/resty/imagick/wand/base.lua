@@ -772,4 +772,8 @@ _M.identify_type = function(self)
     return image_type:to_str(lib.MagickIdentifyImageType(self.wand))
 end
 
+_M.implode = function(self, radius, method)
+    return handle_result(self, lib.MagickImplodeImage(self.wand, radius, pixel_interpolate_method:to_int(method .. "InterpolatePixel")))
+end
+
 return _M

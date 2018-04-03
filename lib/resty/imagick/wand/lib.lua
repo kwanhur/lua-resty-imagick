@@ -359,6 +359,9 @@ ffi.cdef([[  typedef void MagickWand;
 
   const char *MagickIdentifyImage(MagickWand *wand);
   ImageType MagickIdentifyImageType(MagickWand *wand);
+
+  MagickBooleanType MagickImplodeImage(MagickWand *wand,
+  const double radius,const PixelInterpolateMethod method);
 ]])
 
 local get_flags

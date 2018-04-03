@@ -663,6 +663,11 @@ Gets the potential image type:
 
 Bilevel Grayscale GrayscaleMatte Palette PaletteMatte TrueColor TrueColorMatte ColorSeparation ColorSeparationMatte
 
+`img:implode(radius, method)`
+-----
+Creates a new image that is a copy of an existing one with the image pixels "implode" by the specified percentage. 
+It allocates the memory necessary for the new Image structure and returns a pointer to the new image.
+
 [Back to TOC](#table-of-contents)
 
 Authors
