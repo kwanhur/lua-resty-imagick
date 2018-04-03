@@ -757,4 +757,8 @@ _M.has_next = function(self)
     return handle_result(self, lib.MagickHasNextImage(self.wand))
 end
 
+_M.has_previous = function(self)
+    return handle_result(self, lib.MagickHasPreviousImage(self.wand))
+end
+
 return _M

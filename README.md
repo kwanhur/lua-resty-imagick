@@ -647,6 +647,10 @@ then use this method to apply the transform to the image.
 -----
 Returns True if the wand has more images when traversing the list in the forward direction.
 
+`img:has_previous()`
+-----
+Returns True if the wand has more images when traversing the list in the reverse direction.
+
 [Back to TOC](#table-of-contents)
 
 Authors

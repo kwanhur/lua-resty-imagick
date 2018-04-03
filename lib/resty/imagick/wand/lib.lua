@@ -355,6 +355,7 @@ ffi.cdef([[  typedef void MagickWand;
   const MagickWand *hald_wand);
 
   MagickBooleanType MagickHasNextImage(MagickWand *wand);
+  MagickBooleanType MagickHasPreviousImage(MagickWand *wand);
 ]])
 
 local get_flags
