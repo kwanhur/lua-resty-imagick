@@ -917,6 +917,11 @@ again starting with the first image in list. Images added at this point are prep
 Also at that point any images added to the wand using add() or read() will be prepended before the first image. 
 In this sense the condition is not quite exactly the same as reset_iterator().
 
+`img:quantize(num_corlors, colorspace, treedepth, method, measure_error)`
+------
+Analyzes the colors within a reference image and chooses a fixed number of colors to represent the image. The goal of 
+the algorithm is to minimize the color difference between the input and output image while minimizing the processing time.
+
 [Back to TOC](#table-of-contents)
 
 Authors

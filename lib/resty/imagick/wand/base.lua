@@ -954,4 +954,8 @@ _M.previous = function(self)
     return lib.MagickPreviousImage(self.wand)
 end
 
+_M.quantize = function(self, num_corlors, colorspace, treedepth, method, measure_error)
+    return handle_result(self, lib.MagickQuantizeImage(self.wand, num_corlors, colorspace_type:to_int(colorspace .. "Colorspace"), treedepth, distort_method:to_int(method .. "DitherMethod"), measure_error))
+end
+
 return _M
