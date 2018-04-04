@@ -363,6 +363,22 @@ local ResolutionType = enum({
     "PixelsPerCentimeterResolution"
 })
 
+local MetricType = enum({
+    [0] = "UndefinedErrorMetric",
+    "AbsoluteErrorMetric",
+    "FuzzErrorMetric",
+    "MeanAbsoluteErrorMetric",
+    "MeanErrorPerPixelErrorMetric",
+    "MeanSquaredErrorMetric",
+    "NormalizedCrossCorrelationErrorMetric",
+    "PeakAbsoluteErrorMetric",
+    "PeakSignalToNoiseRatioErrorMetric",
+    "PerceptualHashErrorMetric",
+    "RootMeanSquaredErrorMetric",
+    "StructuralSimilarityErrorMetric",
+    "StructuralDissimilarityErrorMetric"
+})
+
 local PixelInterpolateMethod = enum({
     [0] = "UndefinedInterpolatePixel",
     "AverageInterpolatePixel",
@@ -458,6 +474,8 @@ _M.endian_type = EndianType
 _M.image_type = ImageType
 
 _M.resolution_type = ResolutionType
+
+_M.metric_type = MetricType
 
 _M.pixel_interpolate_method = PixelInterpolateMethod
 
