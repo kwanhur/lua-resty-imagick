@@ -715,6 +715,10 @@ sharpening with an unsharp mask, however the mask is instead created using an im
 -----
 A convenience method that scales an image proportionally to twice its original size.
 
+`img:minify()`
+-----
+A convenience method that scales an image proportionally to one-half its original size.
+
 `img:merge_layers(method)`
 -----
 Composes all the image layers from the current given image onward to produce a single image of the merged layers.
