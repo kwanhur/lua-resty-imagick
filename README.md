@@ -940,6 +940,13 @@ Members width and height of raise_info define the width of the vertical and hori
 -----
 Changes the value of individual pixels based on the intensity of each pixel compared to threshold. The result is a high-contrast, two color image.
 
+`img:read(filename)`
+-----
+Reads an image or image sequence. The images are inserted just before the current image pointer position.
+
+Use set_first_iterator(), to insert new images before all the current images in the wand, set_last_iterator() to append 
+add to the end, set_iterator_index() to place images just after the given index.
+
 [Back to TOC](#table-of-contents)
 
 Authors

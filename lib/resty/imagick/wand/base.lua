@@ -971,7 +971,11 @@ _M.raise = function(self, w, h, x, y, raise)
 end
 
 _M.random_threshold = function(self, low, high)
-    return handle_result(self.wand, low, high)
+    return handle_result(self, lib.MagickRandomThresholdImage(self.wand, low, high))
+end
+
+_M.read = function(self, filename)
+    return handle_result(self, lib.MagickReadImage(self.wand, filename))
 end
 
 return _M

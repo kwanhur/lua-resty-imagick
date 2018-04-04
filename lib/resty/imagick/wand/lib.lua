@@ -521,6 +521,8 @@ ffi.cdef([[
 
   MagickBooleanType MagickRandomThresholdImage(MagickWand *wand,
   const double low,const double high);
+
+  MagickBooleanType MagickReadImage(MagickWand *wand,const char *filename);
 ]])
 
 local get_flags
