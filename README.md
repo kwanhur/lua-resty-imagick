@@ -373,6 +373,10 @@ assigned in order to the specified hannels of the combined image. The typical or
 -----
 Adds a comment to your image.
 
+`img:compare_layers(method)`
+-----
+Compares each image with the next in a sequence and returns the maximum bounding region of any pixel differences it discovers.
+
 `img:contrast(sharpen)`
 -----
 Enhances the intensity differences between the lighter and darker elements of the image. 

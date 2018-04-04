@@ -432,6 +432,10 @@ _M.comment = function(self, comment)
     return handle_result(self, lib.MagickCommentImage(self.wand, comment))
 end
 
+_M.compare_layers = function(self, method)
+    return lib.MagickCompareImagesLayers(self.wand, layer_method:to_int(method .. "Layer"))
+end
+
 _M.contrast = function(self, sharpen)
     return handle_result(self, lib.MagickContrastImage(self.wand, sharpen))
 end

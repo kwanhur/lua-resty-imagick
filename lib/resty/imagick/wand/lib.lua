@@ -190,6 +190,9 @@ ffi.cdef([[  typedef void MagickWand;
   MagickBooleanType MagickCommentImage(MagickWand *wand,
   const char *comment);
 
+  MagickWand *MagickCompareImagesLayers(MagickWand *wand,
+  const LayerMethod method);
+
   MagickBooleanType MagickContrastImage(MagickWand *wand,
   const MagickBooleanType sharpen);
 
