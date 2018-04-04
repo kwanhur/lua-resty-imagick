@@ -496,6 +496,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickPosterizeImage(MagickWand *wand,
   const size_t levels,const DitherMethod method);
+
+  MagickWand *MagickPreviewImages(MagickWand *wand,
+  const PreviewType preview);
 ]])
 
 local get_flags

@@ -899,6 +899,11 @@ Simulates a Polaroid picture.
 -----
 Reduces the image to a limited number of color level.
 
+`img:preview(preview)`
+-----
+Tiles 9 thumbnails of the specified image with an image processing operation applied at varying strengths. 
+This helpful to quickly pin-point an appropriate parameter for an image processing operation.
+
 [Back to TOC](#table-of-contents)
 
 Authors

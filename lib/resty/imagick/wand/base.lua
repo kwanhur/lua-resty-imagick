@@ -946,4 +946,8 @@ _M.posterize = function(self, levels, method)
     return handle_result(self, lib.MagickPosterizeImage(self.wand, levels, distort_method:to_int(method .. "DitherMethod")))
 end
 
+_M.preview = function(self, preview)
+    return lib.MagickPreviewImages(self.wand, preview_type:to_int(preview .. "Preview"))
+end
+
 return _M
