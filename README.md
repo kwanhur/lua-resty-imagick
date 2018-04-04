@@ -895,6 +895,10 @@ Pings an image or image sequence from an open file descriptor.
 -----
 Simulates a Polaroid picture.
 
+`img:posterize(levels, method)`
+-----
+Reduces the image to a limited number of color level.
+
 [Back to TOC](#table-of-contents)
 
 Authors

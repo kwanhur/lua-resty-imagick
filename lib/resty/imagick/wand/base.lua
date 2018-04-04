@@ -34,6 +34,7 @@ local resolution_type = wand_data.resolution_type
 local metric_type = wand_data.metric_type
 local pixel_interpolate_method = wand_data.pixel_interpolate_method
 local morphology_method = wand_data.morphology_method
+local dither_method = wand_data.dither_method
 local rendering_intent = wand_data.rendering_intent
 local montage_mode = wand_data.montage_mode
 
@@ -938,6 +939,10 @@ end
 
 _M.polariod = function(self, drawing, caption, angle, method)
     return handle_result(self, lib.MagickPolaroidImage(self.wand, drawing, caption, angle, pixel_interpolate_method:to_int(method .. "InterpolatePixel")))
+end
+
+_M.posterize = function(self, levels, method)
+    return handle_result(self, lib.MagickPosterizeImage(self.wand, levels, distort_method:to_int(method .. "DitherMethod")))
 end
 
 return _M

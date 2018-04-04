@@ -455,6 +455,13 @@ local MorphologyMethod = enum({
     "VoronoiMorphology"
 })
 
+local DitherMethod = enum({
+    [0] = "UndefinedDitherMethod",
+    "NoDitherMethod",
+    "RiemersmaDitherMethod",
+    "FloydSteinbergDitherMethod"
+})
+
 _M.composite_operators = CompositeOperators
 
 _M.gravity_type = GravityType
@@ -494,6 +501,8 @@ _M.metric_type = MetricType
 _M.pixel_interpolate_method = PixelInterpolateMethod
 
 _M.morphology_method = MorphologyMethod
+
+_M.dither_method = DitherMethod
 
 _M.rendering_intent = RenderingIntent
 
