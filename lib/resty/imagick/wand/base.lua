@@ -813,4 +813,8 @@ _M.magnify = function(self)
     return handle_result(self, lib.MagickMagnifyImage(self.wand))
 end
 
+_M.merge_layers = function(self, method)
+    return lib.MagickMergeImageLayers(self.wand, layer_method:to_int(method .. "Layer"))
+end
+
 return _M

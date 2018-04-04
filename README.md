@@ -715,6 +715,14 @@ sharpening with an unsharp mask, however the mask is instead created using an im
 -----
 A convenience method that scales an image proportionally to twice its original size.
 
+`img:merge_layers(method)`
+-----
+Composes all the image layers from the current given image onward to produce a single image of the merged layers.
+
+The inital canvas's size depends on the given LayerMethod, and is initialized using the first images background color. 
+The images are then compositied onto that image in sequence using the given composition that has been assigned to 
+each individual image.
+
 [Back to TOC](#table-of-contents)
 
 Authors
