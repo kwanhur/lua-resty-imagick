@@ -908,4 +908,8 @@ _M.oil_paint = function(self, radius, sigma)
     return handle_result(self, lib.MagickOilPaintImage(radius, sigma))
 end
 
+_M.opaque_paint = function(self, target, fill, fuzz, invert)
+    return handle_result(self, lib.MagickOpaquePaintImage(self.wand, target, fill, fuzz, invert))
+end
+
 return _M

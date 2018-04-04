@@ -857,6 +857,10 @@ You can also reduce the influence of a particular channel with a gamma value of 
 Applies a special effect filter that simulates an oil painting. Each pixel is replaced by the 
 most frequent color occurring in a circular region defined by radius.
 
+`img:opaque_paint(target, fill, fuzz, invert)`
+-----
+Changes any pixel that matches color with the color defined by fill.
+
 [Back to TOC](#table-of-contents)
 
 Authors
