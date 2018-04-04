@@ -357,6 +357,13 @@ which includes the offset, slope, and power for each of the RGB channels as well
 -----
 Blends the fill color with each pixel in the image.
 
+`img:color_matrix(color_matrix)`
+-----
+Apply color transformation to an image. The method permits saturation changes, hue rotation, luminance to alpha, and 
+various other effects. Although variable-sized transformation matrices can be used, typically one uses a 5x5 matrix for 
+an RGBA image and a 6x6 for CMYKA (or RGBA with offsets). The matrix is similar to those used by Adobe Flash except 
+offsets are in column 6 rather than 5 (in support of CMYKA images) and offsets are normalized (divide Flash offset by 255).
+
 `img:comment(comment)`
 -----
 Adds a comment to your image.

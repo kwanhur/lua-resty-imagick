@@ -181,6 +181,9 @@ ffi.cdef([[  typedef void MagickWand;
   MagickBooleanType MagickColorizeImage(MagickWand *wand,
   const PixelWand *colorize,const PixelWand *blend);
 
+  MagickBooleanType MagickColorMatrixImage(MagickWand *wand,
+  const KernelInfo *color_matrix);
+
   MagickBooleanType MagickCommentImage(MagickWand *wand,
   const char *comment);
 

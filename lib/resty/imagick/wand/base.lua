@@ -420,6 +420,10 @@ _M.colorize = function(self, colorize, blend)
     return handle_result(self, lib.MagickColorizeImage(self.wand, colorize, blend))
 end
 
+_M.color_matrix = function(self, color_matrix)
+    return handle_result(self, lib.MagickColorMatrixImage(self.wand, color_matrix))
+end
+
 _M.comment = function(self, comment)
     return handle_result(self, lib.MagickCommentImage(self.wand, comment))
 end
