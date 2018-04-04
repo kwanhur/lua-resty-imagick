@@ -442,7 +442,11 @@ _M.compare = function(self, reference, metric, distortion)
 end
 
 _M.composite_gravity = function(self, source, compose, gravity)
-    return handle_result(self, lib.MagickCompositeImageGravity(self.wand, source, compression_type:to_int(compose .. "CompositeOp"), gravity_type:to_int(gravity .. "Gravity")))
+    return handle_result(self, lib.MagickCompositeImageGravity(self.wand, source, composite_operators:to_int(compose .. "CompositeOp"), gravity_type:to_int(gravity .. "Gravity")))
+end
+
+_M.composite_layers = function(self, source, compose, x, y)
+    return handle_result(self, lib.MagickCompositeLayers(self.wand, source, composite_operators:to_int(compose .. "CompositeOp"), x, y))
 end
 
 _M.contrast = function(self, sharpen)

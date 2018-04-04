@@ -201,6 +201,10 @@ ffi.cdef([[  typedef void MagickWand;
   const MagickWand *source_wand,const CompositeOperator compose,
   const GravityType gravity);
 
+  MagickBooleanType MagickCompositeLayers(MagickWand *wand,
+  const MagickWand *source_wand, const CompositeOperator compose,
+  const ssize_t x,const ssize_t y);
+
   MagickBooleanType MagickContrastImage(MagickWand *wand,
   const MagickBooleanType sharpen);
 

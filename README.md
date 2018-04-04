@@ -377,6 +377,27 @@ Adds a comment to your image.
 -----
 Compares each image with the next in a sequence and returns the maximum bounding region of any pixel differences it discovers.
 
+`img:composite_layers(source, compose, x, y)`
+-----
+Composite the images in the source wand over the images in the destination wand in sequence, starting with the current image in both lists.
+
+Each layer from the two image lists are composted together until the end of one of the image lists is reached. 
+The offset of each composition is also adjusted to match the virtual canvas offsets of each layer. As such the 
+given offset is relative to the virtual canvas, and not the actual image.
+
+Composition uses given x and y offsets, as the 'origin' location of the source images virtual canvas (not the real image) 
+allowing you to compose a list of 'layer images' into the destiantioni images. This makes it well sutiable for 
+directly composing 'Clears Frame Animations' or 'Coaleased Animations' onto a static or other 'Coaleased Animation' 
+destination image list. GIF disposal handling is not looked at.
+
+Special case:- If one of the image sequences is the last image (just a single image remaining), that image is 
+repeatally composed with all the images in the other image list. Either the source or destination lists may be the single image, for this situation.
+
+In the case of a single destination image (or last image given), that image will ve cloned to match the number of 
+images remaining in the source image list.
+
+This is equivelent to the "-layer Composite" Shell API operator.
+
 `img:compare(reference, metric, distortion)`
 -----
 Compares an image to a reconstructed image and returns the specified difference image.
