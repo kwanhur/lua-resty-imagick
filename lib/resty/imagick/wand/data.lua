@@ -159,6 +159,39 @@ local StorageType = enum({
     "ShortPixel"
 })
 
+local PreivewType = enum({
+    [0] = "UndefinedPreview",
+    "RotatePreview",
+    "ShearPreview",
+    "RollPreview",
+    "HuePreview",
+    "SaturationPreview",
+    "BrightnessPreview",
+    "GammaPreview",
+    "SpiffPreview",
+    "DullPreview",
+    "GrayscalePreview",
+    "QuantizePreview",
+    "DespecklePreview",
+    "ReduceNoisePreview",
+    "AddNoisePreview",
+    "SharpenPreview",
+    "BlurPreview",
+    "ThresholdPreview",
+    "EdgeDetectPreview",
+    "SpreadPreview",
+    "SolarizePreview",
+    "ShadePreview",
+    "RaisePreview",
+    "SegmentPreview",
+    "SwirlPreview",
+    "ImplodePreview",
+    "WavePreview",
+    "OilPaintPreview",
+    "CharcoalDrawingPreview",
+    "JPEGPreview"
+})
+
 local DistortMethod = enum({
     [0] = "UndefinedDistortion",
     "AffineDistortion",
@@ -497,6 +530,8 @@ _M.image_type = ImageType
 _M.resolution_type = ResolutionType
 
 _M.metric_type = MetricType
+
+_M.preview_type = PreivewType
 
 _M.pixel_interpolate_method = PixelInterpolateMethod
 

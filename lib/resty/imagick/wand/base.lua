@@ -32,6 +32,7 @@ local endian_type = wand_data.endian_type
 local image_type = wand_data.image_type
 local resolution_type = wand_data.resolution_type
 local metric_type = wand_data.metric_type
+local preview_type = wand_data.preview_type
 local pixel_interpolate_method = wand_data.pixel_interpolate_method
 local morphology_method = wand_data.morphology_method
 local dither_method = wand_data.dither_method
