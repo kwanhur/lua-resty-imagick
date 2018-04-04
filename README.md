@@ -852,6 +852,11 @@ Enhances the contrast of a color image by adjusting the pixels color to span the
 
 You can also reduce the influence of a particular channel with a gamma value of 0.
 
+`img:oil_paint(radius, sigma)`
+-----
+Applies a special effect filter that simulates an oil painting. Each pixel is replaced by the 
+most frequent color occurring in a circular region defined by radius.
+
 [Back to TOC](#table-of-contents)
 
 Authors

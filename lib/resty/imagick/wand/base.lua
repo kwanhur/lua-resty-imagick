@@ -904,4 +904,8 @@ _M.normalize = function(self)
     return handle_result(self, lib.MagickNormalizeImage(self.wand))
 end
 
+_M.oil_paint = function(self, radius, sigma)
+    return handle_result(self, lib.MagickOilPaintImage(radius, sigma))
+end
+
 return _M
