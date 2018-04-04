@@ -884,4 +884,8 @@ _M.morphology = function(self, method, iterations, kernel)
     return handle_result(self, lib.MagickMorphologyImage(self.wand, morphology_method:to_int(method .. "Morphology"), iterations, kernel))
 end
 
+_M.motion_blur = function(self, radius, sigma, angle)
+    return handle_result(self, lib.MagickMotionBlurImage(self.wand, radius, sigma, angle))
+end
+
 return _M

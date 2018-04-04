@@ -435,6 +435,9 @@ ffi.cdef([[  typedef void MagickWand;
 
   MagickBooleanType MagickMorphologyImage(MagickWand *wand,
   MorphologyMethod method,const ssize_t iterations,KernelInfo *kernel);
+
+  MagickBooleanType MagickMotionBlurImage(MagickWand *wand,
+  const double radius,const double sigma,const double angle);
 ]])
 
 local get_flags

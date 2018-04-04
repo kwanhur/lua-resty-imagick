@@ -818,6 +818,12 @@ a meta-morphosis from one image to the next.
 -----
 Applies a user supplied kernel to the image according to the given mophology method.
 
+`img:motion_blur(radius, sigma, angle)`
+-----
+Simulates motion blur. We convolve the image with a Gaussian operator of the given radius and standard deviation (sigma). 
+For reasonable results, radius should be larger than sigma. Use a radius of 0 and MotionBlurImage() 
+selects a suitable radius for you. Angle gives the angle of the blurring motion.
+
 [Back to TOC](#table-of-contents)
 
 Authors
