@@ -966,4 +966,8 @@ _M.ratational_blur = function(self, angle)
     return handle_result(self, lib.MagickRotationalBlurImage(self.wand, angle))
 end
 
+_M.raise = function(self, w, h, x, y, raise)
+    return handle_result(self, lib.MagickRaiseImage(self.wand, w, h, x, y, raise))
+end
+
 return _M

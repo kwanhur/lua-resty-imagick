@@ -514,6 +514,10 @@ ffi.cdef([[
 
   MagickBooleanType MagickRotationalBlurImage(MagickWand *wand,
   const double angle);
+
+  MagickBooleanType MagickRaiseImage(MagickWand *wand,
+  const size_t width,const size_t height,const ssize_t x,
+  const ssize_t y,const MagickBooleanType raise);
 ]])
 
 local get_flags

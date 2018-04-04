@@ -931,6 +931,11 @@ the algorithm is to minimize the color difference between the input and output i
 ----
 Rotational blurs an image.
 
+`img:raise(w, h, x, y, raise)`
+-----
+Creates a simulated three-dimensional button-like effect by lightening and darkening the edges of the image. 
+Members width and height of raise_info define the width of the vertical and horizontal edge of the effect.
+
 [Back to TOC](#table-of-contents)
 
 Authors
