@@ -202,6 +202,26 @@ local VirtualPixelMethod = enum({
     "CheckerTileVirtualPixelMethod"
 })
 
+local LayerMethod = enum({
+    [0] = "UndefinedLayer",
+    "CoalesceLayer",
+    "CompareAnyLayer",
+    "CompareClearLayer",
+    "CompareOverlayLayer",
+    "DisposeLayer",
+    "OptimizeLayer",
+    "OptimizeImageLayer",
+    "OptimizePlusLayer",
+    "OptimizeTransLayer",
+    "RemoveDupsLayer",
+    "RemoveZeroLayer",
+    "CompositeLayer",
+    "MergeLayer",
+    "FlattenLayer",
+    "MosaicLayer",
+    "TrimBoundsLayer"
+})
+
 local EvaluateOperator = enum({
     [0] = "UndefinedEvaluateOperator",
     "AbsEvaluateOperator",
@@ -381,6 +401,8 @@ _M.storage_type = StorageType
 _M.distort_method = DistortMethod
 
 _M.virtual_pixel_method = VirtualPixelMethod
+
+_M.layer_method = LayerMethod
 
 _M.evaluate_operator = EvaluateOperator
 
