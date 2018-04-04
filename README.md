@@ -706,6 +706,11 @@ Stretches with saturation the image intensity.
 -----
 Rescales image with seam carving.
 
+`img:local_contrast(radius, strenght)`
+-----
+Attempts to increase the appearance of large-scale light-dark transitions. Local contrast enhancement works similarly to 
+sharpening with an unsharp mask, however the mask is instead created using an image with a greater blur distance.
+
 [Back to TOC](#table-of-contents)
 
 Authors

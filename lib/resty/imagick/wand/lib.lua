@@ -382,6 +382,8 @@ ffi.cdef([[  typedef void MagickWand;
   const double black_point,const double white_point);
 
   MagickBooleanType MagickLiquidRescaleImage(MagickWand *wand, const size_t columns,const size_t rows, const double delta_x,const double rigidity);
+
+  MagickBooleanType MagickLocalContrastImage(MagickWand *wand, const double radius,const double strength);
 ]])
 
 local get_flags
