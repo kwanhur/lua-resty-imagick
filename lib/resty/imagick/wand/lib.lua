@@ -518,6 +518,9 @@ ffi.cdef([[
   MagickBooleanType MagickRaiseImage(MagickWand *wand,
   const size_t width,const size_t height,const ssize_t x,
   const ssize_t y,const MagickBooleanType raise);
+
+  MagickBooleanType MagickRandomThresholdImage(MagickWand *wand,
+  const double low,const double high);
 ]])
 
 local get_flags

@@ -970,4 +970,8 @@ _M.raise = function(self, w, h, x, y, raise)
     return handle_result(self, lib.MagickRaiseImage(self.wand, w, h, x, y, raise))
 end
 
+_M.random_threshold = function(self, low, high)
+    return handle_result(self.wand, low, high)
+end
+
 return _M

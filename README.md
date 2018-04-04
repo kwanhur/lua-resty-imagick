@@ -936,6 +936,10 @@ Rotational blurs an image.
 Creates a simulated three-dimensional button-like effect by lightening and darkening the edges of the image. 
 Members width and height of raise_info define the width of the vertical and horizontal edge of the effect.
 
+`img:random_threshold(low, high)`
+-----
+Changes the value of individual pixels based on the intensity of each pixel compared to threshold. The result is a high-contrast, two color image.
+
 [Back to TOC](#table-of-contents)
 
 Authors
