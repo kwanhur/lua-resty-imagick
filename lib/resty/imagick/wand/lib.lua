@@ -438,6 +438,9 @@ ffi.cdef([[  typedef void MagickWand;
 
   MagickBooleanType MagickMotionBlurImage(MagickWand *wand,
   const double radius,const double sigma,const double angle);
+
+  MagickBooleanType MagickNegateImage(MagickWand *wand,
+  const MagickBooleanType gray);
 ]])
 
 local get_flags

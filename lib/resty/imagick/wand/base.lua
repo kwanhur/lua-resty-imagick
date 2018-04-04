@@ -888,4 +888,8 @@ _M.motion_blur = function(self, radius, sigma, angle)
     return handle_result(self, lib.MagickMotionBlurImage(self.wand, radius, sigma, angle))
 end
 
+_M.negate = function(self, gray)
+    return handle_result(self, lib.MagickNegateImage(self.wand, gray))
+end
+
 return _M

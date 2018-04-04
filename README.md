@@ -824,6 +824,12 @@ Simulates motion blur. We convolve the image with a Gaussian operator of the giv
 For reasonable results, radius should be larger than sigma. Use a radius of 0 and MotionBlurImage() 
 selects a suitable radius for you. Angle gives the angle of the blurring motion.
 
+`img:negate(gray)`
+-----
+Negates the colors in the reference image. The Grayscale option means that only grayscale values within the image are negated.
+
+You can also reduce the influence of a particular channel with a gamma value of 0.
+
 [Back to TOC](#table-of-contents)
 
 Authors
