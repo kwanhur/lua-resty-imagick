@@ -333,6 +333,26 @@ inside the path. Id may be a number if preceded with #, to work on a numbered pa
 -----
 Replaces colors in the image from a color lookup table.
 
+`img:color_decision_list()`
+-----
+Accepts a lightweight Color Correction Collection (CCC) file which solely contains one or more color corrections and 
+applies the color correction to the image. Here is a sample CCC file:
+
+    <ColorCorrectionCollection xmlns="urn:ASC:CDL:v1.2">
+    <ColorCorrection id="cc03345">
+          <SOPNode>
+               <Slope> 0.9 1.2 0.5 </Slope>
+               <Offset> 0.4 -0.5 0.6 </Offset>
+               <Power> 1.0 0.8 1.5 </Power>
+          </SOPNode>
+          <SATNode>
+               <Saturation> 0.85 </Saturation>
+          </SATNode>
+    </ColorCorrection>
+    </ColorCorrectionCollection>
+w
+which includes the offset, slope, and power for each of the RGB channels as well as the saturation.
+
 `img:comment(comment)`
 -----
 Adds a comment to your image.

@@ -404,6 +404,18 @@ _M.clut = function(self, clut, method)
     return handle_result(self, lib.MagickClutImage(self.wand, clut, pixel_interpolate_method:to_int(method .. "InterpolatePixel")))
 end
 
+_M.color_decision_list = function(self)
+    local col = ffi.new("char *[?]")
+    local ok, msg, code = lib.MagickColorDecisionListImage(self.wand, col)
+    if ok then
+        local co = ffi.string(col)
+        lib.MagickRelinquishMemory(col)
+        return co
+    else
+        return nil, msg, code
+    end
+end
+
 _M.comment = function(self, comment)
     return handle_result(self, lib.MagickCommentImage(self.wand, comment))
 end
