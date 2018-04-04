@@ -13,7 +13,11 @@ local type = type
 local pcall = pcall
 local error = error
 
-ffi.cdef([[  typedef void MagickWand;
+ffi.cdef([[
+  struct _IO_FILE;
+  typedef struct _IO_FILE FILE;
+
+  typedef void MagickWand;
   typedef void PixelWand;
   typedef void DrawingWand;
   typedef void KernelInfo;
@@ -467,6 +471,8 @@ ffi.cdef([[  typedef void MagickWand;
   MagickBooleanType MagickPingImage(MagickWand *wand,const char *filename);
   MagickBooleanType MagickPingImageBlob(MagickWand *wand,
   const void *blob,const size_t length);
+
+  MagickBooleanType MagickPingImageFile(MagickWand *wand,FILE *file);
 ]])
 
 local get_flags

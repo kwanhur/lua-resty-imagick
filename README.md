@@ -887,6 +887,10 @@ It is designed to efficiently obtain this information from a file without readin
 -----
 Pings an image or image sequence from a blob.
 
+`img:ping_file(file)`
+-----
+Pings an image or image sequence from an open file descriptor.
+
 [Back to TOC](#table-of-contents)
 
 Authors
