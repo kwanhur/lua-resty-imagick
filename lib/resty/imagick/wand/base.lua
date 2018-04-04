@@ -900,4 +900,8 @@ _M.next = function(self)
     return handle_result(self, lib.MagickNextImage(self.wand))
 end
 
+_M.normalize = function(self)
+    return handle_result(self, lib.MagickNormalizeImage(self.wand))
+end
+
 return _M

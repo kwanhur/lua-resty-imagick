@@ -846,6 +846,12 @@ When the above condition (end of image list) is reached, the iterator is automat
 previous() to again iterate over the images in the reverse direction, starting with the last image (again). You can 
 jump to this condition immeditally using set_last_iterator().
 
+`img:normalize()`
+-----
+Enhances the contrast of a color image by adjusting the pixels color to span the entire range of colors available
+
+You can also reduce the influence of a particular channel with a gamma value of 0.
+
 [Back to TOC](#table-of-contents)
 
 Authors
