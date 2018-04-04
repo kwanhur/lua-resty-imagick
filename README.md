@@ -830,6 +830,10 @@ Negates the colors in the reference image. The Grayscale option means that only 
 
 You can also reduce the influence of a particular channel with a gamma value of 0.
 
+`img:new_image(columns, rows, background)`
+-----
+Adds a blank image canvas of the specified size and background color to the wand.
+
 [Back to TOC](#table-of-contents)
 
 Authors

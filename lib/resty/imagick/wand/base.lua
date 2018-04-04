@@ -892,4 +892,8 @@ _M.negate = function(self, gray)
     return handle_result(self, lib.MagickNegateImage(self.wand, gray))
 end
 
+_M.new_image = function(self, columns, rows, background)
+    return handle_result(self, lib.MagickNewImage(self.wand, columns, rows, background))
+end
+
 return _M
