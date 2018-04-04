@@ -871,7 +871,12 @@ smallest cropped image to replace each frame, while preserving the results of th
 Takes a frame optimized GIF animation, and compares the overlayed pixels against the disposal image resulting from 
 all the previous frames in the animation. Any pixel that does not change the disposal image (and thus does not effect the outcome of an overlay) is made transparent.
 
-WARNING: This modifies the current images directly, rather than generate a new image sequence. 
+WARNING: This modifies the current images directly, rather than generate a new image sequence.
+ 
+`img:ordered_dither(threshold_map)`
+-----
+Performs an ordered dither based on a number of pre-defined dithering threshold maps, but over multiple intensity levels, 
+which can be different for different channels, according to the input arguments.
 
 [Back to TOC](#table-of-contents)
 

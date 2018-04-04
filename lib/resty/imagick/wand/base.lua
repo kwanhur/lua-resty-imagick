@@ -920,4 +920,8 @@ _M.optimize_transparency = function(self)
     return handle_result(self, lib.MagickOptimizeImageTransparency(self.wand))
 end
 
+_M.ordered_dither = function(self, threshold_map)
+    return handle_result(self, lib.MagickOrderedDitherImage(self.wand, threshold_map))
+end
+
 return _M
