@@ -523,6 +523,9 @@ ffi.cdef([[
   const double low,const double high);
 
   MagickBooleanType MagickReadImage(MagickWand *wand,const char *filename);
+
+  MagickBooleanType MagickReadImageBlob(MagickWand *wand,
+  const void *blob,const size_t length);
 ]])
 
 local get_flags

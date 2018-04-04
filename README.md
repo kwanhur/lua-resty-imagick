@@ -947,6 +947,10 @@ Reads an image or image sequence. The images are inserted just before the curren
 Use set_first_iterator(), to insert new images before all the current images in the wand, set_last_iterator() to append 
 add to the end, set_iterator_index() to place images just after the given index.
 
+`img:read_blob(blob)`
+-----
+Reads an image or image sequence from a blob. In all other respects it is like read().
+
 [Back to TOC](#table-of-contents)
 
 Authors
