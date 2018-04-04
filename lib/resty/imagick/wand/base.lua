@@ -32,6 +32,7 @@ local endian_type = wand_data.endian_type
 local image_type = wand_data.image_type
 local resolution_type = wand_data.resolution_type
 local pixel_interpolate_method = wand_data.pixel_interpolate_method
+local morphology_method = wand_data.morphology_method
 local rendering_intent = wand_data.rendering_intent
 local montage_mode = wand_data.montage_mode
 
@@ -828,6 +829,10 @@ end
 
 _M.morph = function(self, num_frames)
     return lib.MagickMorphImages(self.wand, num_frames)
+end
+
+_M.morphology = function(self, method, iterations, kernel)
+    return handle_result(self, lib.MagickMorphologyImage(self.wand, morphology_method:to_int(method .. "Morphology"), iterations, kernel))
 end
 
 return _M

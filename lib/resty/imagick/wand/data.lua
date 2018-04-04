@@ -393,6 +393,38 @@ local MontageMode = enum({
     "ConcatenateMode"
 })
 
+local MorphologyMethod = enum({
+    [0] = "UndefinedMorphology",
+    --/* Convolve / Correlate weighted sums */
+    "ConvolveMorphology",
+    "CorrelateMorphology",
+    --/* Low-level Morphology methods */
+    "ErodeMorphology",
+    "DilateMorphology",
+    "ErodeIntensityMorphology",
+    "DilateIntensityMorphology",
+    "IterativeDistanceMorphology",
+    --/* Second-level Morphology methods */
+    "OpenMorphology",
+    "CloseMorphology",
+    "OpenIntensityMorphology",
+    "CloseIntensityMorphology",
+    "SmoothMorphology",
+    --/* Difference Morphology methods */
+    "EdgeInMorphology",
+    "EdgeOutMorphology",
+    "EdgeMorphology",
+    "TopHatMorphology",
+    "BottomHatMorphology",
+    --/* Recursive Morphology methods */
+    "HitAndMissMorphology",
+    "ThinningMorphology",
+    "ThickenMorphology",
+    --/* Directly Applied Morphology methods */
+    "DistanceMorphology",
+    "VoronoiMorphology"
+})
+
 _M.composite_operators = CompositeOperators
 
 _M.gravity = gravity
@@ -428,6 +460,8 @@ _M.image_type = ImageType
 _M.resolution_type = ResolutionType
 
 _M.pixel_interpolate_method = PixelInterpolateMethod
+
+_M.morphology_method = MorphologyMethod
 
 _M.rendering_intent = RenderingIntent
 

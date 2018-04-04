@@ -16,6 +16,7 @@ local error = error
 ffi.cdef([[  typedef void MagickWand;
   typedef void PixelWand;
   typedef void DrawingWand;
+  typedef void KernelInfo;
 
   typedef int MagickBooleanType;
   typedef int ExceptionType;
@@ -398,6 +399,9 @@ ffi.cdef([[  typedef void MagickWand;
 
   MagickWand *MagickMorphImages(MagickWand *wand,
   const size_t number_frames);
+
+  MagickBooleanType MagickMorphologyImage(MagickWand *wand,
+  MorphologyMethod method,const ssize_t iterations,KernelInfo *kernel);
 ]])
 
 local get_flags

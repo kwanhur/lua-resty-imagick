@@ -737,6 +737,10 @@ the name of the image optionally appearing just below the individual tile.
 Method morphs a set of images. Both the image pixels and size are linearly interpolated to give the appearance of 
 a meta-morphosis from one image to the next.
 
+`img:morphology(method, iterations, kernel)`
+-----
+Applies a user supplied kernel to the image according to the given mophology method.
+
 [Back to TOC](#table-of-contents)
 
 Authors
