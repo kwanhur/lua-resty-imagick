@@ -922,6 +922,11 @@ In this sense the condition is not quite exactly the same as reset_iterator().
 Analyzes the colors within a reference image and chooses a fixed number of colors to represent the image. The goal of 
 the algorithm is to minimize the color difference between the input and output image while minimizing the processing time.
 
+`img:quantize_multi(num_corlors, colorspace, treedepth, method, measure_error)`
+----
+Analyzes the colors within a sequence of images and chooses a fixed number of colors to represent the image. The goal of 
+the algorithm is to minimize the color difference between the input and output image while minimizing the processing time.
+
 [Back to TOC](#table-of-contents)
 
 Authors

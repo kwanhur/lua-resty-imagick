@@ -958,4 +958,8 @@ _M.quantize = function(self, num_corlors, colorspace, treedepth, method, measure
     return handle_result(self, lib.MagickQuantizeImage(self.wand, num_corlors, colorspace_type:to_int(colorspace .. "Colorspace"), treedepth, distort_method:to_int(method .. "DitherMethod"), measure_error))
 end
 
+_M.quantize_multi = function(self, num_corlors, colorspace, treedepth, method, measure_error)
+    return handle_result(self, lib.MagickQuantizeImages(self.wand, num_corlors, colorspace_type:to_int(colorspace .. "Colorspace"), treedepth, distort_method:to_int(method .. "DitherMethod"), measure_error))
+end
+
 return _M
