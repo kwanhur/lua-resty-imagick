@@ -473,6 +473,10 @@ ffi.cdef([[
   const void *blob,const size_t length);
 
   MagickBooleanType MagickPingImageFile(MagickWand *wand,FILE *file);
+
+  MagickBooleanType MagickPolaroidImage(MagickWand *wand,
+  const DrawingWand *drawing_wand,const char *caption,const double angle,
+  const PixelInterpolateMethod method);
 ]])
 
 local get_flags

@@ -936,4 +936,8 @@ _M.ping_file = function(self, file)
     return handle_result(self, lib.MagickPingImageFile(self.wand, file))
 end
 
+_M.polariod = function(self, drawing, caption, angle, method)
+    return handle_result(self, lib.MagickPolaroidImage(self.wand, drawing, caption, angle, pixel_interpolate_method:to_int(method .. "InterpolatePixel")))
+end
+
 return _M

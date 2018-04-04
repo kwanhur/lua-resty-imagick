@@ -891,6 +891,10 @@ Pings an image or image sequence from a blob.
 -----
 Pings an image or image sequence from an open file descriptor.
 
+`img:polaroid(drawing, caption, angle, method)`
+-----
+Simulates a Polaroid picture.
+
 [Back to TOC](#table-of-contents)
 
 Authors
