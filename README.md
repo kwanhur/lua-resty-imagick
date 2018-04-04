@@ -878,6 +878,11 @@ WARNING: This modifies the current images directly, rather than generate a new i
 Performs an ordered dither based on a number of pre-defined dithering threshold maps, but over multiple intensity levels, 
 which can be different for different channels, according to the input arguments.
 
+`img:ping(filename)`
+-----
+The same as read() except the only valid information returned is the image width, height, size, and format. 
+It is designed to efficiently obtain this information from a file without reading the entire image sequence into memory.
+
 [Back to TOC](#table-of-contents)
 
 Authors

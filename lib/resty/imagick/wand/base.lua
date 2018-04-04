@@ -924,4 +924,8 @@ _M.ordered_dither = function(self, threshold_map)
     return handle_result(self, lib.MagickOrderedDitherImage(self.wand, threshold_map))
 end
 
+_M.ping = function(self, filename)
+    return handle_result(self, lib.MagickPingImage(self.wand, filename))
+end
+
 return _M

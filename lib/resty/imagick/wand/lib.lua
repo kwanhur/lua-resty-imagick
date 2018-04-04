@@ -463,6 +463,8 @@ ffi.cdef([[  typedef void MagickWand;
 
   MagickBooleanType MagickOrderedDitherImage(MagickWand *wand,
   const char *threshold_map);
+
+  MagickBooleanType MagickPingImage(MagickWand *wand,const char *filename);
 ]])
 
 local get_flags
