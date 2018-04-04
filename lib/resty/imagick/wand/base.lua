@@ -14,7 +14,7 @@ local wand_data = require("resty.imagick.wand.data")
 
 local lib = wand_lib.lib
 local can_resize = wand_lib.can_resize
-local gravity = wand_data.gravity
+local gravity_type = wand_data.gravity_type
 local filter_type = wand_data.filter_type
 local storage_type = wand_data.storage_type
 local distort_method = wand_data.distort_method
@@ -118,11 +118,11 @@ _M.set_option = function(self, magick, key, value)
 end
 
 _M.get_gravity = function(self)
-    return gravity:to_str(lib.MagickGetImageGravity(self.wand))
+    return gravity_type:to_str(lib.MagickGetImageGravity(self.wand))
 end
 
 _M.set_gravity = function(self, gtype)
-    gtype = assert(gravity:to_int(gtype), "invalid gravity type")
+    gtype = assert(gravity_type:to_int(gtype), "invalid gravity type")
     return lib.MagickSetImageGravity(self.wand, gtype)
 end
 
@@ -439,6 +439,10 @@ end
 
 _M.compare = function(self, reference, metric, distortion)
     return lib.MagickCompareImages(self.wand, reference, metric_type:to_int(metric .. "ErrorMetric"), distortion)
+end
+
+_M.composite_gravity = function(self, source, compose, gravity)
+    return handle_result(self, lib.MagickCompositeImageGravity(self.wand, source, compression_type:to_int(compose .. "CompositeOp"), gravity_type:to_int(gravity .. "Gravity")))
 end
 
 _M.contrast = function(self, sharpen)

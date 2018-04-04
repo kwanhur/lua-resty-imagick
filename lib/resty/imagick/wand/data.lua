@@ -78,19 +78,19 @@ local CompositeOperators = enum({
     "LightenIntensityCompositeOp",
     "HardMixCompositeOp"
 })
-local gravity = enum({
-    [0] = "ForgetGravity",
-    "NorthWestGravity",
-    "NorthGravity",
-    "NorthEastGravity",
-    "WestGravity",
-    "CenterGravity",
-    "EastGravity",
-    "SouthWestGravity",
-    "SouthGravity",
-    "SouthEastGravity",
-    "StaticGravity"
-})
+--local gravity = enum({
+--    [0] = "ForgetGravity",
+--    "NorthWestGravity",
+--    "NorthGravity",
+--    "NorthEastGravity",
+--    "WestGravity",
+--    "CenterGravity",
+--    "EastGravity",
+--    "SouthWestGravity",
+--    "SouthGravity",
+--    "SouthEastGravity",
+--    "StaticGravity"
+--})
 local orientation = enum({
     [0] = "UndefinedOrientation",
     "TopLeftOrientation",
@@ -379,6 +379,20 @@ local MetricType = enum({
     "StructuralDissimilarityErrorMetric"
 })
 
+local GravityType = enum({
+    [-1] = "UndefinedGravity",
+    [0] = "ForgetGravity",
+    [1] = "NorthWestGravity",
+    [2] = "NorthGravity",
+    [3] = "NorthEastGravity",
+    [4] = "WestGravity",
+    [5] = "CenterGravity",
+    [6] = "EastGravity",
+    [7] = "SouthWestGravity",
+    [8] = "SouthGravity",
+    [9] = "SouthEastGravity"
+})
+
 local PixelInterpolateMethod = enum({
     [0] = "UndefinedInterpolatePixel",
     "AverageInterpolatePixel",
@@ -443,7 +457,7 @@ local MorphologyMethod = enum({
 
 _M.composite_operators = CompositeOperators
 
-_M.gravity = gravity
+_M.gravity_type = GravityType
 
 _M.orientation = orientation
 

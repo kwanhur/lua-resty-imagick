@@ -381,6 +381,10 @@ Compares each image with the next in a sequence and returns the maximum bounding
 -----
 Compares an image to a reconstructed image and returns the specified difference image.
 
+`img:composite_gravity(source, compose, gravity)`
+-----
+Composite one image onto another using the specified gravity.
+
 `img:contrast(sharpen)`
 -----
 Enhances the intensity differences between the lighter and darker elements of the image. 
