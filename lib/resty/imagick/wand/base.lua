@@ -950,4 +950,8 @@ _M.preview = function(self, preview)
     return lib.MagickPreviewImages(self.wand, preview_type:to_int(preview .. "Preview"))
 end
 
+_M.previous = function(self)
+    return lib.MagickPreviousImage(self.wand)
+end
+
 return _M

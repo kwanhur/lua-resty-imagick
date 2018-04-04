@@ -904,6 +904,19 @@ Reduces the image to a limited number of color level.
 Tiles 9 thumbnails of the specified image with an image processing operation applied at varying strengths. 
 This helpful to quickly pin-point an appropriate parameter for an image processing operation.
 
+`img:previous()`
+-----
+Sets the previous image in the wand as the current image.
+
+It is typically used after set_last_iterator(), after which its first use will set the last image as the current image (unless the wand is empty).
+
+It will return False when no more images are left to be returned which happens when the wand is empty, or the current 
+image is the first image. At that point the iterator is than reset to again process images in the forward direction, 
+again starting with the first image in list. Images added at this point are prepended.
+
+Also at that point any images added to the wand using add() or read() will be prepended before the first image. 
+In this sense the condition is not quite exactly the same as reset_iterator().
+
 [Back to TOC](#table-of-contents)
 
 Authors

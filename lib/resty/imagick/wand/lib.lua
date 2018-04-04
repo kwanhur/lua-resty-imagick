@@ -499,6 +499,8 @@ ffi.cdef([[
 
   MagickWand *MagickPreviewImages(MagickWand *wand,
   const PreviewType preview);
+
+  MagickBooleanType MagickPreviousImage(MagickWand *wand);
 ]])
 
 local get_flags
