@@ -711,6 +711,10 @@ Rescales image with seam carving.
 Attempts to increase the appearance of large-scale light-dark transitions. Local contrast enhancement works similarly to 
 sharpening with an unsharp mask, however the mask is instead created using an image with a greater blur distance.
 
+`img:magnify()`
+-----
+A convenience method that scales an image proportionally to twice its original size.
+
 [Back to TOC](#table-of-contents)
 
 Authors

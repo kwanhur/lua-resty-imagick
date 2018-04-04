@@ -805,7 +805,11 @@ _M.liquid_rescale = function(self, columns, rows, delta_x, rigidity)
 end
 
 _M.local_contrast = function(self, radius, strength)
-    return handle_result(self, lib.MagickLocalContrastImage(radius, strength))
+    return handle_result(self, lib.MagickLocalContrastImage(self.wand, radius, strength))
+end
+
+_M.magnify = function(self)
+    return handle_result(self, lib.MagickMagnifyImage(self.wand))
 end
 
 return _M
