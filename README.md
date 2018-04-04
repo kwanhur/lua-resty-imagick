@@ -866,6 +866,13 @@ Changes any pixel that matches color with the color defined by fill.
 Compares each image the GIF disposed forms of the previous image in the sequence. From this it attempts to select the 
 smallest cropped image to replace each frame, while preserving the results of the animation.
 
+`img:optimize_transparency()`
+-----
+Takes a frame optimized GIF animation, and compares the overlayed pixels against the disposal image resulting from 
+all the previous frames in the animation. Any pixel that does not change the disposal image (and thus does not effect the outcome of an overlay) is made transparent.
+
+WARNING: This modifies the current images directly, rather than generate a new image sequence. 
+
 [Back to TOC](#table-of-contents)
 
 Authors

@@ -458,6 +458,8 @@ ffi.cdef([[  typedef void MagickWand;
   const MagickBooleanType invert);
 
   MagickWand *MagickOptimizeImageLayers(MagickWand *wand);
+
+  MagickBooleanType MagickOptimizeImageTransparency(MagickWand *wand);
 ]])
 
 local get_flags

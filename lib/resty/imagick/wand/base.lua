@@ -916,4 +916,8 @@ _M.optimize_layers = function(self)
     return lib.MagickOptimizeImageLayers(self.wand)
 end
 
+_M.optimize_transparency = function(self)
+    return handle_result(self, lib.MagickOptimizeImageTransparency(self.wand))
+end
+
 return _M
