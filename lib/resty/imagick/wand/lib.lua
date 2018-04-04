@@ -211,6 +211,9 @@ ffi.cdef([[  typedef void MagickWand;
   MagickBooleanType MagickContrastStretchImage(MagickWand *wand,
   const double black_point,const double white_point);
 
+  MagickBooleanType MagickConvolveImage(MagickWand *wand,
+  const KernelInfo *kernel);
+
   MagickBooleanType MagickCycleColormapImage(MagickWand *wand,
   const ssize_t displace);
 

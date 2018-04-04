@@ -457,6 +457,10 @@ _M.contrast_stretch = function(self, black, white)
     return handle_result(self, lib.MagickContrastStretchImage(self.wand, black, white))
 end
 
+_M.convolve = function(self, kernel)
+    return handle_result(self, lib.MagickConvolveImage(self.wand, kernel))
+end
+
 _M.circle_colormap = function(self, displace)
     return handle_result(self, lib.MagickCycleColormapImage(self.wand, displace))
 end

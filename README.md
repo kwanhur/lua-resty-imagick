@@ -416,6 +416,10 @@ Set sharpen to a value other than 0 to increase the image contrast otherwise the
 Enhances the contrast of a color image by adjusting the pixels color to span the entire range of colors available. 
 You can also reduce the influence of a particular channel with a gamma value of 0.
 
+`img:convolve(kernel)`
+-----
+Applies a custom convolution kernel to the image.
+
 `img:cycle_colormap(displace)`
 -----
 Displaces an image's colormap by a given number of positions. 
