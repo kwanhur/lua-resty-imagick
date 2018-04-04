@@ -364,6 +364,11 @@ various other effects. Although variable-sized transformation matrices can be us
 an RGBA image and a 6x6 for CMYKA (or RGBA with offsets). The matrix is similar to those used by Adobe Flash except 
 offsets are in column 6 rather than 5 (in support of CMYKA images) and offsets are normalized (divide Flash offset by 255).
 
+`img:combine(color_space)`
+-----
+Combines one or more images into a single image. The grayscale value of the pixels of each image in the sequence is 
+assigned in order to the specified hannels of the combined image. The typical ordering would be image 1 => Red, 2 => Green, 3 => Blue, etc.
+
 `img:comment(comment)`
 -----
 Adds a comment to your image.

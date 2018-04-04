@@ -424,6 +424,10 @@ _M.color_matrix = function(self, color_matrix)
     return handle_result(self, lib.MagickColorMatrixImage(self.wand, color_matrix))
 end
 
+_M.combine = function(self, colorspace)
+    return lib.MagickCombineImages(self.wand, colorspace_type:to_int(colorspace .. "Colorspace"))
+end
+
 _M.comment = function(self, comment)
     return handle_result(self, lib.MagickCommentImage(self.wand, comment))
 end
