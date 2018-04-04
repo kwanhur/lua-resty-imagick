@@ -927,6 +927,10 @@ the algorithm is to minimize the color difference between the input and output i
 Analyzes the colors within a sequence of images and chooses a fixed number of colors to represent the image. The goal of 
 the algorithm is to minimize the color difference between the input and output image while minimizing the processing time.
 
+`img:rotational_blur(angle)`
+----
+Rotational blurs an image.
+
 [Back to TOC](#table-of-contents)
 
 Authors

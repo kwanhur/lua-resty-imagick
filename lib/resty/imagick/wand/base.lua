@@ -962,4 +962,8 @@ _M.quantize_multi = function(self, num_corlors, colorspace, treedepth, method, m
     return handle_result(self, lib.MagickQuantizeImages(self.wand, num_corlors, colorspace_type:to_int(colorspace .. "Colorspace"), treedepth, distort_method:to_int(method .. "DitherMethod"), measure_error))
 end
 
+_M.ratational_blur = function(self, angle)
+    return handle_result(self, lib.MagickRotationalBlurImage(self.wand, angle))
+end
+
 return _M

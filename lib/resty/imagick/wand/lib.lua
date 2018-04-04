@@ -511,6 +511,9 @@ ffi.cdef([[
   const size_t number_colors,const ColorspaceType colorspace,
   const size_t treedepth,const DitherMethod dither_method,
   const MagickBooleanType measure_error);
+
+  MagickBooleanType MagickRotationalBlurImage(MagickWand *wand,
+  const double angle);
 ]])
 
 local get_flags
