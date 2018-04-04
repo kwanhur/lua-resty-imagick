@@ -861,6 +861,11 @@ most frequent color occurring in a circular region defined by radius.
 -----
 Changes any pixel that matches color with the color defined by fill.
 
+`img:optimize_layers()`
+-----
+Compares each image the GIF disposed forms of the previous image in the sequence. From this it attempts to select the 
+smallest cropped image to replace each frame, while preserving the results of the animation.
+
 [Back to TOC](#table-of-contents)
 
 Authors

@@ -912,4 +912,8 @@ _M.opaque_paint = function(self, target, fill, fuzz, invert)
     return handle_result(self, lib.MagickOpaquePaintImage(self.wand, target, fill, fuzz, invert))
 end
 
+_M.optimize_layers = function(self)
+    return lib.MagickOptimizeImageLayers(self.wand)
+end
+
 return _M
