@@ -178,6 +178,9 @@ ffi.cdef([[  typedef void MagickWand;
   MagickBooleanType MagickColorDecisionListImage(MagickWand *wand,
   const char *color_correction_collection);
 
+  MagickBooleanType MagickColorizeImage(MagickWand *wand,
+  const PixelWand *colorize,const PixelWand *blend);
+
   MagickBooleanType MagickCommentImage(MagickWand *wand,
   const char *comment);
 

@@ -416,6 +416,10 @@ _M.color_decision_list = function(self)
     end
 end
 
+_M.colorize = function(self, colorize, blend)
+    return handle_result(self, lib.MagickColorizeImage(self.wand, colorize, blend))
+end
+
 _M.comment = function(self, comment)
     return handle_result(self, lib.MagickCommentImage(self.wand, comment))
 end

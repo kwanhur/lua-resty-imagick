@@ -350,8 +350,12 @@ applies the color correction to the image. Here is a sample CCC file:
           </SATNode>
     </ColorCorrection>
     </ColorCorrectionCollection>
-w
+
 which includes the offset, slope, and power for each of the RGB channels as well as the saturation.
+
+`img:colorize(colorize, blend)`
+-----
+Blends the fill color with each pixel in the image.
 
 `img:comment(comment)`
 -----
