@@ -883,6 +883,10 @@ which can be different for different channels, according to the input arguments.
 The same as read() except the only valid information returned is the image width, height, size, and format. 
 It is designed to efficiently obtain this information from a file without reading the entire image sequence into memory.
 
+`img:ping_blob(blob)`
+-----
+Pings an image or image sequence from a blob.
+
 [Back to TOC](#table-of-contents)
 
 Authors

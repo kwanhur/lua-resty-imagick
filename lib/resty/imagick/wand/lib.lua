@@ -465,6 +465,8 @@ ffi.cdef([[  typedef void MagickWand;
   const char *threshold_map);
 
   MagickBooleanType MagickPingImage(MagickWand *wand,const char *filename);
+  MagickBooleanType MagickPingImageBlob(MagickWand *wand,
+  const void *blob,const size_t length);
 ]])
 
 local get_flags

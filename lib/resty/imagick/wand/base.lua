@@ -928,4 +928,8 @@ _M.ping = function(self, filename)
     return handle_result(self, lib.MagickPingImage(self.wand, filename))
 end
 
+_M.ping_blob = function(self, blob)
+    return handle_result(self, lib.MagickPingImageBlob(self.wand, blob, #blob))
+end
+
 return _M
