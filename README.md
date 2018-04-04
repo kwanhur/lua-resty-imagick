@@ -727,6 +727,11 @@ The inital canvas's size depends on the given LayerMethod, and is initialized us
 The images are then compositied onto that image in sequence using the given composition that has been assigned to 
 each individual image.
 
+`img:montage(drawing, tile_geometry, thumbnail_geometry, mode, frame)`
+-----
+Creates a composite image by combining several separate images. The images are tiled on the composite image with 
+the name of the image optionally appearing just below the individual tile.
+
 [Back to TOC](#table-of-contents)
 
 Authors

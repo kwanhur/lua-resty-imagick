@@ -386,6 +386,13 @@ local RenderingIntent = enum({
     "RelativeIntent"
 })
 
+local MontageMode = enum({
+    [0] = "UndefinedMode",
+    "FrameMode",
+    "UnframeMode",
+    "ConcatenateMode"
+})
+
 _M.composite_operators = CompositeOperators
 
 _M.gravity = gravity
@@ -423,5 +430,7 @@ _M.resolution_type = ResolutionType
 _M.pixel_interpolate_method = PixelInterpolateMethod
 
 _M.rendering_intent = RenderingIntent
+
+_M.montage_mode = MontageMode
 
 return _M

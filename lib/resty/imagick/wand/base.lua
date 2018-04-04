@@ -33,6 +33,7 @@ local image_type = wand_data.image_type
 local resolution_type = wand_data.resolution_type
 local pixel_interpolate_method = wand_data.pixel_interpolate_method
 local rendering_intent = wand_data.rendering_intent
+local montage_mode = wand_data.montage_mode
 
 local setmetatable = setmetatable
 local tonumber = tonumber
@@ -819,6 +820,10 @@ end
 
 _M.merge_layers = function(self, method)
     return lib.MagickMergeImageLayers(self.wand, layer_method:to_int(method .. "Layer"))
+end
+
+_M.montage = function(self, drawing, tile_geometry, thumbnail_geometry, mode, frame)
+    return lib.MagickMontageImage(self.wand, drawing, tile_geometry, thumbnail_geometry, montage_mode:to_int(mode .. "Mode"), frame)
 end
 
 return _M

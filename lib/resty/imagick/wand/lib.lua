@@ -390,6 +390,11 @@ ffi.cdef([[  typedef void MagickWand;
 
   MagickWand *MagickMergeImageLayers(MagickWand *wand,
   const LayerMethod method);
+
+  MagickWand *MagickMontageImage(MagickWand *wand,
+  const DrawingWand drawing_wand,const char *tile_geometry,
+  const char *thumbnail_geometry,const MontageMode mode,
+  const char *frame)
 ]])
 
 local get_flags
