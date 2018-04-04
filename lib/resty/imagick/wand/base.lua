@@ -400,6 +400,10 @@ _M.chip_path = function(self, path, inside)
     return handle_result(self, lib.MagickClipImagePath(self.wand, path, inside))
 end
 
+_M.clut = function(self, clut, method)
+    return handle_result(self, lib.MagickClutImage(self.wand, clut, pixel_interpolate_method:to_int(method .. "InterpolatePixel")))
+end
+
 _M.comment = function(self, comment)
     return handle_result(self, lib.MagickCommentImage(self.wand, comment))
 end

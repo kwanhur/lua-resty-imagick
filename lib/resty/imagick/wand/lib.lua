@@ -172,6 +172,9 @@ ffi.cdef([[  typedef void MagickWand;
   MagickBooleanType MagickClipImagePath(MagickWand *wand,
   const char *pathname,const MagickBooleanType inside);
 
+  MagickBooleanType MagickClutImage(MagickWand *wand,
+  const MagickWand *clut_wand,const PixelInterpolateMethod method);
+
   MagickBooleanType MagickCommentImage(MagickWand *wand,
   const char *comment);
 

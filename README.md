@@ -329,6 +329,10 @@ Clips along the first path from the 8BIM profile, if present.
 Clips along the named paths from the 8BIM profile, if present. Later operations take effect 
 inside the path. Id may be a number if preceded with #, to work on a numbered path, e.g., "#1" to use the first path.
 
+`img:clut(clut, method)`
+-----
+Replaces colors in the image from a color lookup table.
+
 `img:comment(comment)`
 -----
 Adds a comment to your image.
