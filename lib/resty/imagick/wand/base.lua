@@ -826,4 +826,8 @@ _M.montage = function(self, drawing, tile_geometry, thumbnail_geometry, mode, fr
     return lib.MagickMontageImage(self.wand, drawing, tile_geometry, thumbnail_geometry, montage_mode:to_int(mode .. "Mode"), frame)
 end
 
+_M.morph = function(self, num_frames)
+    return lib.MagickMorphImages(self.wand, num_frames)
+end
+
 return _M

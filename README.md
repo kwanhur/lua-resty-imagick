@@ -732,6 +732,11 @@ each individual image.
 Creates a composite image by combining several separate images. The images are tiled on the composite image with 
 the name of the image optionally appearing just below the individual tile.
 
+`img:morph(num_frames)`
+-----
+Method morphs a set of images. Both the image pixels and size are linearly interpolated to give the appearance of 
+a meta-morphosis from one image to the next.
+
 [Back to TOC](#table-of-contents)
 
 Authors
