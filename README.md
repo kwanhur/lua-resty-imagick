@@ -834,6 +834,18 @@ You can also reduce the influence of a particular channel with a gamma value of 
 -----
 Adds a blank image canvas of the specified size and background color to the wand.
 
+`img:next()`
+-----
+Sets the next image in the wand as the current image.
+
+It is typically used after reset_iterator(), after which its first use will set the first image as the current image (unless the wand is empty).
+
+It will return False when no more images are left to be returned which happens when the wand is empty, or the current image is the last image.
+
+When the above condition (end of image list) is reached, the iterator is automaticall set so that you can start using 
+previous() to again iterate over the images in the reverse direction, starting with the last image (again). You can 
+jump to this condition immeditally using set_last_iterator().
+
 [Back to TOC](#table-of-contents)
 
 Authors

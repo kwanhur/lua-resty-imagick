@@ -445,6 +445,8 @@ ffi.cdef([[  typedef void MagickWand;
   MagickBooleanType MagickNewImage(MagickWand *wand,
   const size_t columns,const size_t rows,
   const PixelWand *background);
+
+  MagickBooleanType MagickNextImage(MagickWand *wand);
 ]])
 
 local get_flags

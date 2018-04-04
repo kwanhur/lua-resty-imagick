@@ -896,4 +896,8 @@ _M.new_image = function(self, columns, rows, background)
     return handle_result(self, lib.MagickNewImage(self.wand, columns, rows, background))
 end
 
+_M.next = function(self)
+    return handle_result(self, lib.MagickNextImage(self.wand))
+end
+
 return _M
