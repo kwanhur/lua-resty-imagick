@@ -1051,4 +1051,8 @@ _M.set_mask = function(self, type, clip_mask)
     return handle_result(self, lib.MagickSetImageMask(self.wand, type, clip_mask))
 end
 
+_M.set_color = function(self, color)
+    return handle_result(self, lib.MagickSetImageColor(self.wand, color))
+end
+
 return _M

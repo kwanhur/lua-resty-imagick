@@ -1027,6 +1027,10 @@ Sets image channel mask.
 -----
 Sets image clip mask.
 
+`img:set_color(color)`
+-----
+Set the entire wand canvas to the specified color.
+
 [Back to TOC](#table-of-contents)
 
 Authors
