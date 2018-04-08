@@ -980,6 +980,11 @@ Offsets an image as defined by x and y.
 Scales an image to the desired dimensions with pixel sampling. Unlike other scaling methods, this method does not 
 introduce any additional color into the scaled image.
 
+`img:segment(colorspace, verbose, cluster_threshold, smooth_threshold)`
+-----
+Segments an image by analyzing the histograms of the color components and identifying units that are homogeneous with 
+the fuzzy C-means technique.
+
 [Back to TOC](#table-of-contents)
 
 Authors

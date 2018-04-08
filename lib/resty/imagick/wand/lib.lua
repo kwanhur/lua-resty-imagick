@@ -543,6 +543,10 @@ ffi.cdef([[
 
   MagickBooleanType MagickSampleImage(MagickWand *wand,
   const size_t columns,const size_t rows);
+
+  MagickBooleanType MagickSegmentImage(MagickWand *wand,
+  const ColorspaceType colorspace,const MagickBooleanType verbose,
+  const double cluster_threshold,const double smooth_threshold);
 ]])
 
 local get_flags

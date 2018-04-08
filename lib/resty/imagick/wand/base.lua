@@ -1006,4 +1006,8 @@ _M.sample = function(self, columns, rows)
     return handle_result(self, lib.MagickSampleImage(self.wand, columns, rows))
 end
 
+_M.segment = function(self, colorspace, verbose, cluster_threshold, smooth_threshold)
+    return handle_result(self, lib.MagickSegmentImage(self.wand, colorspace_type:to_int(colorspace .. "Colorspace"), verbose, cluster_threshold, smooth_threshold))
+end
+
 return _M
