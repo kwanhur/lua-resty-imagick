@@ -1023,6 +1023,10 @@ Sets the image border color.
 -----
 Sets image channel mask.
 
+`img:set_mask(type, clip_mask)`
+-----
+Sets image clip mask.
+
 [Back to TOC](#table-of-contents)
 
 Authors

@@ -1047,4 +1047,8 @@ _M.set_channel_mask = function(self, channel_mask)
     return lib.MagickSetImageChannelMask(self.wand, channel_mask)
 end
 
+_M.set_mask = function(self, type, clip_mask)
+    return handle_result(self, lib.MagickSetImageMask(self.wand, type, clip_mask))
+end
+
 return _M

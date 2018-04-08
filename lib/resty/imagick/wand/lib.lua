@@ -576,6 +576,9 @@ ffi.cdef([[
 
   ChannelType MagickSetImageChannelMask(MagickWand *wand,
   const ChannelType channel_mask);
+
+  MagickBooleanType MagickSetImageMask(MagickWand *wand,
+  const PixelMask type,const MagickWand *clip_mask);
 ]])
 
 local get_flags
