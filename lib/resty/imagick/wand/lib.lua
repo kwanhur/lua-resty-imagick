@@ -528,6 +528,9 @@ ffi.cdef([[
   const void *blob,const size_t length);
 
   MagickBooleanType MagickReadImageFile(MagickWand *wand,FILE *file);
+
+  MagickBooleanType MagickRemapImage(MagickWand *wand,
+  const MagickWand *remap_wand,const DitherMethod method);
 ]])
 
 local get_flags

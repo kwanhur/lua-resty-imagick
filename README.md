@@ -955,6 +955,10 @@ Reads an image or image sequence from a blob. In all other respects it is like r
 -----
 Reads an image or image sequence from an already opened file descriptor. Otherwise it is like read().
 
+`img:remap(remap_wand, method)`
+-----
+Replaces the colors of an image with the closest color from a reference image.
+
 [Back to TOC](#table-of-contents)
 
 Authors

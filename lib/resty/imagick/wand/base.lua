@@ -986,4 +986,8 @@ _M.read_file = function(self, file)
     return handle_result(self, lib.MagickReadImageFile(self.wand, file))
 end
 
+_M.remap = function(self, remap_wand, method)
+    return handle_result(self, lib.MagickRemapImage(self.wand, remap_wand, dither_method:to_int(method .. "DitherMethod")))
+end
+
 return _M
