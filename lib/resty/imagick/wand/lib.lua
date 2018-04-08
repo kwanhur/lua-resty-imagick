@@ -591,6 +591,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImageCompose(MagickWand *wand,
   const CompositeOperator compose);
+
+  MagickBooleanType MagickSetImageCompression(MagickWand *wand,
+  const CompressionType compression);
 ]])
 
 local get_flags

@@ -1067,4 +1067,8 @@ _M.set_compose = function(self, compose)
     return handle_result(self, lib.MagickSetImageCompose(self.wand, composite_operators:to_int(compose .. "CompositeOp")))
 end
 
+_M.set_compression = function(self, compression)
+    return handle_result(self, lib.MagickSetImageCompression(self.wand, compression_type:to_int(compression .. "Compression")))
+end
+
 return _M

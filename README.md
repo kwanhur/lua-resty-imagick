@@ -1043,6 +1043,10 @@ Sets the image colorspace. But does not modify the image data.
 -----
 Sets the image composite operator, useful for specifying how to composite the image thumbnail when using the montage() method.
 
+`img:set_compression(compression)`
+-----
+Sets the image compression.
+
 [Back to TOC](#table-of-contents)
 
 Authors
