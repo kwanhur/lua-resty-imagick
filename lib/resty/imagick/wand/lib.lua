@@ -600,6 +600,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImageDispose(MagickWand *wand,
   const DisposeType dispose);
+
+  MagickBooleanType MagickSetImageEndian(MagickWand *wand,
+  const EndianType endian);
 ]])
 
 local get_flags

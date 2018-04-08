@@ -1055,6 +1055,10 @@ Sets the image delay.
 -----
 Sets the image disposal method.
 
+`img:set_endian(endian)`
+-----
+Sets the image endian method.
+
 [Back to TOC](#table-of-contents)
 
 Authors

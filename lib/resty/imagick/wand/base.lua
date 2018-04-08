@@ -1079,4 +1079,7 @@ _M.set_dispose = function(self, dispose)
     return handle_result(self, lib.MagickSetImageDispose(self.wand, dispose_type:to_int(dispose .. "Dispose")))
 end
 
+_M.set_endian = function(self, endian)
+    return handle_result(self, lib.MagickSetImageEndian(self.wand, endian_type:to_int(endian .. "Endian")))
+end
 return _M
