@@ -1055,4 +1055,8 @@ _M.set_color = function(self, color)
     return handle_result(self, lib.MagickSetImageColor(self.wand, color))
 end
 
+_M.set_colormap_color = function(self, index, color)
+    return handle_result(self, lib.MagickSetImageColormapColor(self.wand, index, color))
+end
+
 return _M

@@ -1031,6 +1031,10 @@ Sets image clip mask.
 -----
 Set the entire wand canvas to the specified color.
 
+`img:set_colormap_color(index, color)`
+-----
+Sets the color of the specified colormap index.
+
 [Back to TOC](#table-of-contents)
 
 Authors
