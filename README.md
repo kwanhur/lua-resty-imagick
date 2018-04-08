@@ -951,6 +951,10 @@ add to the end, set_iterator_index() to place images just after the given index.
 -----
 Reads an image or image sequence from a blob. In all other respects it is like read().
 
+`img:read_file(file)`
+-----
+Reads an image or image sequence from an already opened file descriptor. Otherwise it is like read().
+
 [Back to TOC](#table-of-contents)
 
 Authors

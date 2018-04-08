@@ -982,4 +982,8 @@ _M.read_blob = function(self, blob)
     return handle_result(self, lib.MagickReadImageBlob(self.wand, blob, #blob))
 end
 
+_M.read_file = function(self, file)
+    return handle_result(self, lib.MagickReadImageFile(self.wand, file))
+end
+
 return _M
