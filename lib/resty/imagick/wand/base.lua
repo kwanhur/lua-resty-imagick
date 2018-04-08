@@ -1014,4 +1014,8 @@ _M.selective_blur = function(self, radius, sigma, threshold)
     return handle_result(self, lib.MagickSelectiveBlurImage(self.wand, radius, sigma, threshold))
 end
 
+_M.separate = function(self, channel)
+    return handle_result(self, lib.MagickSeparateImage(self.wand, channel))
+end
+
 return _M

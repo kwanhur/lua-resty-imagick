@@ -40,6 +40,7 @@ ffi.cdef([[
   typedef int ResolutionType;
   typedef int MetricType;
   typedef int PreviewType;
+  typedef int ChannelType;
   typedef int DistortMethod;
   typedef int DitherMethod;
   typedef int PixelInterpolateMethod;
@@ -550,6 +551,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSelectiveBlurImage(MagickWand *wand,
   const double radius,const double sigma,const double threshold);
+
+  MagickBooleanType MagickSeparateImage(MagickWand *wand,
+  const ChannelType channel);
 ]])
 
 local get_flags

@@ -990,6 +990,10 @@ the fuzzy C-means technique.
 Selectively blur an image within a contrast threshold. It is similar to the unsharpen mask that sharpens everything with 
 contrast above a certain threshold.
 
+`img:separate(channel)`
+-----
+Separates a channel from the image and returns a grayscale image. A channel is a particular color component of each pixel in the image.
+
 [Back to TOC](#table-of-contents)
 
 Authors
