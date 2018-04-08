@@ -1015,6 +1015,10 @@ Sets the image background color.
 -----
 Sets the image chromaticity blue primary point.
 
+`img:set_border_color(border)`
+-----
+Sets the image border color.
+
 [Back to TOC](#table-of-contents)
 
 Authors
