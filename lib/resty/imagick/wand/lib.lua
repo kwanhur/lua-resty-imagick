@@ -557,6 +557,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSepiaToneImage(MagickWand *wand,
   const double threshold);
+
+  MagickBooleanType MagickSetImage(MagickWand *wand,
+  const MagickWand *set_wand);
 ]])
 
 local get_flags

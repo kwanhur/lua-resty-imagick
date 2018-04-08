@@ -1022,4 +1022,8 @@ _M.sepia_tone = function(self, threshold)
     return handle_result(self, lib.MagickSepiaToneImage(self.wand, threshold))
 end
 
+_M.set = function(self, set_wand)
+    return handle_result(self, lib.MagickSetImage(self.wand, set_wand))
+end
+
 return _M

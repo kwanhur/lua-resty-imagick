@@ -999,6 +999,10 @@ Separates a channel from the image and returns a grayscale image. A channel is a
 Applies a special effect to the image, similar to the effect achieved in a photo darkroom by sepia toning. 
 Threshold ranges from 0 to QuantumRange and is a measure of the extent of the sepia toning. A threshold of 80 is a good starting point for a reasonable tone.
 
+`img:set(set_wand)`
+-----
+Replaces the last image returned by set_interator_index(), next(), previous() with the images from the specified wand.
+
 [Back to TOC](#table-of-contents)
 
 Authors
