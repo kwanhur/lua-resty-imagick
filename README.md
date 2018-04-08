@@ -1011,6 +1011,10 @@ Activates, deactivates, resets, or sets the alpha channel.
 -----
 Sets the image background color.
 
+`img:set_blue_primary(x, y, z)`
+-----
+Sets the image chromaticity blue primary point.
+
 [Back to TOC](#table-of-contents)
 
 Authors

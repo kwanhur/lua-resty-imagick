@@ -1035,4 +1035,8 @@ _M.set_background_color = function(self, background)
     return handle_result(self, lib.MagickSetImageBackgroundColor(self.wand, background))
 end
 
+_M.set_blue_primary = function(self, x, y, z)
+    return handle_result(self, lib.MagickSetImageBluePrimary(self.wand, x, y, z))
+end
+
 return _M

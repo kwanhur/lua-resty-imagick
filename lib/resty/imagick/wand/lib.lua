@@ -567,6 +567,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImageBackgroundColor(MagickWand *wand,
   const PixelWand *background);
+
+  MagickBooleanType MagickSetImageBluePrimary(MagickWand *wand,
+  const double x,const double y,const double z);
 ]])
 
 local get_flags
