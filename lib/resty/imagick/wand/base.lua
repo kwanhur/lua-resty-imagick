@@ -38,6 +38,7 @@ local morphology_method = wand_data.morphology_method
 local dither_method = wand_data.dither_method
 local rendering_intent = wand_data.rendering_intent
 local montage_mode = wand_data.montage_mode
+local alpha_channel_option = wand_data.alpha_channel_option
 
 local setmetatable = setmetatable
 local tonumber = tonumber
@@ -1024,6 +1025,10 @@ end
 
 _M.set = function(self, set_wand)
     return handle_result(self, lib.MagickSetImage(self.wand, set_wand))
+end
+
+_M.set_alpha_channel = function(self, alpha_type)
+    return handle_result(self, lib.MagickSetImageAlphaChannel(self.wand, alpha_channel_option:to_int(alpha_type .. "AlphaChannel")))
 end
 
 return _M

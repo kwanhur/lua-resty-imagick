@@ -1003,6 +1003,10 @@ Threshold ranges from 0 to QuantumRange and is a measure of the extent of the se
 -----
 Replaces the last image returned by set_interator_index(), next(), previous() with the images from the specified wand.
 
+`img:set_alpha_channel(alpha_type)`
+-----
+Activates, deactivates, resets, or sets the alpha channel.
+
 [Back to TOC](#table-of-contents)
 
 Authors

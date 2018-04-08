@@ -51,6 +51,7 @@ ffi.cdef([[
   typedef int MagickFunction;
   typedef int MontageMode;
   typedef int RenderingIntent;
+  typedef int AlphaChannelOption;
 
   void MagickWandGenesis();
   MagickWand* NewMagickWand();
@@ -560,6 +561,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImage(MagickWand *wand,
   const MagickWand *set_wand);
+
+  MagickBooleanType MagickSetImageAlphaChannel(MagickWand *wand,
+  const AlphaChannelOption alpha_type);
 ]])
 
 local get_flags

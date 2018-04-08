@@ -495,6 +495,25 @@ local DitherMethod = enum({
     "FloydSteinbergDitherMethod"
 })
 
+local AlphaChannelOption = enum({
+    [0] = "UndefinedAlphaChannel",
+    "ActivateAlphaChannel",
+    "AssociateAlphaChannel",
+    "BackgroundAlphaChannel",
+    "CopyAlphaChannel",
+    "DeactivateAlphaChannel",
+    "DiscreteAlphaChannel",
+    "DisassociateAlphaChannel",
+    "ExtractAlphaChannel",
+    "OffAlphaChannel",
+    "OnAlphaChannel",
+    "OpaqueAlphaChannel",
+    "RemoveAlphaChannel",
+    "SetAlphaChannel",
+    "ShapeAlphaChannel",
+    "TransparentAlphaChannel"
+})
+
 _M.composite_operators = CompositeOperators
 
 _M.gravity_type = GravityType
@@ -542,5 +561,7 @@ _M.dither_method = DitherMethod
 _M.rendering_intent = RenderingIntent
 
 _M.montage_mode = MontageMode
+
+_M.alpha_channel_option = AlphaChannelOption
 
 return _M
