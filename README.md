@@ -1071,6 +1071,10 @@ Sets the filename of a particular image in a sequence.
 -----
 Sets the image fuzz.
 
+`img:set_gamma(gamma)`
+-----
+Sets the image gamma.
+
 [Back to TOC](#table-of-contents)
 
 Authors

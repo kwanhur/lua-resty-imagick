@@ -1095,4 +1095,8 @@ _M.set_fuzz = function(self, fuzz)
     return handle_result(self, lib.MagickSetImageFuzz(self.wand, fuzz))
 end
 
+_M.set_gamma = function(self, gamma)
+    return handle_result(self, lib.MagickSetImageGamma(self.wand, gamma))
+end
+
 return _M

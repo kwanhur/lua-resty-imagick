@@ -612,6 +612,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImageFuzz(MagickWand *wand,
   const double fuzz);
+
+  MagickBooleanType MagickSetImageGamma(MagickWand *wand,
+  const double gamma);
 ]])
 
 local get_flags
