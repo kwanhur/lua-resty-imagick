@@ -971,6 +971,10 @@ Bessel Blackman Box Catrom Cubic Gaussian Hanning Hermite Lanczos Mitchell Point
 
 Most of the filters are FIR (finite impulse response), however, Bessel, Gaussian, and Sinc are IIR (infinite impulse response). Bessel and Sinc are windowed (brought down to zero) with the Blackman filter.
 
+`img:roll(x, y)`
+-----
+Offsets an image as defined by x and y.
+
 [Back to TOC](#table-of-contents)
 
 Authors

@@ -998,4 +998,8 @@ _M.resample = function(self, x_resolution, y_resolution, filter)
     return handle_result(self, lib.MagickResampleImage(self.wand, x_resolution, y_resolution, filter_type:to_int(filter .. "Filter")))
 end
 
+_M.roll = function(self, x, y)
+    return handle_result(self, lib.MagickRollImage(self.wand, x, y))
+end
+
 return _M

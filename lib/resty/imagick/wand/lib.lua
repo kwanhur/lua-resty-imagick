@@ -537,6 +537,9 @@ ffi.cdef([[
   MagickBooleanType MagickResampleImage(MagickWand *wand,
   const double x_resolution,const double y_resolution,
   const FilterType filter);
+
+  MagickBooleanType MagickRollImage(MagickWand *wand,const ssize_t x,
+  const size_t y);
 ]])
 
 local get_flags
