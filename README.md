@@ -985,6 +985,11 @@ introduce any additional color into the scaled image.
 Segments an image by analyzing the histograms of the color components and identifying units that are homogeneous with 
 the fuzzy C-means technique.
 
+`img:selective_blur(radius, sigma, threshold)`
+-----
+Selectively blur an image within a contrast threshold. It is similar to the unsharpen mask that sharpens everything with 
+contrast above a certain threshold.
+
 [Back to TOC](#table-of-contents)
 
 Authors

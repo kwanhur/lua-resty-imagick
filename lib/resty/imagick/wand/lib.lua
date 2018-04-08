@@ -547,6 +547,9 @@ ffi.cdef([[
   MagickBooleanType MagickSegmentImage(MagickWand *wand,
   const ColorspaceType colorspace,const MagickBooleanType verbose,
   const double cluster_threshold,const double smooth_threshold);
+
+  MagickBooleanType MagickSelectiveBlurImage(MagickWand *wand,
+  const double radius,const double sigma,const double threshold);
 ]])
 
 local get_flags
