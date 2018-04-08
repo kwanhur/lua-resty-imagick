@@ -1047,6 +1047,10 @@ Sets the image composite operator, useful for specifying how to composite the im
 -----
 Sets the image compression.
 
+`img:set_delay(delay)`
+-----
+Sets the image delay.
+
 [Back to TOC](#table-of-contents)
 
 Authors

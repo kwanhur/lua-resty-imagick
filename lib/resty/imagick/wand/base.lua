@@ -1071,4 +1071,8 @@ _M.set_compression = function(self, compression)
     return handle_result(self, lib.MagickSetImageCompression(self.wand, compression_type:to_int(compression .. "Compression")))
 end
 
+_M.set_delay = function(self, delay)
+    return handle_result(self, lib.MagickSetImageDelay(self.wand, delay))
+end
+
 return _M
