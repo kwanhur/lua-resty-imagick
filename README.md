@@ -1007,6 +1007,10 @@ Replaces the last image returned by set_interator_index(), next(), previous() wi
 -----
 Activates, deactivates, resets, or sets the alpha channel.
 
+`img:set_background_color(background)`
+-----
+Sets the image background color.
+
 [Back to TOC](#table-of-contents)
 
 Authors

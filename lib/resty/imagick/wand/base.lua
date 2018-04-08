@@ -1031,4 +1031,8 @@ _M.set_alpha_channel = function(self, alpha_type)
     return handle_result(self, lib.MagickSetImageAlphaChannel(self.wand, alpha_channel_option:to_int(alpha_type .. "AlphaChannel")))
 end
 
+_M.set_background_color = function(self, background)
+    return handle_result(self, lib.MagickSetImageBackgroundColor(self.wand, background))
+end
+
 return _M
