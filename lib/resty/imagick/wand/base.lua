@@ -1063,4 +1063,8 @@ _M.set_colorspace = function(self, colorspace)
     return handle_result(self, lib.MagickSetImageColorspace(self.wand, colorspace_type:to_int(colorspace .. "Colorspace")))
 end
 
+_M.set_compose = function(self, compose)
+    return handle_result(self, lib.MagickSetImageCompose(self.wand, composite_operators:to_int(compose .. "CompositeOp")))
+end
+
 return _M

@@ -1039,6 +1039,10 @@ Sets the color of the specified colormap index.
 -----
 Sets the image colorspace. But does not modify the image data.
 
+`img:set_compose(compose)`
+-----
+Sets the image composite operator, useful for specifying how to composite the image thumbnail when using the montage() method.
+
 [Back to TOC](#table-of-contents)
 
 Authors
