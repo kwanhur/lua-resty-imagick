@@ -990,4 +990,8 @@ _M.remap = function(self, remap_wand, method)
     return handle_result(self, lib.MagickRemapImage(self.wand, remap_wand, dither_method:to_int(method .. "DitherMethod")))
 end
 
+_M.remove = function(self)
+    return handle_result(self, lib.MagickRemoveImage(self.wand))
+end
+
 return _M

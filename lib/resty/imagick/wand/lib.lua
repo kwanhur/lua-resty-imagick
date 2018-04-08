@@ -531,6 +531,8 @@ ffi.cdef([[
 
   MagickBooleanType MagickRemapImage(MagickWand *wand,
   const MagickWand *remap_wand,const DitherMethod method);
+
+  MagickBooleanType MagickRemoveImage(MagickWand *wand);
 ]])
 
 local get_flags
