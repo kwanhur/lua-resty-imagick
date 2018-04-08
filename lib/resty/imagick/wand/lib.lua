@@ -554,6 +554,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSeparateImage(MagickWand *wand,
   const ChannelType channel);
+
+  MagickBooleanType MagickSepiaToneImage(MagickWand *wand,
+  const double threshold);
 ]])
 
 local get_flags

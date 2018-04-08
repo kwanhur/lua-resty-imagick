@@ -994,6 +994,11 @@ contrast above a certain threshold.
 -----
 Separates a channel from the image and returns a grayscale image. A channel is a particular color component of each pixel in the image.
 
+`img:sepia_tone(threshold)`
+-----
+Applies a special effect to the image, similar to the effect achieved in a photo darkroom by sepia toning. 
+Threshold ranges from 0 to QuantumRange and is a measure of the extent of the sepia toning. A threshold of 80 is a good starting point for a reasonable tone.
+
 [Back to TOC](#table-of-contents)
 
 Authors

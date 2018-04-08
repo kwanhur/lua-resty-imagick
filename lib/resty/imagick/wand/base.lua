@@ -1018,4 +1018,8 @@ _M.separate = function(self, channel)
     return handle_result(self, lib.MagickSeparateImage(self.wand, channel))
 end
 
+_M.sepia_tone = function(self, threshold)
+    return handle_result(self, lib.MagickSepiaToneImage(self.wand, threshold))
+end
+
 return _M
