@@ -1075,4 +1075,8 @@ _M.set_delay = function(self, delay)
     return handle_result(self, lib.MagickSetImageDelay(self.wand, delay))
 end
 
+_M.set_dispose = function(self, dispose)
+    return handle_result(self, lib.MagickSetImageDispose(self.wand, dispose_type:to_int(dispose .. "Dispose")))
+end
+
 return _M

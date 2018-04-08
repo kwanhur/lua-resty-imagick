@@ -1051,6 +1051,10 @@ Sets the image compression.
 -----
 Sets the image delay.
 
+`img:set_dispose(dispose)`
+-----
+Sets the image disposal method.
+
 [Back to TOC](#table-of-contents)
 
 Authors

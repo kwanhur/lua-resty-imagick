@@ -597,6 +597,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImageDelay(MagickWand *wand,
   const size_t delay);
+
+  MagickBooleanType MagickSetImageDispose(MagickWand *wand,
+  const DisposeType dispose);
 ]])
 
 local get_flags
