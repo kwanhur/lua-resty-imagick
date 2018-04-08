@@ -1002,4 +1002,8 @@ _M.roll = function(self, x, y)
     return handle_result(self, lib.MagickRollImage(self.wand, x, y))
 end
 
+_M.sample = function(self, columns, rows)
+    return handle_result(self, lib.MagickSampleImage(self.wand, columns, rows))
+end
+
 return _M

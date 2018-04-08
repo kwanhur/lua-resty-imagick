@@ -975,6 +975,11 @@ Most of the filters are FIR (finite impulse response), however, Bessel, Gaussian
 -----
 Offsets an image as defined by x and y.
 
+`img:sample(columns, rows)`
+-----
+Scales an image to the desired dimensions with pixel sampling. Unlike other scaling methods, this method does not 
+introduce any additional color into the scaled image.
+
 [Back to TOC](#table-of-contents)
 
 Authors

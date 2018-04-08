@@ -540,6 +540,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickRollImage(MagickWand *wand,const ssize_t x,
   const size_t y);
+
+  MagickBooleanType MagickSampleImage(MagickWand *wand,
+  const size_t columns,const size_t rows);
 ]])
 
 local get_flags
