@@ -1035,6 +1035,10 @@ Set the entire wand canvas to the specified color.
 -----
 Sets the color of the specified colormap index.
 
+`img:set_colorspace(colorspace)`
+-----
+Sets the image colorspace. But does not modify the image data.
+
 [Back to TOC](#table-of-contents)
 
 Authors

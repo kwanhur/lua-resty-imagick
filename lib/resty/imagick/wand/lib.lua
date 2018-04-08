@@ -585,6 +585,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImageColormapColor(MagickWand *wand,
   const size_t index,const PixelWand *color);
+
+  MagickBooleanType MagickSetImageColorspace(MagickWand *wand,
+  const ColorspaceType colorspace);
 ]])
 
 local get_flags
