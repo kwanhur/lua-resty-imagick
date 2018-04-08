@@ -963,6 +963,14 @@ Replaces the colors of an image with the closest color from a reference image.
 -----
 Removes an image from the image list.
 
+`img:resample(x_resolution, y_resolution, filter)`
+-----
+Resample image to desired resolution.
+
+Bessel Blackman Box Catrom Cubic Gaussian Hanning Hermite Lanczos Mitchell Point Quandratic Sinc Triangle
+
+Most of the filters are FIR (finite impulse response), however, Bessel, Gaussian, and Sinc are IIR (infinite impulse response). Bessel and Sinc are windowed (brought down to zero) with the Blackman filter.
+
 [Back to TOC](#table-of-contents)
 
 Authors

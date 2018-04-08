@@ -994,4 +994,8 @@ _M.remove = function(self)
     return handle_result(self, lib.MagickRemoveImage(self.wand))
 end
 
+_M.resample = function(self, x_resolution, y_resolution, filter)
+    return handle_result(self, lib.MagickResampleImage(self.wand, x_resolution, y_resolution, filter_type:to_int(filter .. "Filter")))
+end
+
 return _M
