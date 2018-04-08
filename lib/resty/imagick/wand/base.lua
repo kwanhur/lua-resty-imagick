@@ -1091,4 +1091,8 @@ _M.set_filename = function(self, filename)
     return handle_result(self, lib.MagickSetImageFilename(self.wand, filename))
 end
 
+_M.set_fuzz = function(self, fuzz)
+    return handle_result(self, lib.MagickSetImageFuzz(self.wand, fuzz))
+end
+
 return _M

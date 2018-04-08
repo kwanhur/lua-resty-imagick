@@ -1067,6 +1067,10 @@ Sets the image size (i.e. columns & rows).
 -----
 Sets the filename of a particular image in a sequence.
 
+`img:set_fuzz(fuzz)`
+-----
+Sets the image fuzz.
+
 [Back to TOC](#table-of-contents)
 
 Authors

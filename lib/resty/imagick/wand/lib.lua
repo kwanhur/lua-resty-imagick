@@ -609,6 +609,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImageFilename(MagickWand *wand,
   const char *filename);
+
+  MagickBooleanType MagickSetImageFuzz(MagickWand *wand,
+  const double fuzz);
 ]])
 
 local get_flags
