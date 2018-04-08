@@ -1019,6 +1019,10 @@ Sets the image chromaticity blue primary point.
 -----
 Sets the image border color.
 
+`img:set_channel_mask(channel_mask)`
+-----
+Sets image channel mask.
+
 [Back to TOC](#table-of-contents)
 
 Authors

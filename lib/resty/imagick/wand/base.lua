@@ -1043,4 +1043,8 @@ _M.set_border_color = function(self, border)
     return handle_result(self, lib.MagickSetImageBorderColor(self.wand, border))
 end
 
+_M.set_channel_mask = function(self, channel_mask)
+    return lib.MagickSetImageChannelMask(self.wand, channel_mask)
+end
+
 return _M

@@ -573,6 +573,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImageBorderColor(MagickWand *wand,
   const PixelWand *border);
+
+  ChannelType MagickSetImageChannelMask(MagickWand *wand,
+  const ChannelType channel_mask);
 ]])
 
 local get_flags
