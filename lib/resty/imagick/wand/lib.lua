@@ -606,6 +606,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImageExtent(MagickWand *wand,
   const size_t columns,const unsigned rows);
+
+  MagickBooleanType MagickSetImageFilename(MagickWand *wand,
+  const char *filename);
 ]])
 
 local get_flags

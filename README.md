@@ -1063,6 +1063,10 @@ Sets the image endian method.
 -----
 Sets the image size (i.e. columns & rows).
 
+`img:set_filename(filename)`
+-----
+Sets the filename of a particular image in a sequence.
+
 [Back to TOC](#table-of-contents)
 
 Authors

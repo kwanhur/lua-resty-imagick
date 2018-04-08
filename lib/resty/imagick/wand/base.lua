@@ -1087,4 +1087,8 @@ _M.set_extent = function(self, columns, rows)
     return handle_result(self, lib.MagickSetImageExtent(self.wand, columns, rows))
 end
 
+_M.set_filename = function(self, filename)
+    return handle_result(self, lib.MagickSetImageFilename(self.wand, filename))
+end
+
 return _M
