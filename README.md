@@ -1059,6 +1059,10 @@ Sets the image disposal method.
 -----
 Sets the image endian method.
 
+`img:set_extent(columns, rows)`
+-----
+Sets the image size (i.e. columns & rows).
+
 [Back to TOC](#table-of-contents)
 
 Authors

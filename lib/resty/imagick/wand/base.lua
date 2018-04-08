@@ -1082,4 +1082,9 @@ end
 _M.set_endian = function(self, endian)
     return handle_result(self, lib.MagickSetImageEndian(self.wand, endian_type:to_int(endian .. "Endian")))
 end
+
+_M.set_extent = function(self, columns, rows)
+    return handle_result(self, lib.MagickSetImageExtent(self.wand, columns, rows))
+end
+
 return _M

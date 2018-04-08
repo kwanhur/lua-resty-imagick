@@ -603,6 +603,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImageEndian(MagickWand *wand,
   const EndianType endian);
+
+  MagickBooleanType MagickSetImageExtent(MagickWand *wand,
+  const size_t columns,const unsigned rows);
 ]])
 
 local get_flags
