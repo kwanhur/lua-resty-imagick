@@ -1119,4 +1119,8 @@ _M.set_matte_color = function(self, matte)
     return handle_result(self, lib.MagickSetImageMatteColor(self.wand, matte))
 end
 
+_M.set_page = function(self, w, h, x, y)
+    return handle_result(self, lib.MagickSetImagePage(self.wand, w, h, x, y))
+end
+
 return _M

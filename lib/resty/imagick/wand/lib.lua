@@ -629,6 +629,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImageMatteColor(MagickWand *wand,
   const PixelWand *matte);
+
+  MagickBooleanType MagickSetImagePage(MagickWand *wand,const size_t width,
+  const size_t height,const ssize_t x,const ssize_t y);
 ]])
 
 local get_flags

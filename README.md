@@ -1095,6 +1095,10 @@ Sets the image matte channel.
 -----
 Sets the image alpha color.
 
+`img:set_page(w, h, x, y)`
+-----
+Sets the page geometry of the image.
+
 [Back to TOC](#table-of-contents)
 
 Authors
