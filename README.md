@@ -1075,6 +1075,10 @@ Sets the image fuzz.
 -----
 Sets the image gamma.
 
+`img:set_green_primary(x, y, z)`
+------
+Sets the image chromaticity green primary point.
+
 [Back to TOC](#table-of-contents)
 
 Authors

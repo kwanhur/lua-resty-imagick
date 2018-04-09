@@ -1099,4 +1099,8 @@ _M.set_gamma = function(self, gamma)
     return handle_result(self, lib.MagickSetImageGamma(self.wand, gamma))
 end
 
+_M.set_green_primary = function(self, x, y, z)
+    return handle_result(self, lib.MagickSetImageGreenPrimary(self.wand, x, y, z))
+end
+
 return _M

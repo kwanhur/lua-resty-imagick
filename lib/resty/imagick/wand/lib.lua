@@ -570,6 +570,8 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImageBluePrimary(MagickWand *wand,
   const double x,const double y,const double z);
+  MagickBooleanType MagickSetImageGreenPrimary(MagickWand *wand,
+  const double x,const double y,const double z);
 
   MagickBooleanType MagickSetImageBorderColor(MagickWand *wand,
   const PixelWand *border);
