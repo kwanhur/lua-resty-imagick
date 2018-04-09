@@ -1091,6 +1091,10 @@ Sets the image iterations.
 ------
 Sets the image matte channel.
 
+`img:set_matte_color(matte)`
+-----
+Sets the image alpha color.
+
 [Back to TOC](#table-of-contents)
 
 Authors
