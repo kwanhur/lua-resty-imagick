@@ -1079,6 +1079,10 @@ Sets the image gamma.
 ------
 Sets the image chromaticity green primary point.
 
+`img:set_interpolate_method(method)`
+-----
+Sets the image interpolate pixel method.
+
 [Back to TOC](#table-of-contents)
 
 Authors

@@ -1103,4 +1103,8 @@ _M.set_green_primary = function(self, x, y, z)
     return handle_result(self, lib.MagickSetImageGreenPrimary(self.wand, x, y, z))
 end
 
+_M.set_interpolate_method = function(self, method)
+    return handle_result(self, lib.MagickSetImageInterpolateMethod(pixel_interpolate_method:to_int(method .. "InterpolatePixel")))
+end
+
 return _M

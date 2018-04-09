@@ -617,6 +617,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImageGamma(MagickWand *wand,
   const double gamma);
+
+  MagickBooleanType MagickSetImageInterpolateMethod(MagickWand *wand,
+  const PixelInterpolateMethod method);
 ]])
 
 local get_flags
