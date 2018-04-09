@@ -1135,4 +1135,8 @@ _M.set_red_primary = function(self, x, y, z)
     return handle_result(self, lib.MagickSetImageRedPrimary(self.wand, x, y, z))
 end
 
+_M.set_rendering_intent = function(self, intent)
+    return handle_result(self, lib.MagickSetImageRenderingIntent(rendering_intent:to_int(intent .. "Intent")))
+end
+
 return _M

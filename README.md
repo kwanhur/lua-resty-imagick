@@ -1107,6 +1107,10 @@ Sets the wand image progress monitor to the specified method and returns the pre
 -----
 Sets the image chromaticity red primary point.
 
+`img:set_rendering_intent(intent)`
+-----
+Sets the image rendering intent.
+
 [Back to TOC](#table-of-contents)
 
 Authors

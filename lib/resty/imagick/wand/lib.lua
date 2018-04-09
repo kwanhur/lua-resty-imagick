@@ -642,6 +642,9 @@ ffi.cdef([[
   MagickBooleanType MagickProgressMonitor(const char *text,
 const MagickOffsetType offset,const MagickSizeType span,
 void *client_data);
+
+MagickBooleanType MagickSetImageRenderingIntent(MagickWand *wand,
+  const RenderingIntent rendering_intent);
 ]])
 
 local get_flags
