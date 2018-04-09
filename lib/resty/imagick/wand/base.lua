@@ -1131,4 +1131,8 @@ _M.progress_monitor = function(self, text, offset, span, client_data)
     return handle_result(self, lib.MagickProgressMonitor(text, offset, span, client_data))
 end
 
+_M.set_red_primary = function(self, x, y, z)
+    return handle_result(self, lib.MagickSetImageRedPrimary(self.wand, x, y, z))
+end
+
 return _M

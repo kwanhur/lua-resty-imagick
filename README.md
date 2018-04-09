@@ -1101,7 +1101,11 @@ Sets the page geometry of the image.
 
 `img:set_progress_monitor(progress_monitor, client_data)`
 -----
-Sets the wand image progress monitor to the specified method and returns the previous progress monitor if any. 
+Sets the wand image progress monitor to the specified method and returns the previous progress monitor if any.
+ 
+`img:set_red_primary(x, y, z)`
+-----
+Sets the image chromaticity red primary point.
 
 [Back to TOC](#table-of-contents)
 
