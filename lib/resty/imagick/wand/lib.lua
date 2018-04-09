@@ -623,6 +623,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImageIterations(MagickWand *wand,
   const size_t iterations);
+
+  MagickBooleanType MagickSetImageMatte(MagickWand *wand,
+  const MagickBooleanType *matte);
 ]])
 
 local get_flags

@@ -1111,4 +1111,8 @@ _M.set_iterations = function(self, iterations)
     return handle_result(self, lib.MagickSetImageIterations(self.wand, iterations))
 end
 
+_M.set_matte = function(self, matte)
+    return handle_result(self, lib.MagickSetImageMatte(self.wand, matte))
+end
+
 return _M

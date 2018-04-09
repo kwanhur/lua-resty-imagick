@@ -1087,6 +1087,10 @@ Sets the image interpolate pixel method.
 ------
 Sets the image iterations.
 
+`img:set_matte(matte)`
+------
+Sets the image matte channel.
+
 [Back to TOC](#table-of-contents)
 
 Authors
