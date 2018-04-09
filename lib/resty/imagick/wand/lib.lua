@@ -620,6 +620,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImageInterpolateMethod(MagickWand *wand,
   const PixelInterpolateMethod method);
+
+  MagickBooleanType MagickSetImageIterations(MagickWand *wand,
+  const size_t iterations);
 ]])
 
 local get_flags

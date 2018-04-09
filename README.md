@@ -1083,6 +1083,10 @@ Sets the image chromaticity green primary point.
 -----
 Sets the image interpolate pixel method.
 
+`img:set_iterations(iterations)`
+------
+Sets the image iterations.
+
 [Back to TOC](#table-of-contents)
 
 Authors
