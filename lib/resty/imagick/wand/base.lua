@@ -1123,4 +1123,12 @@ _M.set_page = function(self, w, h, x, y)
     return handle_result(self, lib.MagickSetImagePage(self.wand, w, h, x, y))
 end
 
+_M.set_progress_monitor = function(self, progress_monitor, client_data)
+    return lib.MagickSetImageProgressMonitor(self.wand, progress_monitor, client_data)
+end
+
+_M.progress_monitor = function(self, text, offset, span, client_data)
+    return handle_result(self, lib.MagickProgressMonitor(text, offset, span, client_data))
+end
+
 return _M

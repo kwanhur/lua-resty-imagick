@@ -23,6 +23,8 @@ ffi.cdef([[
   typedef void KernelInfo;
 
   typedef int MagickBooleanType;
+  typedef long long MagickOffsetType;
+  typedef unsigned long long MagickSizeType;
   typedef int ExceptionType;
   typedef int ssize_t;
   typedef int CompositeOperator;
@@ -632,6 +634,12 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImagePage(MagickWand *wand,const size_t width,
   const size_t height,const ssize_t x,const ssize_t y);
+
+  MagickProgressMonitor MagickSetImageProgressMonitor(MagickWand *wand
+  const MagickProgressMonitor progress_monitor,void *client_data);
+  MagickBooleanType MagickProgressMonitor(const char *text,
+const MagickOffsetType offset,const MagickSizeType span,
+void *client_data);
 ]])
 
 local get_flags
