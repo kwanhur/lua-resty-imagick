@@ -1127,6 +1127,10 @@ Sets the image ticks-per-second.
 -----
 Sets the image type.
 
+`img:set_units(units)`
+-----
+Sets the image units of resolution
+
 [Back to TOC](#table-of-contents)
 
 Authors

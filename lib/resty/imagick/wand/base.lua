@@ -1189,7 +1189,11 @@ _M.set_ticks_persecond = function(self, ticks)
 end
 
 _M.set_type = function(self, itype)
-    return handle_result(self, lib.MagickSetImageType(image_type:to_int(itype .. "Type")))
+    return handle_result(self, lib.MagickSetImageType(self.wand, image_type:to_int(itype .. "Type")))
 end
 
+_M.set_units = function(self, units)
+    return handle_result(self, lib.MagickSetImageUnits(self.wand, 
+      resolution_type:to_int(units .. "Resolution")))
+end
 return _M

@@ -638,6 +638,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImageType(MagickWand *wand,
     const ImageType image_type);
+
+  MagickBooleanType MagickSetImageUnits(MagickWand *wand,
+    const ResolutionType units);
 ]])
 
 local get_flags
