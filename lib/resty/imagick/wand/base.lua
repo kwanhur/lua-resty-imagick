@@ -1218,4 +1218,8 @@ _M.shavel = function(self, columns, rows)
     return handle_result(self, lib.MagickShaveImage(self.wand, columns, rows))
 end
 
+_M.shear = function(self, background, x_shear, y_shear)
+    return handle_result(self, lib.MagickShearImage(self.wand, background, x_shear, y_shear))
+end
+
 return _M

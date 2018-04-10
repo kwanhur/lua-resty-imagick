@@ -657,6 +657,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickShaveImage(MagickWand *wand,
     const size_t columns,const size_t rows);
+
+  MagickBooleanType MagickShearImage(MagickWand *wand,
+    const PixelWand *background,const double x_shear,const double y_shear);
 ]])
 
 local get_flags
