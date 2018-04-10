@@ -1142,4 +1142,9 @@ end
 _M.set_resolution = funtion(self, x_resolution, y_resolution)
     return handle_result(self, lib.MagickSetImageResolution(self.wand, x_resolution, y_resolution))
 end
+
+_M.set_scene = function(self, scene)
+    return handle_result(self, lib.MagickSetImageScene(self.wand, scene))
+end
+
 return _M

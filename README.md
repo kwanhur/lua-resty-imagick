@@ -1115,6 +1115,10 @@ Sets the image rendering intent.
 -----
 Sets the image resolution.
 
+`img:set_scene(scene)`
+-----
+Sets the image scene.
+
 [Back to TOC](#table-of-contents)
 
 Authors
