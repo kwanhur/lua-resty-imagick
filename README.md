@@ -1135,6 +1135,10 @@ Sets the image units of resolution
 -----
 Sets the image virtual pixel method.
 
+`img:set_white_point(x, y, z)`
+-----
+Sets the image chromaticity white point.
+
 [Back to TOC](#table-of-contents)
 
 Authors

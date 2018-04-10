@@ -1198,8 +1198,12 @@ _M.set_units = function(self, units)
 end
 
 _M.set_virtual_pixel_method = function(self, method)
-   return virtual_pixel_method:to_str(lib.MagickSetImageVirtualPixelMethod(self.wand,
-     virtual_pixel_method:to_int(method .. "VirtualPixelMethod")))
+    return virtual_pixel_method:to_str(lib.MagickSetImageVirtualPixelMethod(self.wand,
+      virtual_pixel_method:to_int(method .. "VirtualPixelMethod")))
+end
+
+_M.set_white_point = function(self, x, y, z)
+    return handle_result(self, lib.MagickSetImageWhitePoint(self.wand, x, y, z))
 end
 
 return _M
