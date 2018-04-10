@@ -1119,6 +1119,10 @@ Sets the image resolution.
 -----
 Sets the image scene.
 
+`img:set_ticks_perseconds(ticks)`
+-----
+Sets the image ticks-per-second.
+
 [Back to TOC](#table-of-contents)
 
 Authors

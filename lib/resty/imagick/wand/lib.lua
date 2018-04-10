@@ -632,6 +632,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSetImageScene(MagickWand *wand,
     const size_t scene);
+
+  MagickBooleanType MagickSetImageTicksPerSecond(MagickWand *wand,
+    const ssize_t ticks_per_second);
 ]])
 
 local get_flags

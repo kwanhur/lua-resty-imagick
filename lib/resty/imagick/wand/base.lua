@@ -1147,4 +1147,8 @@ _M.set_scene = function(self, scene)
     return handle_result(self, lib.MagickSetImageScene(self.wand, scene))
 end
 
+_M.set_ticks_persecond = function(self, ticks)
+    return handle_result(self, lib.MagickSetImageTicksPerSecond(self.wand, ticks))
+end
+
 return _M
