@@ -1206,4 +1206,8 @@ _M.set_white_point = function(self, x, y, z)
     return handle_result(self, lib.MagickSetImageWhitePoint(self.wand, x, y, z))
 end
 
+_M.shade = function(self, gray, azimuth, elevation)
+    return handle_result(self, lib.MagickShadeImage(self.wand, gray, azimuth, elevation))
+end
+
 return _M
