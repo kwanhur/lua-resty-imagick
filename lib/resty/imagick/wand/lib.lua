@@ -651,6 +651,9 @@ ffi.cdef([[
   MagickBooleanType MagickShadeImage(MagickWand *wand,
     const MagickBooleanType gray,const double azimuth,
     const double elevation);
+
+  MagickBooleanType MagickShadowImage(MagickWand *wand,const double alpha,
+    const double sigma,const ssize_t x,const ssize_t y);
 ]])
 
 local get_flags

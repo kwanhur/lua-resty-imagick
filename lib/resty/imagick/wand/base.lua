@@ -1210,4 +1210,8 @@ _M.shade = function(self, gray, azimuth, elevation)
     return handle_result(self, lib.MagickShadeImage(self.wand, gray, azimuth, elevation))
 end
 
+_M.shadow = function(self, alpha, sigma, x, y)
+    return handle_result(self, lib.MagickShadowImage(self.wand, alpha, sigma, x, y))
+end
+
 return _M

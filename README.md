@@ -1144,6 +1144,10 @@ Sets the image chromaticity white point.
 Shines a distant light on an image to create a three-dimensional effect. You control the positioning of the light with azimuth and elevation; 
 azimuth is measured in degrees off the x axis and elevation is measured in pixels above the Z axis.
 
+`img:shadow(alpha, sigma, x, y)`
+-----
+Simulates an image shadow.
+
 [Back to TOC](#table-of-contents)
 
 Authors
