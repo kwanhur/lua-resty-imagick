@@ -654,6 +654,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickShadowImage(MagickWand *wand,const double alpha,
     const double sigma,const ssize_t x,const ssize_t y);
+
+  MagickBooleanType MagickShaveImage(MagickWand *wand,
+    const size_t columns,const size_t rows);
 ]])
 
 local get_flags

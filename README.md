@@ -1148,6 +1148,10 @@ azimuth is measured in degrees off the x axis and elevation is measured in pixel
 -----
 Simulates an image shadow.
 
+`img:shavel(columns, rows)`
+-----
+Shaves pixels from the image edges. It allocates the memory necessary for the new Image structure and returns a pointer to the new image.
+
 [Back to TOC](#table-of-contents)
 
 Authors

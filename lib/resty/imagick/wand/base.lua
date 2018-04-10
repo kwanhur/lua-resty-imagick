@@ -1214,4 +1214,8 @@ _M.shadow = function(self, alpha, sigma, x, y)
     return handle_result(self, lib.MagickShadowImage(self.wand, alpha, sigma, x, y))
 end
 
+_M.shavel = function(self, columns, rows)
+    return handle_result(self, lib.MagickShaveImage(self.wand, columns, rows))
+end
+
 return _M
