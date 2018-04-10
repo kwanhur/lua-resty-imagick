@@ -1123,6 +1123,10 @@ Sets the image scene.
 -----
 Sets the image ticks-per-second.
 
+`img:set_type(itype)`
+-----
+Sets the image type.
+
 [Back to TOC](#table-of-contents)
 
 Authors
