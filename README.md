@@ -1131,6 +1131,10 @@ Sets the image type.
 -----
 Sets the image units of resolution
 
+`img:set_virtual_pixel_method(method)`
+-----
+Sets the image virtual pixel method.
+
 [Back to TOC](#table-of-contents)
 
 Authors

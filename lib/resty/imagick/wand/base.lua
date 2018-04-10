@@ -1196,4 +1196,10 @@ _M.set_units = function(self, units)
     return handle_result(self, lib.MagickSetImageUnits(self.wand, 
       resolution_type:to_int(units .. "Resolution")))
 end
+
+_M.set_virtual_pixel_method = function(self, method)
+   return virtual_pixel_method:to_str(lib.MagickSetImageVirtualPixelMethod(self.wand,
+     virtual_pixel_method:to_int(method .. "VirtualPixelMethod")))
+end
+
 return _M
