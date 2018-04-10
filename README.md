@@ -1111,6 +1111,10 @@ Sets the image chromaticity red primary point.
 -----
 Sets the image rendering intent.
 
+`img:set_resolution(x, y)`
+-----
+Sets the image resolution.
+
 [Back to TOC](#table-of-contents)
 
 Authors
