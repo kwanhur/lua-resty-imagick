@@ -729,6 +729,10 @@ ffi.cdef([[
   MagickBooleanType MagickUnsharpMaskImage(MagickWand *wand,
     const double radius,const double sigma,const double gain,
     const double threshold);
+
+  MagickBooleanType MagickVignetteImage(MagickWand *wand,
+    const double radius,const double sigma,const ssize_t x,
+    const ssize_t y);
 ]])
 
 local get_flags

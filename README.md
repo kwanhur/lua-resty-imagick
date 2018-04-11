@@ -1251,6 +1251,10 @@ Discards all but one of any pixel color.
 Sharpens an image. We convolve the image with a Gaussian operator of the given radius and standard deviation (sigma). 
 For reasonable results, radius should be larger than sigma. Use a radius of 0 and UnsharpMaskImage() selects a suitable radius for you.
 
+`img:vignette(radius, sigma, x, y)`
+-----
+Softens the edges of the image in vignette style.
+
 [Back to TOC](#table-of-contents)
 
 Authors

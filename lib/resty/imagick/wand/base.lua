@@ -1317,4 +1317,8 @@ _M.unsharp_mask = function(self, radius, sigma, gain, threshold)
     return handle_result(self, lib.MagickUnsharpMaskImage(self.wand, radius, sigma, gain, threshold))
 end
 
+_M.vignette = function(self, radius, sigma, x, y)
+    return handle_result(self, lib.MagickVignetteImage(self.wand, radius, sigma, x, y))
+end
+
 return _M
