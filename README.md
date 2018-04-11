@@ -1182,6 +1182,10 @@ Takes all images from the current image pointer to the end of the image list and
 Applies a special effect to the image, similar to the effect achieved in a photo darkroom by selectively exposing areas of photo sensitive paper to light. 
 Threshold ranges from 0 to QuantumRange and is a measure of the extent of the solarization.
 
+`img:sparse_color(method, num_args, args)`
+-----
+Given a set of coordinates, interpolates the colors found at those coordinates, across the whole image, using various methods.
+
 [Back to TOC](#table-of-contents)
 
 Authors

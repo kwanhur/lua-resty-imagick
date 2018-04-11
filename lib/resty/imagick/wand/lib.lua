@@ -50,6 +50,7 @@ ffi.cdef([[
   typedef int MorphologyMethod;
   typedef int LayerMethod;
   typedef int VirtualPixelMethod;
+  typedef int SparseColorMethod;
   typedef int MagickEvaluateOperator;
   typedef int MagickFunction;
   typedef int MontageMode;
@@ -678,6 +679,10 @@ ffi.cdef([[
 
   MagickBooleanType MagickSolarizeImage(MagickWand *wand,
     const double threshold);
+
+  MagickBooleanType MagickSparseColorImage(MagickWand *wand,
+    const SparseColorMethod method,const size_t number_arguments,
+    const double *arguments);
 ]])
 
 local get_flags

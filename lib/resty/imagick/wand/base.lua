@@ -20,6 +20,7 @@ local storage_type = wand_data.storage_type
 local distort_method = wand_data.distort_method
 local virtual_pixel_method = wand_data.virtual_pixel_method
 local layer_method = wand_data.layer_method
+local sparse_color_method = wand_data.sparse_color_method
 local evaluate_operator = wand_data.evaluate_operator
 local composite_operators = wand_data.composite_operators
 local orientation = wand_data.orientation
@@ -1241,6 +1242,11 @@ end
 
 _M.solarize = function(self, threshold)
     return handle_result(self, lib.MagickSolarizeImage(self.wand, threshold))
+end
+
+_M.sparse_color = function(self, method, num_args, args)
+    return handle_result(self, lib.MagickSparseColorImage(self.wand, sparse_color_method:to_int(method .. "ColorInterpolate"),
+      num_args, args))
 end
 
 return _M

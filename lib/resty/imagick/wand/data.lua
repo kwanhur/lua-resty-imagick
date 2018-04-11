@@ -514,6 +514,17 @@ local AlphaChannelOption = enum({
     "TransparentAlphaChannel"
 })
 
+local SparseColorMethod = enum({
+    [0] = "UndefinedColorInterpolate",
+    [1] = "BarycentricColorInterpolate",
+    [8] = "BilinearColorInterpolate",
+    [9] = "PolynomialColorInterpolate",
+    [17] = "ShepardsColorInterpolate",
+    [19] = "VoronoiColorInterpolate",
+    [20] = "InverseColorInterpolate",
+    [21] = "ManhattanColorInterpolate"
+})
+
 _M.composite_operators = CompositeOperators
 
 _M.gravity_type = GravityType
@@ -531,6 +542,8 @@ _M.distort_method = DistortMethod
 _M.virtual_pixel_method = VirtualPixelMethod
 
 _M.layer_method = LayerMethod
+
+_M.sparse_color_method = SparseColorMethod
 
 _M.evaluate_operator = EvaluateOperator
 
