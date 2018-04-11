@@ -1186,6 +1186,10 @@ Threshold ranges from 0 to QuantumRange and is a measure of the extent of the so
 -----
 Given a set of coordinates, interpolates the colors found at those coordinates, across the whole image, using various methods.
 
+`img:splice(w, h, x, y)`
+-----
+Splices a solid color into the image.
+
 [Back to TOC](#table-of-contents)
 
 Authors

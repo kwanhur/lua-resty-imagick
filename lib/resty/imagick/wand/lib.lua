@@ -683,6 +683,10 @@ ffi.cdef([[
   MagickBooleanType MagickSparseColorImage(MagickWand *wand,
     const SparseColorMethod method,const size_t number_arguments,
     const double *arguments);
+
+  MagickBooleanType MagickSpliceImage(MagickWand *wand,
+    const size_t width,const size_t height,const ssize_t x,
+    const ssize_t y);
 ]])
 
 local get_flags

@@ -1249,4 +1249,8 @@ _M.sparse_color = function(self, method, num_args, args)
       num_args, args))
 end
 
+_M.splice = function(self, w, h, x, y)
+    return handle_result(self, lib.MagickSpliceImage(self.wand, w, h, x, y))
+end
+
 return _M
