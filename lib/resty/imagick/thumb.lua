@@ -23,7 +23,7 @@ _M.parse_size_str = function(str, src_w, src_h)
         w = tonumber(w)
     end
 
-    local p = h:match("(%d+)%%")
+    p = h:match("(%d+)%%")
     if p then
         h = tonumber(p) / 100 * src_h
     else

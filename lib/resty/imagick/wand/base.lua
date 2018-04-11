@@ -156,7 +156,7 @@ _M.resize = function(self, w, h, f, blur)
         error("Failed to load filter list, can't resize")
     end
     w, h = self:_keep_aspect(w, h)
-    return handle_result(self, lib.MagickResizeImage(self.wand, w, h, 
+    return handle_result(self, lib.MagickResizeImage(self.wand, w, h,
       filter_type:to_int(f .. 'Filter'), blur))
 end
 
@@ -408,7 +408,7 @@ _M.chip_path = function(self, path, inside)
 end
 
 _M.clut = function(self, clut, method)
-    return handle_result(self, lib.MagickClutImage(self.wand, clut, 
+    return handle_result(self, lib.MagickClutImage(self.wand, clut,
       pixel_interpolate_method:to_int(method .. "InterpolatePixel")))
 end
 
@@ -449,12 +449,12 @@ _M.compare = function(self, reference, metric, distortion)
 end
 
 _M.composite_gravity = function(self, source, compose, gravity)
-    return handle_result(self, lib.MagickCompositeImageGravity(self.wand, source, 
+    return handle_result(self, lib.MagickCompositeImageGravity(self.wand, source,
       composite_operators:to_int(compose .. "CompositeOp"), gravity_type:to_int(gravity .. "Gravity")))
 end
 
 _M.composite_layers = function(self, source, compose, x, y)
-    return handle_result(self, lib.MagickCompositeLayers(self.wand, source, 
+    return handle_result(self, lib.MagickCompositeLayers(self.wand, source,
       composite_operators:to_int(compose .. "CompositeOp"), x, y))
 end
 
@@ -504,7 +504,7 @@ _M.displays = function(self, server_name)
 end
 
 _M.distort = function(self, method, num_args, args, bestfit)
-    return handle_result(self, lib.MagickDistortImage(distort_method:to_int(method .. 'Distortion'), 
+    return handle_result(self, lib.MagickDistortImage(distort_method:to_int(method .. 'Distortion'),
       num_args, args, bestfit))
 end
 
@@ -588,12 +588,12 @@ _M.equalize = function(self)
 end
 
 _M.evaluate = function(self, operator, value)
-    return handle_result(self, lib.MagickEvaluateImage(self.wand, 
+    return handle_result(self, lib.MagickEvaluateImage(self.wand,
       evaluate_operator:to_int(operator .. "EvaluateOperator"), value))
 end
 
 _M.export_pixels = function(self, x, y, columns, rows, map, storage, pixels)
-    return handle_result(self, lib.MagickExportImagePixels(self.wand, x, y, columns, rows, 
+    return handle_result(self, lib.MagickExportImagePixels(self.wand, x, y, columns, rows,
       map, storage_type:to_int(storage .. "Pixel"), pixels))
 end
 
@@ -602,7 +602,7 @@ _M.extent = function(self, w, h, x, y)
 end
 
 _M.flood_fill_paint = function(self, fill, fuzz, border_color, x, y, invert)
-    return handle_result(self, lib.MagickFloodfillPaintImage(self.wand, fill, fuzz, 
+    return handle_result(self, lib.MagickFloodfillPaintImage(self.wand, fill, fuzz,
       border_color, x, y, invert))
 end
 
@@ -611,17 +611,17 @@ _M.forward_fourier_transform = function(self, magnitude)
 end
 
 _M.inverse_fourier_transform = function(self, phase_wand, magnitude)
-    return handle_result(self, lib.MagickInverseFourierTransformImage(self.wand, 
+    return handle_result(self, lib.MagickInverseFourierTransformImage(self.wand,
       phase_wand, magnitude))
 end
 
 _M.frame = function(self, matte_color, w, h, inner_level, outer_level, compose)
-    return handle_result(self, lib.MagickFrameImage(self.wand, matte_color, w, h, 
+    return handle_result(self, lib.MagickFrameImage(self.wand, matte_color, w, h,
       inner_level, outer_level, composite_operators:to_int(compose .. "CompositeOp")))
 end
 
 _M.funtion = function(self, func, num_args, args)
-    return handle_result(self, lib.MagickFunctionImage(self.wand, 
+    return handle_result(self, lib.MagickFunctionImage(self.wand,
       functions:to_int(func .. "Function"), num_args, args))
 end
 
@@ -685,7 +685,7 @@ end
 
 _M.get_colormap_color = function(self, color)
     local index = ffi.new("size_t[1]", 0)
-    local ok, msg, code handle_result(self, lib.MagickGetImageColormapColor(self.wand, index, color))
+    local ok, msg, code = handle_result(self, lib.MagickGetImageColormapColor(self.wand, index, color))
     if ok then
         return index
     else
@@ -845,17 +845,17 @@ _M.identify_type = function(self)
 end
 
 _M.implode = function(self, radius, method)
-    return handle_result(self, lib.MagickImplodeImage(self.wand, radius, 
+    return handle_result(self, lib.MagickImplodeImage(self.wand, radius,
       pixel_interpolate_method:to_int(method .. "InterpolatePixel")))
 end
 
 _M.import_pixels = function(self, x, y, columns, rows, map, storage, pixels)
-    return handle_result(self, lib.MagickImportImagePixels(self.wand, x, y, 
+    return handle_result(self, lib.MagickImportImagePixels(self.wand, x, y,
       columns, rows, map, storage_type:to_int(storage .. "Pixel"), pixels))
 end
 
 _M.interpolative_resize = function(self, columns, rows, method)
-    return handle_result(self, lib.MagickInterpolativeResizeImage(self.wand, 
+    return handle_result(self, lib.MagickInterpolativeResizeImage(self.wand,
       columns, rows, pixel_interpolate_method:to_int(method .. "InterpolatePixel")))
 end
 
@@ -868,17 +868,17 @@ _M.level = function(self, black_point, gamma, white_point)
 end
 
 _M.linear_stretch = function(self, black_point, white_point)
-    return handle_result(self, lib.MagickLinearStretchImage(self.wand, 
+    return handle_result(self, lib.MagickLinearStretchImage(self.wand,
       black_point, white_point))
 end
 
 _M.liquid_rescale = function(self, columns, rows, delta_x, rigidity)
-    return handle_result(self, lib.MagickLiquidRescaleImage(columns, rows, 
+    return handle_result(self, lib.MagickLiquidRescaleImage(columns, rows,
       delta_x, rigidity))
 end
 
 _M.local_contrast = function(self, radius, strength)
-    return handle_result(self, lib.MagickLocalContrastImage(self.wand, radius, 
+    return handle_result(self, lib.MagickLocalContrastImage(self.wand, radius,
       strength))
 end
 
@@ -904,7 +904,7 @@ _M.morph = function(self, num_frames)
 end
 
 _M.morphology = function(self, method, iterations, kernel)
-    return handle_result(self, lib.MagickMorphologyImage(self.wand, 
+    return handle_result(self, lib.MagickMorphologyImage(self.wand,
       morphology_method:to_int(method .. "Morphology"), iterations, kernel))
 end
 
@@ -933,7 +933,7 @@ _M.oil_paint = function(self, radius, sigma)
 end
 
 _M.opaque_paint = function(self, target, fill, fuzz, invert)
-    return handle_result(self, lib.MagickOpaquePaintImage(self.wand, target, 
+    return handle_result(self, lib.MagickOpaquePaintImage(self.wand, target,
       fill, fuzz, invert))
 end
 
@@ -962,12 +962,12 @@ _M.ping_file = function(self, file)
 end
 
 _M.polariod = function(self, drawing, caption, angle, method)
-    return handle_result(self, lib.MagickPolaroidImage(self.wand, drawing, caption, 
+    return handle_result(self, lib.MagickPolaroidImage(self.wand, drawing, caption,
       angle, pixel_interpolate_method:to_int(method .. "InterpolatePixel")))
 end
 
 _M.posterize = function(self, levels, method)
-    return handle_result(self, lib.MagickPosterizeImage(self.wand, levels, 
+    return handle_result(self, lib.MagickPosterizeImage(self.wand, levels,
       distort_method:to_int(method .. "DitherMethod")))
 end
 
@@ -980,14 +980,14 @@ _M.previous = function(self)
 end
 
 _M.quantize = function(self, num_corlors, colorspace, treedepth, method, measure_error)
-    return handle_result(self, lib.MagickQuantizeImage(self.wand, num_corlors, 
-      colorspace_type:to_int(colorspace .. "Colorspace"), treedepth, 
+    return handle_result(self, lib.MagickQuantizeImage(self.wand, num_corlors,
+      colorspace_type:to_int(colorspace .. "Colorspace"), treedepth,
       distort_method:to_int(method .. "DitherMethod"), measure_error))
 end
 
 _M.quantizes = function(self, num_corlors, colorspace, treedepth, method, measure_error)
-    return handle_result(self, lib.MagickQuantizeImages(self.wand, num_corlors, 
-      colorspace_type:to_int(colorspace .. "Colorspace"), treedepth, 
+    return handle_result(self, lib.MagickQuantizeImages(self.wand, num_corlors,
+      colorspace_type:to_int(colorspace .. "Colorspace"), treedepth,
       distort_method:to_int(method .. "DitherMethod"), measure_error))
 end
 
@@ -1016,7 +1016,7 @@ _M.read_file = function(self, file)
 end
 
 _M.remap = function(self, remap_wand, method)
-    return handle_result(self, lib.MagickRemapImage(self.wand, remap_wand, 
+    return handle_result(self, lib.MagickRemapImage(self.wand, remap_wand,
       dither_method:to_int(method .. "DitherMethod")))
 end
 
@@ -1025,7 +1025,7 @@ _M.remove = function(self)
 end
 
 _M.resample = function(self, x_resolution, y_resolution, filter)
-    return handle_result(self, lib.MagickResampleImage(self.wand, x_resolution, 
+    return handle_result(self, lib.MagickResampleImage(self.wand, x_resolution,
       y_resolution, filter_type:to_int(filter .. "Filter")))
 end
 
@@ -1038,8 +1038,8 @@ _M.sample = function(self, columns, rows)
 end
 
 _M.segment = function(self, colorspace, verbose, cluster_threshold, smooth_threshold)
-    return handle_result(self, lib.MagickSegmentImage(self.wand, 
-      colorspace_type:to_int(colorspace .. "Colorspace"), verbose, 
+    return handle_result(self, lib.MagickSegmentImage(self.wand,
+      colorspace_type:to_int(colorspace .. "Colorspace"), verbose,
       cluster_threshold, smooth_threshold))
 end
 
@@ -1060,7 +1060,7 @@ _M.set = function(self, set_wand)
 end
 
 _M.set_alpha_channel = function(self, alpha_type)
-    return handle_result(self, lib.MagickSetImageAlphaChannel(self.wand, 
+    return handle_result(self, lib.MagickSetImageAlphaChannel(self.wand,
       alpha_channel_option:to_int(alpha_type .. "AlphaChannel")))
 end
 
@@ -1080,8 +1080,8 @@ _M.set_channel_mask = function(self, channel_mask)
     return lib.MagickSetImageChannelMask(self.wand, channel_mask)
 end
 
-_M.set_mask = function(self, type, clip_mask)
-    return handle_result(self, lib.MagickSetImageMask(self.wand, type, clip_mask))
+_M.set_mask = function(self, mtype, clip_mask)
+    return handle_result(self, lib.MagickSetImageMask(self.wand, mtype, clip_mask))
 end
 
 _M.set_color = function(self, color)
@@ -1093,17 +1093,17 @@ _M.set_colormap_color = function(self, index, color)
 end
 
 _M.set_colorspace = function(self, colorspace)
-    return handle_result(self, lib.MagickSetImageColorspace(self.wand, 
+    return handle_result(self, lib.MagickSetImageColorspace(self.wand,
       colorspace_type:to_int(colorspace .. "Colorspace")))
 end
 
 _M.set_compose = function(self, compose)
-    return handle_result(self, lib.MagickSetImageCompose(self.wand, 
+    return handle_result(self, lib.MagickSetImageCompose(self.wand,
       composite_operators:to_int(compose .. "CompositeOp")))
 end
 
 _M.set_compression = function(self, compression)
-    return handle_result(self, lib.MagickSetImageCompression(self.wand, 
+    return handle_result(self, lib.MagickSetImageCompression(self.wand,
       compression_type:to_int(compression .. "Compression")))
 end
 
@@ -1112,12 +1112,12 @@ _M.set_delay = function(self, delay)
 end
 
 _M.set_dispose = function(self, dispose)
-    return handle_result(self, lib.MagickSetImageDispose(self.wand, 
+    return handle_result(self, lib.MagickSetImageDispose(self.wand,
       dispose_type:to_int(dispose .. "Dispose")))
 end
 
 _M.set_endian = function(self, endian)
-    return handle_result(self, lib.MagickSetImageEndian(self.wand, 
+    return handle_result(self, lib.MagickSetImageEndian(self.wand,
       endian_type:to_int(endian .. "Endian")))
 end
 
@@ -1142,7 +1142,7 @@ _M.set_green_primary = function(self, x, y, z)
 end
 
 _M.set_interpolate_method = function(self, method)
-    return handle_result(self, lib.MagickSetImageInterpolateMethod(self.wand, 
+    return handle_result(self, lib.MagickSetImageInterpolateMethod(self.wand,
       pixel_interpolate_method:to_int(method .. "InterpolatePixel")))
 end
 
@@ -1195,7 +1195,7 @@ _M.set_type = function(self, itype)
 end
 
 _M.set_units = function(self, units)
-    return handle_result(self, lib.MagickSetImageUnits(self.wand, 
+    return handle_result(self, lib.MagickSetImageUnits(self.wand,
       resolution_type:to_int(units .. "Resolution")))
 end
 
@@ -1228,7 +1228,7 @@ _M.sigmoidal_contrast = function(self, sharpen, alpha, beta)
     return handle_result(self, lib.MagickSigmoidalContrastImage(self.wand, sharpen, alpha, beta))
 end
 
-_M.similarity = function(self, reference, metric, similarity_threshold, offset, similary)
+_M.similarity = function(self, reference, metric, similarity_threshold, offset, similarity)
     return lib.MagickSimilarityImage(self.wand, reference, metric_type:to_int(metric .. "ErrorMetric"),
       similarity_threshold, offset, similarity)
 end
@@ -1255,7 +1255,7 @@ _M.splice = function(self, w, h, x, y)
 end
 
 _M.spread = function(self, method, radius)
-    return handle_result(self, lib.MagickSpreadImage(self.wand, pixel_interpolate_method:to_int(method .. "InterpolatePixel"), 
+    return handle_result(self, lib.MagickSpreadImage(self.wand, pixel_interpolate_method:to_int(method .. "InterpolatePixel"),
       radius))
 end
 
@@ -1297,7 +1297,7 @@ _M.tint = function(self, tint, blend)
 end
 
 _M.transform_colorspace = function(self, colorspace)
-    return handle_result(self, lib.MagickTransformImageColorspace(self.wand, 
+    return handle_result(self, lib.MagickTransformImageColorspace(self.wand,
       colorspace_type:to_int(colorspace .. "Colorspace")))
 end
 
