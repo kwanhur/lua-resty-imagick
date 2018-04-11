@@ -452,7 +452,7 @@ Reduces the speckle noise in an image while perserving the edges of the original
 -----
 Displays an image.
 
-`img:display_multi(server_name)`
+`img:displays(server_name)`
 -----
 Displays an image or image sequence.
 
@@ -922,7 +922,7 @@ In this sense the condition is not quite exactly the same as reset_iterator().
 Analyzes the colors within a reference image and chooses a fixed number of colors to represent the image. The goal of 
 the algorithm is to minimize the color difference between the input and output image while minimizing the processing time.
 
-`img:quantize_multi(num_corlors, colorspace, treedepth, method, measure_error)`
+`img:quantizes(num_corlors, colorspace, treedepth, method, measure_error)`
 ----
 Analyzes the colors within a sequence of images and chooses a fixed number of colors to represent the image. The goal of 
 the algorithm is to minimize the color difference between the input and output image while minimizing the processing time.
@@ -1271,7 +1271,7 @@ Writes an image to the specified filename. If the filename parameter is NULL, th
 -----
 Writes an image to an open file descriptor.
 
-`img:write_multi(filename, adjoin)`
+`img:writes(filename, adjoin)`
 -----
 Writes an image or image sequence.
 

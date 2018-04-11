@@ -499,7 +499,7 @@ _M.display = function(self, server_name)
     return handle_result(self, lib.MagickDisplayImage(self.wand, server_name))
 end
 
-_M.display_multi = function(self, server_name)
+_M.displays = function(self, server_name)
     return handle_result(self, lib.MagickDisplayImages(self.wand, server_name))
 end
 
@@ -985,7 +985,7 @@ _M.quantize = function(self, num_corlors, colorspace, treedepth, method, measure
       distort_method:to_int(method .. "DitherMethod"), measure_error))
 end
 
-_M.quantize_multi = function(self, num_corlors, colorspace, treedepth, method, measure_error)
+_M.quantizes = function(self, num_corlors, colorspace, treedepth, method, measure_error)
     return handle_result(self, lib.MagickQuantizeImages(self.wand, num_corlors, 
       colorspace_type:to_int(colorspace .. "Colorspace"), treedepth, 
       distort_method:to_int(method .. "DitherMethod"), measure_error))
@@ -1338,7 +1338,7 @@ _M.write_file = function(self, file)
     return handle_result(self, lib.MagickWriteImageFile(self.wand, file))
 end
 
-_M.write_multi = function(self, filename, adjoin)
+_M.writes = function(self, filename, adjoin)
     return handle_result(self, lib.MagickWriteImages(self.wand, filename, adjoin))
 end
 
