@@ -13,7 +13,8 @@ local lib = wand_lib.lib
 
 local get_exception = function(wand)
     local etype = ffi.new("ExceptionType[1]", 0)
-    local msg = ffi.string(ffi.gc(lib.MagickGetException(wand, etype), lib.MagickRelinquishMemory))
+    local msg = ffi.string(ffi.gc(lib.MagickGetException(wand, etype),
+      lib.MagickRelinquishMemory))
     return etype[0], msg
 end
 

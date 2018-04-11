@@ -72,11 +72,17 @@ ffi.cdef([[
 
   MagickBooleanType MagickAddImage(MagickWand*, const MagickWand*);
 
-  MagickBooleanType MagickAdaptiveBlurImage(MagickWand *wand,const double radius,const double sigma);
-  MagickBooleanType MagickAdaptiveResizeImage(MagickWand*, const size_t, const size_t);
-  MagickBooleanType MagickAdaptiveSharpenImage(MagickWand *wand,const double radius,const double sigma);
-  MagickBooleanType MagickAdaptiveThresholdImage(MagickWand *wand,const size_t width,const size_t height,
-    const double bias);
+  MagickBooleanType MagickAdaptiveBlurImage(MagickWand *wand,
+    const double radius,const double sigma);
+
+  MagickBooleanType MagickAdaptiveResizeImage(MagickWand*, const size_t,
+    const size_t);
+
+  MagickBooleanType MagickAdaptiveSharpenImage(MagickWand *wand,
+    const double radius,const double sigma);
+
+  MagickBooleanType MagickAdaptiveThresholdImage(MagickWand *wand,
+    const size_t width,const size_t height,const double bias);
 
   MagickBooleanType MagickWriteImage(MagickWand*, const char*);
 
@@ -88,13 +94,18 @@ ffi.cdef([[
     const size_t, const size_t, const ssize_t, const ssize_t);
 
   MagickBooleanType MagickBlurImage(MagickWand*, const double, const double);
-  MagickBooleanType MagickModulateImage(MagickWand*, const double, const double, const double);
-  MagickBooleanType MagickBrightnessContrastImage(MagickWand*, const double, const double);
+
+  MagickBooleanType MagickModulateImage(MagickWand*, const double, const double,
+    const double);
+
+  MagickBooleanType MagickBrightnessContrastImage(MagickWand*, const double,
+    const double);
 
   MagickBooleanType MagickSetImageFormat(MagickWand* wand, const char* format);
-  char* MagickGetImageFormat(MagickWand* wand);
+    char* MagickGetImageFormat(MagickWand* wand);
 
   size_t MagickGetImageCompressionQuality(MagickWand * wand);
+
   MagickBooleanType MagickSetImageCompressionQuality(MagickWand *wand,
     const size_t quality);
 
@@ -105,16 +116,17 @@ ffi.cdef([[
     const size_t columns,const size_t rows);
 
   MagickBooleanType MagickRotateImage(MagickWand *wand,
-  const PixelWand *background,const double degrees);
+    const PixelWand *background,const double degrees);
 
   MagickBooleanType MagickSetOption(MagickWand *,const char *,const char *);
-  char* MagickGetOption(MagickWand *,const char *);
+    char* MagickGetOption(MagickWand *,const char *);
 
   MagickBooleanType MagickCompositeImage(MagickWand *wand,
     const MagickWand *source_wand,const CompositeOperator compose,
     const ssize_t x,const ssize_t y);
 
   GravityType MagickGetImageGravity(MagickWand *wand);
+
   MagickBooleanType MagickSetImageGravity(MagickWand *wand,
     const GravityType gravity);
 
@@ -176,9 +188,11 @@ ffi.cdef([[
   MagickBooleanType MagickResizeImage(MagickWand*,const size_t, const size_t,
     const FilterType, const double);
 
-  MagickBooleanType MagickAnimateImages(MagickWand *wand,const char *server_name);
+  MagickBooleanType MagickAnimateImages(MagickWand *wand,
+    const char *server_name);
 
-  MagickBooleanType MagickBlackThresholdImage(MagickWand *wand,const PixelWand *threshold);
+  MagickBooleanType MagickBlackThresholdImage(MagickWand *wand,
+    const PixelWand *threshold);
 
   MagickBooleanType MagickBlueShiftImage(MagickWand *wand, const double factor);
 
@@ -205,15 +219,18 @@ ffi.cdef([[
     const char *color_correction_collection);
 
   MagickBooleanType MagickColorizeImage(MagickWand *wand,
-     const PixelWand *colorize,const PixelWand *blend);
+    const PixelWand *colorize,const PixelWand *blend);
 
-  MagickBooleanType MagickColorMatrixImage(MagickWand *wand,const KernelInfo *color_matrix);
+  MagickBooleanType MagickColorMatrixImage(MagickWand *wand,
+    const KernelInfo *color_matrix);
 
-  MagickWand *MagickCombineImages(MagickWand *wand,const ColorspaceType colorspace);
+  MagickWand *MagickCombineImages(MagickWand *wand,
+    const ColorspaceType colorspace);
 
   MagickBooleanType MagickCommentImage(MagickWand *wand,const char *comment);
 
-  MagickWand *MagickCompareImagesLayers(MagickWand *wand,const LayerMethod method);
+  MagickWand *MagickCompareImagesLayers(MagickWand *wand,
+    const LayerMethod method);
 
   MagickWand *MagickCompareImages(MagickWand *wand,
     const MagickWand *reference,const MetricType metric,
@@ -227,20 +244,24 @@ ffi.cdef([[
     const MagickWand *source_wand, const CompositeOperator compose,
     const ssize_t x,const ssize_t y);
 
-  MagickBooleanType MagickContrastImage(MagickWand *wand,const MagickBooleanType sharpen);
+  MagickBooleanType MagickContrastImage(MagickWand *wand,
+    const MagickBooleanType sharpen);
 
   MagickBooleanType MagickContrastStretchImage(MagickWand *wand,
     const double black_point,const double white_point);
 
-  MagickBooleanType MagickConvolveImage(MagickWand *wand,const KernelInfo *kernel);
+  MagickBooleanType MagickConvolveImage(MagickWand *wand,
+    const KernelInfo *kernel);
 
-  MagickBooleanType MagickCycleColormapImage(MagickWand *wand,const ssize_t displace);
+  MagickBooleanType MagickCycleColormapImage(MagickWand *wand,
+    const ssize_t displace);
 
   MagickBooleanType MagickConstituteImage(MagickWand *wand,
     const size_t columns,const size_t rows,const char *map,
     const StorageType storage,void *pixels);
 
-  MagickBooleanType MagickDecipherImage(MagickWand *wand,const char *passphrase);
+  MagickBooleanType MagickDecipherImage(MagickWand *wand,
+    const char *passphrase);
 
   MagickWand *MagickDeconstructImages(MagickWand *wand);
 
@@ -248,9 +269,11 @@ ffi.cdef([[
 
   MagickBooleanType MagickDespeckleImage(MagickWand *wand);
 
-  MagickBooleanType MagickDisplayImage(MagickWand *wand,const char *server_name);
+  MagickBooleanType MagickDisplayImage(MagickWand *wand,
+    const char *server_name);
 
-  MagickBooleanType MagickDisplayImages(MagickWand *wand,const char *server_name);
+  MagickBooleanType MagickDisplayImages(MagickWand *wand,
+    const char *server_name);
 
   MagickBooleanType MagickDistortImage(MagickWand *wand,
     const DistortMethod method,const size_t number_arguments,
@@ -288,8 +311,10 @@ ffi.cdef([[
 
   MagickBooleanType MagickForwardFourierTransformImage(MagickWand *wand,
     const MagickBooleanType magnitude);
+
   MagickBooleanType MagickInverseFourierTransformImage(
-    MagickWand *magnitude_wand,MagickWand *phase_wand,const MagickBooleanType magnitude);
+    MagickWand *magnitude_wand,MagickWand *phase_wand,
+    const MagickBooleanType magnitude);
 
   MagickBooleanType MagickFrameImage(MagickWand *wand,
     const PixelWand *matte_color,const size_t width,
@@ -323,7 +348,8 @@ ffi.cdef([[
   MagickBooleanType MagickGetImageRedPrimary(MagickWand *wand,double *x,
     double *y, double *z);
 
-  MagickBooleanType MagickGetImageBorderColor(MagickWand *wand,PixelWand *border_color);
+  MagickBooleanType MagickGetImageBorderColor(MagickWand *wand,
+    PixelWand *border_color);
 
   MagickBooleanType MagickGetImageKurtosis(MagickWand *wand,
     double *kurtosis,double *skewness);
@@ -363,7 +389,8 @@ ffi.cdef([[
 
   size_t MagickGetImageIterations(MagickWand *wand);
 
-  MagickBooleanType MagickGetImageMatteColor(MagickWand *wand,PixelWand *matte_color);
+  MagickBooleanType MagickGetImageMatteColor(MagickWand *wand,
+    PixelWand *matte_color);
 
   MagickBooleanType MagickGetImagePage(MagickWand *wand,
     size_t *width,size_t *height,ssize_t *x,ssize_t *y);
@@ -376,7 +403,8 @@ ffi.cdef([[
 
   RenderingIntent MagickGetImageRenderingIntent(MagickWand *wand);
 
-  MagickBooleanType MagickGetImageResolution(MagickWand *wand,double *x,double *y);
+  MagickBooleanType MagickGetImageResolution(MagickWand *wand,
+    double *x,double *y);
 
   size_t MagickGetImageScene(MagickWand *wand);
 
@@ -397,7 +425,8 @@ ffi.cdef([[
 
   double MagickGetImageTotalInkDensity(MagickWand *wand);
 
-  MagickBooleanType MagickHaldClutImage(MagickWand *wand,const MagickWand *hald_wand);
+  MagickBooleanType MagickHaldClutImage(MagickWand *wand,
+    const MagickWand *hald_wand);
 
   MagickBooleanType MagickHasNextImage(MagickWand *wand);
   MagickBooleanType MagickHasPreviousImage(MagickWand *wand);
@@ -413,8 +442,9 @@ ffi.cdef([[
     const size_t rows,const char *map,const StorageType storage,
     const void *pixels);
 
-  MagickBooleanType MagickInterpolativeResizeImage(MagickWand *wand, const size_t columns,
-    const size_t rows, const PixelInterpolateMethod method);
+  MagickBooleanType MagickInterpolativeResizeImage(MagickWand *wand,
+    const size_t columns,const size_t rows,
+    const PixelInterpolateMethod method);
 
   MagickBooleanType MagickLabelImage(MagickWand *wand,const char *label);
 
@@ -424,11 +454,12 @@ ffi.cdef([[
   MagickBooleanType MagickLinearStretchImage(MagickWand *wand,
     const double black_point,const double white_point);
 
-  MagickBooleanType MagickLiquidRescaleImage(MagickWand *wand, const size_t columns,
-    const size_t rows, const double delta_x,const double rigidity);
+  MagickBooleanType MagickLiquidRescaleImage(MagickWand *wand,
+    const size_t columns,const size_t rows,
+    const double delta_x,const double rigidity);
 
-  MagickBooleanType MagickLocalContrastImage(MagickWand *wand, const double radius,
-    const double strength);
+  MagickBooleanType MagickLocalContrastImage(MagickWand *wand,
+    const double radius,const double strength);
 
   MagickBooleanType MagickMagnifyImage(MagickWand *wand);
   MagickBooleanType MagickMinifyImage(MagickWand *wand);
@@ -698,14 +729,18 @@ ffi.cdef([[
   MagickWand *MagickSteganoImage(MagickWand *wand,
     const MagickWand *watermark_wand,const ssize_t offset);
 
-  MagickWand *MagickStereoImage(MagickWand *wand, const MagickWand *offset_wand);
+  MagickWand *MagickStereoImage(MagickWand *wand,
+    const MagickWand *offset_wand);
 
   MagickBooleanType MagickSwirlImage(MagickWand *wand,const double degrees,
     const PixelInterpolateMethod method);
 
-  MagickWand *MagickTextureImage(MagickWand *wand,const MagickWand *texture_wand);
+  MagickWand *MagickTextureImage(MagickWand *wand,
+    const MagickWand *texture_wand);
 
-  MagickBooleanType MagickThresholdImage(MagickWand *wand,const double threshold);
+  MagickBooleanType MagickThresholdImage(MagickWand *wand,
+    const double threshold);
+
   MagickBooleanType MagickThresholdImageChannel(MagickWand *wand,
     const ChannelType channel,const double threshold);
 
