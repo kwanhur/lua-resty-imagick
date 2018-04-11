@@ -1255,6 +1255,10 @@ For reasonable results, radius should be larger than sigma. Use a radius of 0 an
 -----
 Softens the edges of the image in vignette style.
 
+`img:wave(amplitude, wave_length, method)`
+-----
+Creates a "ripple" effect in the image by shifting the pixels vertically along a sine wave whose amplitude and wavelength is specified by the given parameters.
+
 [Back to TOC](#table-of-contents)
 
 Authors

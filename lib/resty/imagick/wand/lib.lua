@@ -733,6 +733,10 @@ ffi.cdef([[
   MagickBooleanType MagickVignetteImage(MagickWand *wand,
     const double radius,const double sigma,const ssize_t x,
     const ssize_t y);
+
+  MagickBooleanType MagickWaveImage(MagickWand *wand,
+    const double amplitude,const double wave_length,
+    const PixelInterpolateMethod method);
 ]])
 
 local get_flags

@@ -1321,4 +1321,9 @@ _M.vignette = function(self, radius, sigma, x, y)
     return handle_result(self, lib.MagickVignetteImage(self.wand, radius, sigma, x, y))
 end
 
+_M.wavel = function(self, amplitude, wave_length, method)
+    return handle_result(self, lib.MagickWaveImage(self.wand, amplitude, wave_length,
+      pixel_interpolate_method:to_int(method .. "InterpolatePixel")))
+end
+
 return _M
