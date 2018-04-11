@@ -21,6 +21,7 @@ ffi.cdef([[
   typedef void PixelWand;
   typedef void DrawingWand;
   typedef void KernelInfo;
+  typedef void RectangeInfo;
 
   typedef int MagickBooleanType;
   typedef long long MagickOffsetType;
@@ -663,6 +664,12 @@ ffi.cdef([[
 
   MagickBooleanType MagickSigmoidalContrastImage(MagickWand *wand,
     const MagickBooleanType sharpen,const double alpha,const double beta);
+
+  MagickWand *MagickSimilarityImage(MagickWand *wand,
+    const MagickWand *reference,const MetricType metric,
+    const double similarity_threshold,RectangeInfo *offset,
+    double *similarity);
+
 ]])
 
 local get_flags

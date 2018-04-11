@@ -1162,6 +1162,11 @@ Adjusts the contrast of an image with a non-linear sigmoidal contrast algorithm.
 Contrast indicates how much to increase the contrast (0 is none; 3 is typical; 20 is pushing it); mid-point indicates where midtones fall in the resultant image (0 is white; 50 is middle-gray; 100 is black). 
 Set sharpen to True to increase the image contrast otherwise the contrast is reduced.
 
+`img:similarity(reference, metric, similarity_threshold, offset, similarity)`
+-----
+Compares the reference image of the image and returns the best match offset. In addition, it returns a similarity image such that 
+an exact match location is completely white and if none of the pixels match, black, otherwise some gray level in-between.
+
 [Back to TOC](#table-of-contents)
 
 Authors

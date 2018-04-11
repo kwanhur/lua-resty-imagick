@@ -1222,8 +1222,13 @@ _M.shear = function(self, background, x_shear, y_shear)
     return handle_result(self, lib.MagickShearImage(self.wand, background, x_shear, y_shear))
 end
 
-_M.sigmoidal_contrast = function()
+_M.sigmoidal_contrast = function(self, sharpen, alpha, beta)
     return handle_result(self, lib.MagickSigmoidalContrastImage(self.wand, sharpen, alpha, beta))
+end
+
+_M.similarity = function(self, reference, metric, similarity_threshold, offset, similary)
+    return lib.MagickSimilarityImage(self.wand, reference, metric_type:to_int(metric .. "ErrorMetric"),
+      similarity_threshold, offset, similarity)
 end
 
 return _M
