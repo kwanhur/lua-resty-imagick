@@ -1222,4 +1222,8 @@ _M.shear = function(self, background, x_shear, y_shear)
     return handle_result(self, lib.MagickShearImage(self.wand, background, x_shear, y_shear))
 end
 
+_M.sigmoidal_contrast = function()
+    return handle_result(self, lib.MagickSigmoidalContrastImage(self.wand, sharpen, alpha, beta))
+end
+
 return _M

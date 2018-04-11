@@ -660,6 +660,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickShearImage(MagickWand *wand,
     const PixelWand *background,const double x_shear,const double y_shear);
+
+  MagickBooleanType MagickSigmoidalContrastImage(MagickWand *wand,
+    const MagickBooleanType sharpen,const double alpha,const double beta);
 ]])
 
 local get_flags
