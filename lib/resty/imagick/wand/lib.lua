@@ -711,6 +711,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickThumbnailImage(MagickWand *wand,
     const size_t columns,const size_t rows);
+
+  MagickBooleanType MagickTintImage(MagickWand *wand,
+    const PixelWand *tint,const PixelWand *blend);
 ]])
 
 local get_flags

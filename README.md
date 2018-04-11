@@ -1225,6 +1225,11 @@ Changes the value of individual pixels based on the intensity of each pixel comp
 Changes the size of an image to the given dimensions and removes any associated profiles. 
 The goal is to produce small low cost thumbnail images suited for display on the Web.
 
+`img:tint(tint, blend)`
+-----
+Applies a color vector to each pixel in the image. The length of the vector is 0 for black and white and at its maximum for the midtones. 
+The vector weighting function is f(x)=(1-(4.0*((x-0.5)*(x-0.5)))).
+
 [Back to TOC](#table-of-contents)
 
 Authors

@@ -1292,4 +1292,8 @@ _M.thumbnail = function(self, columns, rows)
     return handle_result(self, lib.MagickThumbnailImage(self.wand, columns, rows))
 end
 
+_M.tint = function(self, tint, blend)
+    return handle_result(self, lib.MagickTintImage(self.wand, tint, blend))
+end
+
 return _M
