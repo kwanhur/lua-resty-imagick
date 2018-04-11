@@ -1326,4 +1326,12 @@ _M.wavel = function(self, amplitude, wave_length, method)
       pixel_interpolate_method:to_int(method .. "InterpolatePixel")))
 end
 
+_M.white_threshold = function(self, threshold)
+    return handle_result(self, lib.MagickWhiteThresholdImage(self.wand, threshold))
+end
+
+_M.write = function(self, filename)
+    return handle_result(self, lib.MagickWriteImage(self.wand, filename))
+end
+
 return _M

@@ -737,6 +737,12 @@ ffi.cdef([[
   MagickBooleanType MagickWaveImage(MagickWand *wand,
     const double amplitude,const double wave_length,
     const PixelInterpolateMethod method);
+
+  MagickBooleanType MagickWhiteThresholdImage(MagickWand *wand,
+  const PixelWand *threshold);
+
+  MagickBooleanType MagickWriteImage(MagickWand *wand,
+    const char *filename);
 ]])
 
 local get_flags
