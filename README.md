@@ -1212,6 +1212,10 @@ Composites two images and produces a single image that is the composite of a lef
 Swirls the pixels about the center of the image, where degrees indicates the sweep of the arc through which each pixel is moved. 
 You get a more dramatic effect as the degrees move from 1 to 360.
 
+`img:texture(texture_wand)`
+-----
+Repeatedly tiles the texture image across and down the image canvas.
+
 [Back to TOC](#table-of-contents)
 
 Authors

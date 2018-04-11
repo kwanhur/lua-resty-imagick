@@ -1276,4 +1276,8 @@ _M.swirl = function(self, degrees, method)
     return handle_result(self, lib.MagickSwirlImage(self.wand, degrees, pixel_interpolate_method:to_int(method .. "InterpolatePixel")))
 end
 
+_M.texture = function(self, texture_wand)
+    return lib.MagickTextureImage(self.wand, texture_wand)
+end
+
 return _M

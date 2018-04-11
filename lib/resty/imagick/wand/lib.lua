@@ -702,6 +702,8 @@ ffi.cdef([[
 
   MagickBooleanType MagickSwirlImage(MagickWand *wand,const double degrees,
     const PixelInterpolateMethod method);
+
+  MagickWand *MagickTextureImage(MagickWand *wand,const MagickWand *texture_wand);
 ]])
 
 local get_flags
