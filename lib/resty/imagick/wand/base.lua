@@ -1334,4 +1334,8 @@ _M.write = function(self, filename)
     return handle_result(self, lib.MagickWriteImage(self.wand, filename))
 end
 
+_M.write_file = function(self, file)
+    return handle_result(self, lib.MagickWriteImageFile(self.wand, file))
+end
+
 return _M

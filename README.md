@@ -1267,6 +1267,10 @@ Like threshold() but force all pixels above the threshold into white while leavi
 -----
 Writes an image to the specified filename. If the filename parameter is NULL, the image is written to the filename set by read() or set_filename().
 
+`img:write_file(file)`
+-----
+Writes an image to an open file descriptor.
+
 [Back to TOC](#table-of-contents)
 
 Authors

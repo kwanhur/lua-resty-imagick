@@ -743,6 +743,8 @@ ffi.cdef([[
 
   MagickBooleanType MagickWriteImage(MagickWand *wand,
     const char *filename);
+
+  MagickBooleanType MagickWriteImageFile(MagickWand *wand,FILE *file);
 ]])
 
 local get_flags
