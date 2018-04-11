@@ -1313,4 +1313,8 @@ _M.unique_colors = function(self)
     return handle_result(self, lib.MagickUniqueImageColors(self.wand))
 end
 
+_M.unsharp_mask = function(self, radius, sigma, gain, threshold)
+    return handle_result(self, lib.MagickUnsharpMaskImage(self.wand, radius, sigma, gain, threshold))
+end
+
 return _M
