@@ -1275,6 +1275,10 @@ Writes an image to an open file descriptor.
 -----
 Writes an image or image sequence.
 
+`img:write_files(file)`
+-----
+Writes an image sequence to an open file descriptor.
+
 [Back to TOC](#table-of-contents)
 
 Authors

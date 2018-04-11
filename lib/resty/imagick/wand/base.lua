@@ -1342,4 +1342,8 @@ _M.write_multi = function(self, filename, adjoin)
     return handle_result(self, lib.MagickWriteImages(self.wand, filename, adjoin))
 end
 
+_M.write_files = function(self, file)
+    return handle_result(self, lib.MagickWriteImagesFile(self.wand, file))
+end
+
 return _M
