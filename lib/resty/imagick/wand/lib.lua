@@ -669,8 +669,12 @@ ffi.cdef([[
     const MagickWand *reference,const MetricType metric,
     const double similarity_threshold,RectangeInfo *offset,
     double *similarity);
+
   MagickBooleanType MagickSketchImage(MagickWand *wand,
     const double radius,const double sigma,const double angle);
+
+  MagickWand *MagickSmushImages(MagickWand *wand,
+    const MagickBooleanType stack,const ssize_t offset);
 ]])
 
 local get_flags

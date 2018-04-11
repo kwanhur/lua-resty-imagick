@@ -1235,4 +1235,8 @@ _M.sketch = function(self, radius, sigma, angle)
     return handle_result(self, lib.MagickSketchImage(self.wand, radius, sigma, angle))
 end
 
+_M.smush = function(self, stack, offset)
+    return lib.MagickSmushImages(self.wand, stack, offset)
+end
+
 return _M

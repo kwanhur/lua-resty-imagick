@@ -1173,6 +1173,10 @@ Simulates a pencil sketch. We convolve the image with a Gaussian operator of the
 For reasonable results, radius should be larger than sigma. Use a radius of 0 and sketch() selects a suitable radius for you. 
 Angle gives the angle of the blurring motion.
 
+`img:smush(stack, offset)`
+-----
+Takes all images from the current image pointer to the end of the image list and smushs them to each other top-to-bottom if the stack parameter is true, otherwise left-to-right.
+
 [Back to TOC](#table-of-contents)
 
 Authors
