@@ -1220,6 +1220,11 @@ Repeatedly tiles the texture image across and down the image canvas.
 -----
 Changes the value of individual pixels based on the intensity of each pixel compared to threshold. 
 
+`img:thumbnail(columns, rows)`
+-----
+Changes the size of an image to the given dimensions and removes any associated profiles. 
+The goal is to produce small low cost thumbnail images suited for display on the Web.
+
 [Back to TOC](#table-of-contents)
 
 Authors

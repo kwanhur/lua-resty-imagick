@@ -708,6 +708,9 @@ ffi.cdef([[
   MagickBooleanType MagickThresholdImage(MagickWand *wand,const double threshold);
   MagickBooleanType MagickThresholdImageChannel(MagickWand *wand,
     const ChannelType channel,const double threshold);
+
+  MagickBooleanType MagickThumbnailImage(MagickWand *wand,
+    const size_t columns,const size_t rows);
 ]])
 
 local get_flags

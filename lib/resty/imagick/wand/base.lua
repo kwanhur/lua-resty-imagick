@@ -1288,4 +1288,8 @@ _M.threshold_channel = function(self, channel, threshold)
     return handle_result(self, lib.MagickThresholdImageChannel(self.wand, channel, threshold))
 end
 
+_M.thumbnail = function(self, columns, rows)
+    return handle_result(self, lib.MagickThumbnailImage(self.wand, columns, rows))
+end
+
 return _M
