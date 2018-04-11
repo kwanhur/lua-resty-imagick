@@ -687,6 +687,9 @@ ffi.cdef([[
   MagickBooleanType MagickSpliceImage(MagickWand *wand,
     const size_t width,const size_t height,const ssize_t x,
     const ssize_t y);
+
+  MagickBooleanType MagickSpreadImage(MagickWand *wand,
+    const PixelInterpolateMethod method,const double radius);
 ]])
 
 local get_flags

@@ -1253,4 +1253,9 @@ _M.splice = function(self, w, h, x, y)
     return handle_result(self, lib.MagickSpliceImage(self.wand, w, h, x, y))
 end
 
+_M.spread = function(self, method, radius)
+    return handle_result(self, lib.MagickSpreadImage(self.wand, pixel_interpolate_method:to_int(method .. "InterpolatePixel"), 
+      radius))
+end
+
 return _M

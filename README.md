@@ -1190,6 +1190,10 @@ Given a set of coordinates, interpolates the colors found at those coordinates, 
 -----
 Splices a solid color into the image.
 
+`img:spread(method, radius)`
+------
+A special effects method that randomly displaces each pixel in a block defined by the radius parameter.
+
 [Back to TOC](#table-of-contents)
 
 Authors
