@@ -1271,6 +1271,10 @@ Writes an image to the specified filename. If the filename parameter is NULL, th
 -----
 Writes an image to an open file descriptor.
 
+`img:write_multi(filename, adjoin)`
+-----
+Writes an image or image sequence.
+
 [Back to TOC](#table-of-contents)
 
 Authors
