@@ -1216,6 +1216,10 @@ You get a more dramatic effect as the degrees move from 1 to 360.
 -----
 Repeatedly tiles the texture image across and down the image canvas.
 
+`img:threshold(threshold)`
+-----
+Changes the value of individual pixels based on the intensity of each pixel compared to threshold. 
+
 [Back to TOC](#table-of-contents)
 
 Authors

@@ -1280,4 +1280,12 @@ _M.texture = function(self, texture_wand)
     return lib.MagickTextureImage(self.wand, texture_wand)
 end
 
+_M.threshold = function(self, threshold)
+    return handle_result(self, lib.MagickThresholdImage(self.wand, threshold))
+end
+
+_M.threshold_channel = function(self, channel, threshold)
+    return handle_result(self, lib.MagickThresholdImageChannel(self.wand, channel, threshold))
+end
+
 return _M

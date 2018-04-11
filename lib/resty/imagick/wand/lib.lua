@@ -704,6 +704,10 @@ ffi.cdef([[
     const PixelInterpolateMethod method);
 
   MagickWand *MagickTextureImage(MagickWand *wand,const MagickWand *texture_wand);
+
+  MagickBooleanType MagickThresholdImage(MagickWand *wand,const double threshold);
+  MagickBooleanType MagickThresholdImageChannel(MagickWand *wand,
+    const ChannelType channel,const double threshold);
 ]])
 
 local get_flags
