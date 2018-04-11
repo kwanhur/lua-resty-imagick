@@ -1296,4 +1296,9 @@ _M.tint = function(self, tint, blend)
     return handle_result(self, lib.MagickTintImage(self.wand, tint, blend))
 end
 
+_M.transform_colorspace = function(self, colorspace)
+    return handle_result(self, lib.MagickTransformImageColorspace(self.wand, 
+      colorspace_type:to_int(colorspace .. "Colorspace")))
+end
+
 return _M

@@ -1230,6 +1230,10 @@ The goal is to produce small low cost thumbnail images suited for display on the
 Applies a color vector to each pixel in the image. The length of the vector is 0 for black and white and at its maximum for the midtones. 
 The vector weighting function is f(x)=(1-(4.0*((x-0.5)*(x-0.5)))).
 
+`img:transform_colorspace(colorspace)`
+-----
+Transform the image colorspace, setting the images colorspace while transforming the images data to that colorspace.
+
 [Back to TOC](#table-of-contents)
 
 Authors

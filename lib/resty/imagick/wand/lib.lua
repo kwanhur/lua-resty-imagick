@@ -714,6 +714,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickTintImage(MagickWand *wand,
     const PixelWand *tint,const PixelWand *blend);
+
+  MagickBooleanType MagickTransformImageColorspace(MagickWand *wand,
+    const ColorspaceType colorspace);
 ]])
 
 local get_flags
