@@ -1203,6 +1203,10 @@ Replace each pixel with corresponding statistic from the neighborhood of the spe
 Hides a digital watermark within the image. Recover the hidden watermark later to prove that the authenticity of an image. 
 Offset defines the start position within the image to hide the watermark.
 
+`img:stereo(offset_wand)`
+-----
+Composites two images and produces a single image that is the composite of a left and right image of a stereo pair.
+
 [Back to TOC](#table-of-contents)
 
 Authors

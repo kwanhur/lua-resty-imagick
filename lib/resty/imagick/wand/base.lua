@@ -1268,4 +1268,8 @@ _M.stegano = function(self, watermark, offset)
     return lib.MagickSteganoImage(self.wand, watermark, offset)
 end
 
+_M.stereo = function(self, offset_wand)
+    return lib.MagickStereoImage(self.wand, offset_wand)
+end
+
 return _M

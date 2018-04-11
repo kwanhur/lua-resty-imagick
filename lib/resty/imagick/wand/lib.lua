@@ -697,6 +697,9 @@ ffi.cdef([[
 
   MagickWand *MagickSteganoImage(MagickWand *wand,
     const MagickWand *watermark_wand,const ssize_t offset);
+
+  MagickWand *MagickStereoImage(MagickWand *wand,
+    const MagickWand *offset_wand);
 ]])
 
 local get_flags
