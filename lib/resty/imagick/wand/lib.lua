@@ -675,6 +675,9 @@ ffi.cdef([[
 
   MagickWand *MagickSmushImages(MagickWand *wand,
     const MagickBooleanType stack,const ssize_t offset);
+
+  MagickBooleanType MagickSolarizeImage(MagickWand *wand,
+    const double threshold);
 ]])
 
 local get_flags

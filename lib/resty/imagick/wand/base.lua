@@ -1239,4 +1239,8 @@ _M.smush = function(self, stack, offset)
     return lib.MagickSmushImages(self.wand, stack, offset)
 end
 
+_M.solarize = function(self, threshold)
+    return handle_result(self, lib.MagickSolarizeImage(self.wand, threshold))
+end
+
 return _M

@@ -1177,6 +1177,11 @@ Angle gives the angle of the blurring motion.
 -----
 Takes all images from the current image pointer to the end of the image list and smushs them to each other top-to-bottom if the stack parameter is true, otherwise left-to-right.
 
+`img:solarize(threshold)`
+-----
+Applies a special effect to the image, similar to the effect achieved in a photo darkroom by selectively exposing areas of photo sensitive paper to light. 
+Threshold ranges from 0 to QuantumRange and is a measure of the extent of the solarization.
+
 [Back to TOC](#table-of-contents)
 
 Authors
