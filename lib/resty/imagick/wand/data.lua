@@ -426,6 +426,19 @@ local GravityType = enum({
     [9] = "SouthEastGravity"
 })
 
+local StatisticType = enum({
+    [0] = "UndefinedStatistic",
+    "GradientStatistic",
+    "MaximumStatistic",
+    "MeanStatistic",
+    "MedianStatistic",
+    "MinimumStatistic",
+    "ModeStatistic",
+    "NonpeakStatistic",
+    "RootMeanSquareStatistic",
+    "StandardDeviationStatistic"
+})
+
 local PixelInterpolateMethod = enum({
     [0] = "UndefinedInterpolatePixel",
     "AverageInterpolatePixel",
@@ -534,6 +547,8 @@ _M.orientation = orientation
 _M.interlace = interlace
 
 _M.filter_type = FilterType
+
+_M.statistic_type = StatisticType
 
 _M.storage_type = StorageType
 

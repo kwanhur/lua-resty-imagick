@@ -34,6 +34,7 @@ local image_type = wand_data.image_type
 local resolution_type = wand_data.resolution_type
 local metric_type = wand_data.metric_type
 local preview_type = wand_data.preview_type
+local statistic_type = wand_data.statistic_type
 local pixel_interpolate_method = wand_data.pixel_interpolate_method
 local morphology_method = wand_data.morphology_method
 local dither_method = wand_data.dither_method
@@ -1256,6 +1257,11 @@ end
 _M.spread = function(self, method, radius)
     return handle_result(self, lib.MagickSpreadImage(self.wand, pixel_interpolate_method:to_int(method .. "InterpolatePixel"), 
       radius))
+end
+
+_M.statistic = function(self, stype, w, h)
+    return handle_result(self, lib.MagickStatisticImage(self.wand, statistic_type:to_int(stype .. "Statistic"),
+      w, h))
 end
 
 return _M

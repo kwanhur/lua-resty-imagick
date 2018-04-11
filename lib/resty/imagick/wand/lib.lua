@@ -44,6 +44,7 @@ ffi.cdef([[
   typedef int MetricType;
   typedef int PreviewType;
   typedef int ChannelType;
+  typedef int StatisticType;
   typedef int DistortMethod;
   typedef int DitherMethod;
   typedef int PixelInterpolateMethod;
@@ -690,6 +691,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickSpreadImage(MagickWand *wand,
     const PixelInterpolateMethod method,const double radius);
+
+  MagickBooleanType MagickStatisticImage(MagickWand *wand,
+    const StatisticType type,const double width,const size_t height);
 ]])
 
 local get_flags

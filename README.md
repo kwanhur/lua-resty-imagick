@@ -1194,6 +1194,10 @@ Splices a solid color into the image.
 ------
 A special effects method that randomly displaces each pixel in a block defined by the radius parameter.
 
+`img:statistic(stype, w, h)`
+-----
+Replace each pixel with corresponding statistic from the neighborhood of the specified width and height.
+
 [Back to TOC](#table-of-contents)
 
 Authors
