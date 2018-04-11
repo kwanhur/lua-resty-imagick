@@ -1272,4 +1272,8 @@ _M.stereo = function(self, offset_wand)
     return lib.MagickStereoImage(self.wand, offset_wand)
 end
 
+_M.swirl = function(self, degrees, method)
+    return handle_result(self, lib.MagickSwirlImage(self.wand, degrees, pixel_interpolate_method:to_int(method .. "InterpolatePixel")))
+end
+
 return _M

@@ -698,8 +698,10 @@ ffi.cdef([[
   MagickWand *MagickSteganoImage(MagickWand *wand,
     const MagickWand *watermark_wand,const ssize_t offset);
 
-  MagickWand *MagickStereoImage(MagickWand *wand,
-    const MagickWand *offset_wand);
+  MagickWand *MagickStereoImage(MagickWand *wand, const MagickWand *offset_wand);
+
+  MagickBooleanType MagickSwirlImage(MagickWand *wand,const double degrees,
+    const PixelInterpolateMethod method);
 ]])
 
 local get_flags

@@ -1207,6 +1207,11 @@ Offset defines the start position within the image to hide the watermark.
 -----
 Composites two images and produces a single image that is the composite of a left and right image of a stereo pair.
 
+`img:swirl(degrees, method)`
+-----
+Swirls the pixels about the center of the image, where degrees indicates the sweep of the arc through which each pixel is moved. 
+You get a more dramatic effect as the degrees move from 1 to 360.
+
 [Back to TOC](#table-of-contents)
 
 Authors
