@@ -1301,4 +1301,8 @@ _M.transform_colorspace = function(self, colorspace)
       colorspace_type:to_int(colorspace .. "Colorspace")))
 end
 
+_M.transparent_paint = function(self, target, alpha, fuzz, invert)
+    return handle_result(self, lib.MagickTransparentPaintImage(self.wand, target, alpha, fuzz, invert))
+end
+
 return _M

@@ -717,6 +717,10 @@ ffi.cdef([[
 
   MagickBooleanType MagickTransformImageColorspace(MagickWand *wand,
     const ColorspaceType colorspace);
+
+  MagickBooleanType MagickTransparentPaintImage(MagickWand *wand,
+    const PixelWand *target,const double alpha,const double fuzz,
+    const MagickBooleanType invert);
 ]])
 
 local get_flags

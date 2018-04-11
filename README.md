@@ -1234,6 +1234,10 @@ The vector weighting function is f(x)=(1-(4.0*((x-0.5)*(x-0.5)))).
 -----
 Transform the image colorspace, setting the images colorspace while transforming the images data to that colorspace.
 
+`img:transparent_paint(target, alpha, fuzz, invert)`
+-----
+Changes any pixel that matches color with the color defined by fill.
+
 [Back to TOC](#table-of-contents)
 
 Authors
