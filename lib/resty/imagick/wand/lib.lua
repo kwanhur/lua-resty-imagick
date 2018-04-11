@@ -694,6 +694,9 @@ ffi.cdef([[
 
   MagickBooleanType MagickStatisticImage(MagickWand *wand,
     const StatisticType type,const double width,const size_t height);
+
+  MagickWand *MagickSteganoImage(MagickWand *wand,
+    const MagickWand *watermark_wand,const ssize_t offset);
 ]])
 
 local get_flags

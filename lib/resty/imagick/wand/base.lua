@@ -1264,4 +1264,8 @@ _M.statistic = function(self, stype, w, h)
       w, h))
 end
 
+_M.stegano = function(self, watermark, offset)
+    return lib.MagickSteganoImage(self.wand, watermark, offset)
+end
+
 return _M

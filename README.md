@@ -1198,6 +1198,11 @@ A special effects method that randomly displaces each pixel in a block defined b
 -----
 Replace each pixel with corresponding statistic from the neighborhood of the specified width and height.
 
+`img:stegano(watermark, offset)`
+-----
+Hides a digital watermark within the image. Recover the hidden watermark later to prove that the authenticity of an image. 
+Offset defines the start position within the image to hide the watermark.
+
 [Back to TOC](#table-of-contents)
 
 Authors
