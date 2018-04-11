@@ -1167,6 +1167,12 @@ Set sharpen to True to increase the image contrast otherwise the contrast is red
 Compares the reference image of the image and returns the best match offset. In addition, it returns a similarity image such that 
 an exact match location is completely white and if none of the pixels match, black, otherwise some gray level in-between.
 
+`img:sketch(radius, sigma, angle)`
+-----
+Simulates a pencil sketch. We convolve the image with a Gaussian operator of the given radius and standard deviation (sigma). 
+For reasonable results, radius should be larger than sigma. Use a radius of 0 and sketch() selects a suitable radius for you. 
+Angle gives the angle of the blurring motion.
+
 [Back to TOC](#table-of-contents)
 
 Authors

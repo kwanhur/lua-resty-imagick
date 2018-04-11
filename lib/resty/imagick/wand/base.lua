@@ -1231,4 +1231,8 @@ _M.similarity = function(self, reference, metric, similarity_threshold, offset, 
       similarity_threshold, offset, similarity)
 end
 
+_M.sketch = function(self, radius, sigma, angle)
+    return handle_result(self, lib.MagickSketchImage(self.wand, radius, sigma, angle))
+end
+
 return _M
