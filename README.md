@@ -1242,6 +1242,10 @@ Changes any pixel that matches color with the color defined by fill.
 -----
 Remove edges that are the background color from the image.
 
+`img:unique_colors()`
+-----
+Discards all but one of any pixel color.
+
 [Back to TOC](#table-of-contents)
 
 Authors

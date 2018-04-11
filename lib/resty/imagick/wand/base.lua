@@ -1308,4 +1308,9 @@ end
 _M.trim = function(self, fuzz)
     return handle_result(self, lib.MagickTrimImage(self.wand, fuzz))
 end
+
+_M.unique_colors = function(self)
+    return handle_result(self, lib.MagickUniqueImageColors(self.wand))
+end
+
 return _M

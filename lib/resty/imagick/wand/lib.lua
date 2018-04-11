@@ -723,6 +723,8 @@ ffi.cdef([[
     const MagickBooleanType invert);
 
   MagickBooleanType MagickTrimImage(MagickWand *wand,const double fuzz);
+
+  MagickBooleanType MagickUniqueImageColors(MagickWand *wand);
 ]])
 
 local get_flags
