@@ -1238,6 +1238,10 @@ Transform the image colorspace, setting the images colorspace while transforming
 -----
 Changes any pixel that matches color with the color defined by fill.
 
+`img:trim(fuzz)`
+-----
+Remove edges that are the background color from the image.
+
 [Back to TOC](#table-of-contents)
 
 Authors

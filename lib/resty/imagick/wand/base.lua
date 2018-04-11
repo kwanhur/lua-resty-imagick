@@ -1305,4 +1305,7 @@ _M.transparent_paint = function(self, target, alpha, fuzz, invert)
     return handle_result(self, lib.MagickTransparentPaintImage(self.wand, target, alpha, fuzz, invert))
 end
 
+_M.trim = function(self, fuzz)
+    return handle_result(self, lib.MagickTrimImage(self.wand, fuzz))
+end
 return _M

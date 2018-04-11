@@ -721,6 +721,8 @@ ffi.cdef([[
   MagickBooleanType MagickTransparentPaintImage(MagickWand *wand,
     const PixelWand *target,const double alpha,const double fuzz,
     const MagickBooleanType invert);
+
+  MagickBooleanType MagickTrimImage(MagickWand *wand,const double fuzz);
 ]])
 
 local get_flags
