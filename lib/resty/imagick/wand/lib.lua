@@ -9,7 +9,6 @@ local ffi = require("ffi")
 
 local tostring = tostring
 local open = io.popen
-local type = type
 local pcall = pcall
 local error = error
 
@@ -22,6 +21,7 @@ ffi.cdef([[
   typedef void DrawingWand;
   typedef void KernelInfo;
   typedef void RectangeInfo;
+  typedef void MagickProgressMonitor;
 
   typedef int MagickBooleanType;
   typedef long long MagickOffsetType;
@@ -57,6 +57,7 @@ ffi.cdef([[
   typedef int MontageMode;
   typedef int RenderingIntent;
   typedef int AlphaChannelOption;
+  typedef int PixelMask;
 
   void MagickWandGenesis();
   MagickWand* NewMagickWand();
@@ -429,9 +430,11 @@ ffi.cdef([[
     const MagickWand *hald_wand);
 
   MagickBooleanType MagickHasNextImage(MagickWand *wand);
+
   MagickBooleanType MagickHasPreviousImage(MagickWand *wand);
 
   const char *MagickIdentifyImage(MagickWand *wand);
+
   ImageType MagickIdentifyImageType(MagickWand *wand);
 
   MagickBooleanType MagickImplodeImage(MagickWand *wand,
@@ -448,11 +451,11 @@ ffi.cdef([[
 
   MagickBooleanType MagickLabelImage(MagickWand *wand,const char *label);
 
-  MagickBooleanType MagickLevelImage(MagickWand *wand,
-    const double black_point,const double gamma,const double white_point);
-
   MagickBooleanType MagickLinearStretchImage(MagickWand *wand,
     const double black_point,const double white_point);
+
+  MagickBooleanType MagickLevelImage(MagickWand *wand,
+    const double black_point,const double gamma,const double white_point);
 
   MagickBooleanType MagickLiquidRescaleImage(MagickWand *wand,
     const size_t columns,const size_t rows,
@@ -462,12 +465,13 @@ ffi.cdef([[
     const double radius,const double strength);
 
   MagickBooleanType MagickMagnifyImage(MagickWand *wand);
+
   MagickBooleanType MagickMinifyImage(MagickWand *wand);
 
   MagickWand *MagickMergeImageLayers(MagickWand *wand,const LayerMethod method);
 
   MagickWand *MagickMontageImage(MagickWand *wand,
-    const DrawingWand drawing_wand,const char *tile_geometry,
+    const DrawingWand *drawing_wand,const char *tile_geometry,
     const char *thumbnail_geometry,const MontageMode mode,
     const char *frame);
 
@@ -505,6 +509,7 @@ ffi.cdef([[
     const char *threshold_map);
 
   MagickBooleanType MagickPingImage(MagickWand *wand,const char *filename);
+
   MagickBooleanType MagickPingImageBlob(MagickWand *wand,
     const void *blob,const size_t length);
 
@@ -653,10 +658,8 @@ ffi.cdef([[
   MagickBooleanType MagickSetImagePage(MagickWand *wand,const size_t width,
     const size_t height,const ssize_t x,const ssize_t y);
 
-  MagickProgressMonitor MagickSetImageProgressMonitor(MagickWand *wand
-    const MagickProgressMonitor progress_monitor,void *client_data);
-  MagickBooleanType MagickProgressMonitor(const char *text,
-    const MagickOffsetType offset,const MagickSizeType span,void *client_data);
+  MagickProgressMonitor MagickSetImageProgressMonitor(MagickWand *wand,
+    const MagickProgressMonitor *progress_monitor,void *client_data);
 
   MagickBooleanType MagickSetImageRenderingIntent(MagickWand *wand,
     const RenderingIntent rendering_intent);
@@ -787,38 +790,18 @@ ffi.cdef([[
   MagickBooleanType MagickWriteImagesFile(MagickWand *wand,FILE *file);
 ]])
 
-local get_flags
-get_flags = function()
-    local proc = open("pkg-config --cflags --libs MagickWand", "r")
-    local flags = proc:read("*a")
-    get_flags = function()
-        return flags
-    end
-    proc:close()
-    return flags
-end
-
 local try_to_load = function(...)
     local out
     local args = {...}
     for i = 1, #args do
         local continue = false
-        repeat
-            local name = args[i]
-            if "function" == type(name) then
-                name = name()
-                if not (name) then
-                    continue = true
-                    break
-                end
-            end
-            if pcall(function()
-                out = ffi.load(name)
-            end) then
-                return out
-            end
-            continue = true
-        until true
+        local name = args[i]
+        if name and pcall(function()
+            out = ffi.load(args[i])
+        end) then
+            return out
+        end
+        continue = true
         if not continue then
             break
         end
@@ -826,8 +809,15 @@ local try_to_load = function(...)
     return error("Failed to load ImageMagick (" .. tostring(...) .. ")")
 end
 
-local lib = try_to_load("MagickWand", function()
-    local lname = get_flags():match("-l(MagickWand[^%s]*)")
+local libname = function()
+    local proc = open("pkg-config --cflags --libs MagickWand", "r")
+    local flags = proc:read("*a")
+    proc:close()
+    if flags == nil then
+        flags =  "-lMagickWand-7.Q16HDRI"
+    end
+
+    local lname = flags:match("-l(MagickWand[^%s]*)")
     local suffix
     if ffi.os == "OSX" then
         suffix = ".dylib"
@@ -837,14 +827,8 @@ local lib = try_to_load("MagickWand", function()
         suffix = ".so"
     end
     return lname and "lib" .. lname .. suffix
-end)
-
-_M.lib = lib
-
-_M.can_resize = true
-
-_M.get_filter = function(name)
-    return lib[name .. "Filter"]
 end
+
+_M.lib = try_to_load(libname())
 
 return _M
