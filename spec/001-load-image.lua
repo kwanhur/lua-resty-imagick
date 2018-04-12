@@ -2,10 +2,11 @@
 
 
 describe("LoadImage", function()
-    local path = require('path')
-    local image_path = path.new('/')
-    local image_dir = image_path.join(path.currentdir(), "spec")
-
+    local info = debug.getinfo(1, "S")
+    local path = info.source
+    path = string.sub(path, 2, -1)
+    image_dir = string.match(path, "^.*/")
+    
     local imagick = require("resty.imagick")
     
     it("loadPNGImage", function()
