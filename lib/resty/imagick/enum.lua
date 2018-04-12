@@ -3,28 +3,14 @@
 
 local modulename = 'restyImagickEnum'
 local _M = {}
+local _mt = { __index = _M }
 _M._NAME = modulename
 
 local setmetatable = setmetatable
 local ipairs = ipairs
 local type = type
 
-local mt = {
-    to_str = function(self, val)
-        if type(val) == "string" then
-            return val
-        end
-        return self[val]
-    end,
-    to_int = function(self, val)
-        if type(val) == "number" then
-            return val
-        end
-        return self[val]
-    end
-}
-
-local enum = function(t)
+_M.new = function(self, t)
     local keys
     local key = { }
     local index = 1
@@ -38,10 +24,23 @@ local enum = function(t)
         local key = keys[j]
         t[t[key]] = key
     end
-    setmetatable(t, mt)
-    return t
+
+    self.t = t
+    return setmetatable(self, mt)
 end
 
-_M.enum = enum
+_M.to_str = function(self, val)
+    if type(val) == "string" then
+        return val
+    end
+    return self.t[val]
+end
 
-return _M
+_M.to_int = function(self, val)
+    if type(val) == "number" then
+        return val
+    end
+    return self.t[val]
+end
+
+return _M 

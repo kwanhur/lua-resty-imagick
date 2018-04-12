@@ -5,7 +5,10 @@ local modulename = 'restyImagickWandData'
 local _M = {}
 _M._NAME = modulename
 
-local enum = require("resty.imagick.enum").enum
+local enummer = require("resty.imagick.enum")
+local enum = function(t)
+    return enummer:new(t)
+end
 
 local CompositeOperators = enum({
     [0] = "UndefinedCompositeOp",
