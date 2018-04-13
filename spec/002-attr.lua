@@ -81,4 +81,13 @@ describe("ImageAttr", function()
         ed = img:get_endian()
         assert.is_true(ed == "LSBEndian")
     end)
+
+    it("getSetRendering", function()
+        local re = img:get_rendering_intent()
+        assert.is_true(re == "PerceptualIntent")
+
+        img:set_rendering_intent("Relative")
+        re = img:get_rendering_intent()
+        assert.is_true(re == "RelativeIntent")
+    end)
 end)

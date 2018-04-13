@@ -814,7 +814,7 @@ _M.get_region = function(self, w, h, x, y)
 end
 
 _M.get_rendering_intent = function(self)
-    return rendering_intent:to_str(lib.MagickGetImageRenderingIntent(self.wand))
+    return rendering_intent():to_str(lib.MagickGetImageRenderingIntent(self.wand))
 end
 
 _M.get_resolution = function(self, x, y)
@@ -1242,7 +1242,7 @@ end
 
 _M.set_rendering_intent = function(self, intent)
     return handle_result(self, lib.MagickSetImageRenderingIntent(
-      rendering_intent:to_int(intent .. "Intent")))
+      self.wand, rendering_intent():to_int(intent .. "Intent")))
 end
 
 _M.set_resolution = function(self, x_resolution, y_resolution)
