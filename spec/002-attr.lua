@@ -90,4 +90,13 @@ describe("ImageAttr", function()
         re = img:get_rendering_intent()
         assert.is_true(re == "RelativeIntent")
     end)
+
+    it("getSetGamma", function()
+        local ga = img:get_gamma()
+        assert.is_true(ga < 0.45455 and ga > 0.45)
+
+        img:set_gamma(0.4)
+        ga = img:get_gamma()
+        assert.is_true(0.4 == ga)
+    end)
 end)
