@@ -43,4 +43,4 @@ _M.to_int = function(self, val)
     return self.t[val]
 end
 
-return _M 
+return _M

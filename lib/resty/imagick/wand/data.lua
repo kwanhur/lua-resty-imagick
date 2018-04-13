@@ -3,14 +3,16 @@
 
 local modulename = 'restyImagickWandData'
 local _M = {}
+local mt = {__index = _M}
 _M._NAME = modulename
 
 local enummer = require("resty.imagick.enum")
 local enum = function(t)
-    return enummer:new(t)
+    local e =  enummer:new(t)
+    return e
 end
 
-local CompositeOperators = enum({
+local CompositeOperators = {
     [0] = "UndefinedCompositeOp",
     "NoCompositeOp",
     "ModulusAddCompositeOp",
@@ -80,21 +82,22 @@ local CompositeOperators = enum({
     "DarkenIntensityCompositeOp",
     "LightenIntensityCompositeOp",
     "HardMixCompositeOp"
-})
---local gravity = enum({
---    [0] = "ForgetGravity",
---    "NorthWestGravity",
---    "NorthGravity",
---    "NorthEastGravity",
---    "WestGravity",
---    "CenterGravity",
---    "EastGravity",
---    "SouthWestGravity",
---    "SouthGravity",
---    "SouthEastGravity",
---    "StaticGravity"
---})
-local orientation = enum({
+}
+
+local gravity = {
+    [0] = "ForgetGravity",
+    "NorthWestGravity",
+    "NorthGravity",
+    "NorthEastGravity",
+    "WestGravity",
+    "CenterGravity",
+    "EastGravity",
+    "SouthWestGravity",
+    "SouthGravity",
+    "SouthEastGravity",
+    "StaticGravity"
+}
+local orientation = {
     [0] = "UndefinedOrientation",
     "TopLeftOrientation",
     "TopRightOrientation",
@@ -104,8 +107,9 @@ local orientation = enum({
     "RightTopOrientation",
     "RightBottomOrientation",
     "LeftBottomOrientation"
-})
-local interlace = enum({
+}
+
+local interlace = {
     [0] = "UndefinedInterlace",
     "NoInterlace",
     "LineInterlace",
@@ -114,8 +118,9 @@ local interlace = enum({
     "GIFInterlace",
     "JPEGInterlace",
     "PNGInterlace"
-})
-local FilterType = enum({
+}
+
+local FilterType = {
     [0] = "UndefinedFilter",
     "PointFilter",
     "BoxFilter",
@@ -149,9 +154,9 @@ local FilterType = enum({
     "LanczosRadiusFilter",
     "CubicSplineFilter",
     "SentinelFilter"
-})
+}
 
-local StorageType = enum({
+local StorageType = {
     [0] = "UndefinedPixel",
     "CharPixel",
     "DoublePixel",
@@ -160,9 +165,9 @@ local StorageType = enum({
     "LongLongPixel",
     "QuantumPixel",
     "ShortPixel"
-})
+}
 
-local PreivewType = enum({
+local PreivewType = {
     [0] = "UndefinedPreview",
     "RotatePreview",
     "ShearPreview",
@@ -193,9 +198,9 @@ local PreivewType = enum({
     "OilPaintPreview",
     "CharcoalDrawingPreview",
     "JPEGPreview"
-})
+}
 
-local DistortMethod = enum({
+local DistortMethod = {
     [0] = "UndefinedDistortion",
     "AffineDistortion",
     "AffineProjectionDistortion",
@@ -216,9 +221,9 @@ local DistortMethod = enum({
     "ShepardsDistortion",
     "ResizeDistortion",
     "SentinelDistortion"
-})
+}
 
-local VirtualPixelMethod = enum({
+local VirtualPixelMethod = {
     [0] = "UndefinedVirtualPixelMethod",
     "BackgroundVirtualPixelMethod",
     "DitherVirtualPixelMethod",
@@ -236,9 +241,9 @@ local VirtualPixelMethod = enum({
     "HorizontalTileEdgeVirtualPixelMethod",
     "VerticalTileEdgeVirtualPixelMethod",
     "CheckerTileVirtualPixelMethod"
-})
+}
 
-local LayerMethod = enum({
+local LayerMethod = {
     [0] = "UndefinedLayer",
     "CoalesceLayer",
     "CompareAnyLayer",
@@ -256,9 +261,9 @@ local LayerMethod = enum({
     "FlattenLayer",
     "MosaicLayer",
     "TrimBoundsLayer"
-})
+}
 
-local EvaluateOperator = enum({
+local EvaluateOperator = {
     [0] = "UndefinedEvaluateOperator",
     "AbsEvaluateOperator",
     "AddEvaluateOperator",
@@ -292,17 +297,17 @@ local EvaluateOperator = enum({
     "ThresholdWhiteEvaluateOperator",
     "UniformNoiseEvaluateOperator",
     "XorEvaluateOperator"
-})
+}
 
-local functions = enum({
+local functions = {
     [0] = "UndefinedFunction",
     "ArcsinFunction",
     "ArctanFunction",
     "PolynomialFunction",
     "SinusoidFunction"
-})
+}
 
-local ColorspaceType = enum({
+local ColorspaceType = {
     [0] = "UndefinedColorspace",
     "RGBColorspace",
     "GRAYColorspace",
@@ -337,9 +342,9 @@ local ColorspaceType = enum({
     "HSVColorspace",
     "HCLpColorspace",
     "YDbDrColorspace"
-})
+}
 
-local CompressionType = enum({
+local CompressionType = {
     [0] = "UndefinedCompression",
     "B44ACompression",
     "B44Compression",
@@ -362,23 +367,23 @@ local CompressionType = enum({
     "RLECompression",
     "ZipCompression",
     "ZipSCompression"
-})
+}
 
-local DisposeType = enum({
+local DisposeType = {
     [-1] = "UnrecognizedDispose",
     [0] = "UndefinedDispose",
     [1] = "NoneDispose",
     [2] = "BackgroundDispose",
     [3] = "PreviousDispose"
-})
+}
 
-local EndianType = enum({
+local EndianType = {
     [0] = "UndefinedEndian",
     "LSBEndian",
     "MSBEndian"
-})
+}
 
-local ImageType = enum({
+local ImageType = {
     [0] = "UndefinedType",
     "BilevelType",
     "GrayscaleType",
@@ -391,15 +396,15 @@ local ImageType = enum({
     "ColorSeparationAlphaType",
     "OptimizeType",
     "PaletteBilevelAlphaType"
-})
+}
 
-local ResolutionType = enum({
+local ResolutionType = {
     [0] = "UndefinedResolution",
     "PixelsPerInchResolution",
     "PixelsPerCentimeterResolution"
-})
+}
 
-local MetricType = enum({
+local MetricType = {
     [0] = "UndefinedErrorMetric",
     "AbsoluteErrorMetric",
     "FuzzErrorMetric",
@@ -413,9 +418,9 @@ local MetricType = enum({
     "RootMeanSquaredErrorMetric",
     "StructuralSimilarityErrorMetric",
     "StructuralDissimilarityErrorMetric"
-})
+}
 
-local GravityType = enum({
+local GravityType = {
     [-1] = "UndefinedGravity",
     [0] = "ForgetGravity",
     [1] = "NorthWestGravity",
@@ -427,9 +432,9 @@ local GravityType = enum({
     [7] = "SouthWestGravity",
     [8] = "SouthGravity",
     [9] = "SouthEastGravity"
-})
+}
 
-local StatisticType = enum({
+local StatisticType = {
     [0] = "UndefinedStatistic",
     "GradientStatistic",
     "MaximumStatistic",
@@ -440,9 +445,9 @@ local StatisticType = enum({
     "NonpeakStatistic",
     "RootMeanSquareStatistic",
     "StandardDeviationStatistic"
-})
+}
 
-local PixelInterpolateMethod = enum({
+local PixelInterpolateMethod = {
     [0] = "UndefinedInterpolatePixel",
     "AverageInterpolatePixel",
     "Average9InterpolatePixel",
@@ -455,24 +460,24 @@ local PixelInterpolateMethod = enum({
     "MeshInterpolatePixel",
     "NearestInterpolatePixel",
     "SplineInterpolatePixel"
-})
+}
 
-local RenderingIntent = enum({
+local RenderingIntent = {
     [0] = "UndefinedIntent",
     "SaturationIntent",
     "PerceptualIntent",
     "AbsoluteIntent",
     "RelativeIntent"
-})
+}
 
-local MontageMode = enum({
+local MontageMode = {
     [0] = "UndefinedMode",
     "FrameMode",
     "UnframeMode",
     "ConcatenateMode"
-})
+}
 
-local MorphologyMethod = enum({
+local MorphologyMethod = {
     [0] = "UndefinedMorphology",
     --/* Convolve / Correlate weighted sums */
     "ConvolveMorphology",
@@ -502,16 +507,16 @@ local MorphologyMethod = enum({
     --/* Directly Applied Morphology methods */
     "DistanceMorphology",
     "VoronoiMorphology"
-})
+}
 
-local DitherMethod = enum({
+local DitherMethod = {
     [0] = "UndefinedDitherMethod",
     "NoDitherMethod",
     "RiemersmaDitherMethod",
     "FloydSteinbergDitherMethod"
-})
+}
 
-local AlphaChannelOption = enum({
+local AlphaChannelOption = {
     [0] = "UndefinedAlphaChannel",
     "ActivateAlphaChannel",
     "AssociateAlphaChannel",
@@ -528,9 +533,9 @@ local AlphaChannelOption = enum({
     "SetAlphaChannel",
     "ShapeAlphaChannel",
     "TransparentAlphaChannel"
-})
+} 
 
-local SparseColorMethod = enum({
+local SparseColorMethod = {
     [0] = "UndefinedColorInterpolate",
     [1] = "BarycentricColorInterpolate",
     [8] = "BilinearColorInterpolate",
@@ -539,60 +544,114 @@ local SparseColorMethod = enum({
     [19] = "VoronoiColorInterpolate",
     [20] = "InverseColorInterpolate",
     [21] = "ManhattanColorInterpolate"
-})
+}
 
-_M.composite_operators = CompositeOperators
+_M.composite_operators = function()
+    return enum(CompositeOperators)
+end
 
-_M.gravity_type = GravityType
+_M.gravity_type = function()
+    return enum(GravityType)
+end
 
-_M.orientation = orientation
+_M.orientation = function()
+    return enum(orientation)
+end
 
-_M.interlace = interlace
+_M.interlace = function()
+    return enum(interlace)
+end
 
-_M.filter_type = FilterType
+_M.filter_type = function()
+    return enum(FilterType)
+end
 
-_M.statistic_type = StatisticType
+_M.statistic_type = function()
+    return enum(StatisticType)
+end
 
-_M.storage_type = StorageType
+_M.storage_type = function()
+    return enum(StorageType)
+end
 
-_M.distort_method = DistortMethod
+_M.distort_method = function()
+    return enum(DistortMethod)
+end
 
-_M.virtual_pixel_method = VirtualPixelMethod
+_M.virtual_pixel_method = function()
+    return enum(VirtualPixelMethod)
+end
 
-_M.layer_method = LayerMethod
+_M.layer_method = function()
+    return enum(LayerMethod)
+end
 
-_M.sparse_color_method = SparseColorMethod
+_M.sparse_color_method = function()
+    return enum(SparseColorMethod)
+end
 
-_M.evaluate_operator = EvaluateOperator
+_M.evaluate_operator = function()
+    return enum(EvaluateOperator)
+end
 
-_M.functions = functions
+_M.functions = function()
+    return enum(functions)
+end
 
-_M.colorspace_type = ColorspaceType
+_M.colorspace_type = function()
+    return enum(ColorspaceType)
+end
 
-_M.compression_type = CompressionType
+_M.compression_type = function()
+    return enum(CompressionType)
+end
 
-_M.dispose_type = DisposeType
+_M.dispose_type = function()
+    return enum(DisposeType)
+end
 
-_M.endian_type = EndianType
+_M.endian_type = function()
+    return enum(EndianType)
+end
 
-_M.image_type = ImageType
+_M.image_type = function()
+    return enum(ImageType)
+end
 
-_M.resolution_type = ResolutionType
+_M.resolution_type = function()
+    return enum(ResolutionType)
+end
 
-_M.metric_type = MetricType
+_M.metric_type = function()
+    return enum(MetricType)
+end
 
-_M.preview_type = PreivewType
+_M.preview_type = function()
+    return enum(PreivewType)
+end
 
-_M.pixel_interpolate_method = PixelInterpolateMethod
+_M.pixel_interpolate_method = function()
+    return enum(PixelInterpolateMethod)
+end
 
-_M.morphology_method = MorphologyMethod
+_M.morphology_method = function()
+    return enum(MorphologyMethod)
+end
 
-_M.dither_method = DitherMethod
+_M.dither_method = function()
+    return enum(DitherMethod)
+end
 
-_M.rendering_intent = RenderingIntent
+_M.rendering_intent = function()
+    return enum(RenderingIntent)
+end
 
-_M.montage_mode = MontageMode
+_M.montage_mode = function()
+    return enum(MontageMode)
+end
 
-_M.alpha_channel_option = AlphaChannelOption
+_M.alpha_channel_option = function()
+    return enum(AlphaChannelOption)
+end
 
 return _M

@@ -7,6 +7,15 @@ describe("enum", function()
         return enummer:new(t)
     end
 
+    local c = enum({
+        [0] = "cundefinedEnum",
+        "cfirstEnum",
+        "csecondEnum",
+        "cthirdEnum",
+        "dthirdEnum",
+        "ethirdEnum"
+        })
+
     local d = enum({
         [0] = "undefinedEnum",
         "firstEnum",
@@ -23,5 +32,14 @@ describe("enum", function()
     it("to_str", function()
         local str = d:to_str(2)
         assert.is_true(str == "secondEnum")
+    end)
+
+    it("resolution", function()
+        local w_data = require("resty.imagick.wand.data")
+        local res = w_data.resolution_type
+        print(#res.t)
+        print(res:to_str(0))
+        -- assert.is_true(res:to_int("PixelsPerCentimeterResolution") == 2)
+        assert.is_true(res:to_str(0) == "UndefinedResolution")
     end)
 end)

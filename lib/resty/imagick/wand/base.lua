@@ -13,7 +13,7 @@ local wand_lib = require("resty.imagick.wand.lib")
 local wand_data = require("resty.imagick.wand.data")
 
 local lib = wand_lib.lib
-local can_resize = wand_lib.can_resize
+
 local gravity_type = wand_data.gravity_type
 local filter_type = wand_data.filter_type
 local storage_type = wand_data.storage_type
@@ -31,7 +31,7 @@ local compression_type = wand_data.compression_type
 local dispose_type = wand_data.dispose_type
 local endian_type = wand_data.endian_type
 local image_type = wand_data.image_type
-local resolution_type = wand_data.resolution_type
+local resolution_type = wand_data.resolution_type 
 local metric_type = wand_data.metric_type
 local preview_type = wand_data.preview_type
 local statistic_type = wand_data.statistic_type
@@ -101,7 +101,7 @@ _M.set_depth = function(self, d)
 end
 
 _M.get_quality = function(self)
-    return lib.MagickGetImageCompressionQuality(self.wand)
+    return tonumber(lib.MagickGetImageCompressionQuality(self.wand))
 end
 
 _M.set_quality = function(self, quality)
@@ -125,11 +125,11 @@ _M.set_option = function(self, magick, key, value)
 end
 
 _M.get_gravity = function(self)
-    return gravity_type:to_str(lib.MagickGetImageGravity(self.wand))
+    return gravity_type():to_str(lib.MagickGetImageGravity(self.wand))
 end
 
 _M.set_gravity = function(self, gtype)
-    gtype = assert(gravity_type:to_int(gtype), "invalid gravity type")
+    gtype = assert(gravity_type():to_int(gtype), "invalid gravity type")
     return lib.MagickSetImageGravity(self.wand, gtype)
 end
 
@@ -154,9 +154,6 @@ _M.resize = function(self, w, h, f, blur)
     end
     if blur == nil then
         blur = 1.0
-    end
-    if not (can_resize) then
-        error("Failed to load filter list, can't resize")
     end
     w, h = self:_keep_aspect(w, h)
     return handle_result(self, lib.MagickResizeImage(self.wand, w, h,
@@ -844,7 +841,7 @@ _M.get_image_type = function(self)
 end
 
 _M.get_units = function(self)
-    return resolution_type:to_str(lib.MagickGetImageUnits(self.wand))
+    return resolution_type():to_str(lib.MagickGetImageUnits(self.wand))
 end
 
 _M.get_virtual_pixel_method = function(self)
@@ -1081,7 +1078,7 @@ _M.remove = function(self)
     return handle_result(self, lib.MagickRemoveImage(self.wand))
 end
 
-_M.resample = function(self, x_resolution, y_resolution, filter)
+_M.resample = function(self, x_esolution, y_resolution, filter)
     return handle_result(self, lib.MagickResampleImage(self.wand, x_resolution,
       y_resolution, filter_type:to_int(filter .. "Filter")))
 end
