@@ -63,4 +63,13 @@ describe("ImageAttr", function()
         cs = img:get_colorspace()
         assert.truthy(cs == "RGBColorspace")
     end)
+
+    it("getSetImageType", function()
+        local it = img:get_type()
+        assert.is_true(it == "TrueColorAlphaType")
+
+        img:set_type("Bilevel")
+        it = img:get_type()
+        assert.is_true(it == "BilevelType")
+    end)
 end)

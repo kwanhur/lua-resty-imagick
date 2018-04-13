@@ -836,8 +836,8 @@ _M.get_ticks_per_second = function(self)
     return lib.MagickGetImageTicksPerSecond(self.wand)
 end
 
-_M.get_image_type = function(self)
-    return image_type:to_str(lib.MagickGetImageType(self.wand))
+_M.get_type = function(self)
+    return image_type():to_str(lib.MagickGetImageType(self.wand))
 end
 
 _M.get_units = function(self)
@@ -881,7 +881,7 @@ _M.identify = function(self)
 end
 
 _M.identify_type = function(self)
-    return image_type:to_str(lib.MagickIdentifyImageType(self.wand))
+    return image_type():to_str(lib.MagickIdentifyImageType(self.wand))
 end
 
 _M.implode = function(self, radius, method)
@@ -1261,7 +1261,7 @@ end
 
 _M.set_type = function(self, itype)
     return handle_result(self, lib.MagickSetImageType(self.wand,
-      image_type:to_int(itype .. "Type")))
+      image_type():to_int(itype .. "Type")))
 end
 
 _M.set_units = function(self, units)

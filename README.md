@@ -698,7 +698,7 @@ Generates an SHA-256 message digest for the image pixel stream.
 -----
 Gets the image ticks-per-second.
 
-`img:get_image_type()`
+`img:get_type()`
 -----
 Gets the potential image type:
 
