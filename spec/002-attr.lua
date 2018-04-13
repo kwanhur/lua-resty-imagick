@@ -55,7 +55,7 @@ describe("ImageAttr", function()
         assert.truthy(gravity == "SouthGravity")
     end)
 
-    it("getColorspace", function()
+    it("getSetColorspace", function()
         local cs = img:get_colorspace()
         assert.is_true(cs == "LuvColorspace")
         
