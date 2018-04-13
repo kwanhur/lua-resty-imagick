@@ -753,7 +753,7 @@ _M.get_dispose = function(self)
 end
 
 _M.get_endian = function(self)
-    return endian_type:to_str(lib.MagickGetImageEndian(self.wand))
+    return endian_type():to_str(lib.MagickGetImageEndian(self.wand))
 end
 
 _M.get_filename = function(self)
@@ -1179,7 +1179,7 @@ end
 
 _M.set_endian = function(self, endian)
     return handle_result(self, lib.MagickSetImageEndian(self.wand,
-      endian_type:to_int(endian .. "Endian")))
+      endian_type():to_int(endian .. "Endian")))
 end
 
 _M.set_extent = function(self, columns, rows)

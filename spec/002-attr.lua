@@ -72,4 +72,13 @@ describe("ImageAttr", function()
         it = img:get_type()
         assert.is_true(it == "BilevelType")
     end)
+
+    it("getSetEndian", function()
+        local ed = img:get_endian()
+        assert.is_true(ed == "UndefinedEndian")
+
+        img:set_endian("LSB")
+        ed = img:get_endian()
+        assert.is_true(ed == "LSBEndian")
+    end)
 end)
