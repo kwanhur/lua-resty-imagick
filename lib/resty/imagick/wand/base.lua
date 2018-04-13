@@ -450,7 +450,7 @@ end
 
 _M.combine = function(self, colorspace)
     return lib.MagickCombineImages(self.wand,
-      colorspace_type:to_int(colorspace .. "Colorspace"))
+      colorspace_type():to_int(colorspace .. "Colorspace"))
 end
 
 _M.comment = function(self, comment)
@@ -733,7 +733,7 @@ _M.get_colors = function(self)
 end
 
 _M.get_colorspace = function(self)
-    return colorspace_type:to_str(lib.MagickGetImageColorspace(self.wand))
+    return colorspace_type():to_str(lib.MagickGetImageColorspace(self.wand))
 end
 
 _M.get_compose = function(self)
@@ -1031,14 +1031,14 @@ end
 _M.quantize = function(self, num_corlors, colorspace, treedepth, method,
               measure_error)
     return handle_result(self, lib.MagickQuantizeImage(self.wand, num_corlors,
-      colorspace_type:to_int(colorspace .. "Colorspace"), treedepth,
+      colorspace_type():to_int(colorspace .. "Colorspace"), treedepth,
       distort_method:to_int(method .. "DitherMethod"), measure_error))
 end
 
 _M.quantizes = function(self, num_corlors, colorspace, treedepth, method,
                measure_error)
     return handle_result(self, lib.MagickQuantizeImages(self.wand, num_corlors,
-      colorspace_type:to_int(colorspace .. "Colorspace"), treedepth,
+      colorspace_type():to_int(colorspace .. "Colorspace"), treedepth,
       distort_method:to_int(method .. "DitherMethod"), measure_error))
 end
 
@@ -1094,7 +1094,7 @@ end
 _M.segment = function(self, colorspace, verbose, cluster_threshold,
              smooth_threshold)
     return handle_result(self, lib.MagickSegmentImage(self.wand,
-      colorspace_type:to_int(colorspace .. "Colorspace"), verbose,
+      colorspace_type():to_int(colorspace .. "Colorspace"), verbose,
       cluster_threshold, smooth_threshold))
 end
 
@@ -1155,7 +1155,7 @@ end
 
 _M.set_colorspace = function(self, colorspace)
     return handle_result(self, lib.MagickSetImageColorspace(self.wand,
-      colorspace_type:to_int(colorspace .. "Colorspace")))
+      colorspace_type():to_int(colorspace .. "Colorspace")))
 end
 
 _M.set_compose = function(self, compose)
@@ -1381,7 +1381,7 @@ end
 
 _M.transform_colorspace = function(self, colorspace)
     return handle_result(self, lib.MagickTransformImageColorspace(self.wand,
-      colorspace_type:to_int(colorspace .. "Colorspace")))
+      colorspace_type():to_int(colorspace .. "Colorspace")))
 end
 
 _M.transparent_paint = function(self, target, alpha, fuzz, invert)
