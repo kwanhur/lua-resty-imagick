@@ -339,11 +339,11 @@ _M.set_orientation = function(self, otype)
 end
 
 _M.get_interlace_scheme = function(self)
-    return interlace:to_str(lib.MagickGetImageInterlaceScheme(self.wand))
+    return interlace():to_str(lib.MagickGetImageInterlaceScheme(self.wand))
 end
 
 _M.set_interlace_scheme = function(self, itype)
-    itype = assert(interlace:to_int(itype), "invalid interlace type")
+    itype = assert(interlace():to_int(itype .. "Interlace"), "invalid interlace type")
     return lib.MagickSetImageInterlaceScheme(self.wand, itype)
 end
 

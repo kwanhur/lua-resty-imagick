@@ -99,4 +99,13 @@ describe("ImageAttr", function()
         ga = img:get_gamma()
         assert.is_true(0.4 == ga)
     end)
+
+    it("getSetInterlaceScheme", function()
+        local int = img:get_interlace_scheme()
+        assert.is_true( int == "NoInterlace")
+
+        img:set_interlace_scheme("PNG")
+        int = img:get_interlace_scheme()
+        assert.is_true(int == "PNGInterlace")
+    end)
 end)
