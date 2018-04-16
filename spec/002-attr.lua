@@ -108,4 +108,13 @@ describe("ImageAttr", function()
         int = img:get_interlace_scheme()
         assert.is_true(int == "PNGInterlace")
     end)
+
+    it("getSetCompose", function()
+        local com = img:get_compose()
+        assert.is_true(com == "XorCompositeOp")
+
+        img:set_compose("In")
+        com = img:get_compose()
+        assert.is_true(com == "InCompositeOp")
+    end)
 end)

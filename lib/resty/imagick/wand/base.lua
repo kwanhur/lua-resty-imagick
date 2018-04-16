@@ -257,7 +257,7 @@ _M.composite = function(self, blob, x, y, op)
     if type(blob) == "table" and blob.__name == "Image" then
         blob = blob.wand
     end
-    op = assert(composite_operators:to_int(op), "invalid operator type")
+    op = assert(composite_operators():to_int(op), "invalid operator type")
     return handle_result(self, lib.MagickCompositeImage(self.wand, blob, op,
       x, y))
 end
@@ -470,13 +470,13 @@ end
 _M.composite_gravity = function(self, source, compose, gravity)
     return handle_result(self, lib.MagickCompositeImageGravity(self.wand,
       source,
-      composite_operators:to_int(compose .. "CompositeOp"),
+      composite_operators():to_int(compose .. "CompositeOp"),
       gravity_type:to_int(gravity .. "Gravity")))
 end
 
 _M.composite_layers = function(self, source, compose, x, y)
     return handle_result(self, lib.MagickCompositeLayers(self.wand, source,
-      composite_operators:to_int(compose .. "CompositeOp"), x, y))
+      composite_operators():to_int(compose .. "CompositeOp"), x, y))
 end
 
 _M.contrast = function(self, sharpen)
@@ -644,7 +644,7 @@ end
 _M.frame = function(self, matte_color, w, h, inner_level, outer_level, compose)
     return handle_result(self, lib.MagickFrameImage(self.wand, matte_color,
       w, h, inner_level, outer_level,
-      composite_operators:to_int(compose .. "CompositeOp")))
+      composite_operators():to_int(compose .. "CompositeOp")))
 end
 
 _M.funtion = function(self, func, num_args, args)
@@ -737,7 +737,7 @@ _M.get_colorspace = function(self)
 end
 
 _M.get_compose = function(self)
-    return composite_operators:to_str(lib.MagickGetImageCompose(self.wand))
+    return composite_operators():to_str(lib.MagickGetImageCompose(self.wand))
 end
 
 _M.get_compression = function(self)
@@ -1160,7 +1160,7 @@ end
 
 _M.set_compose = function(self, compose)
     return handle_result(self, lib.MagickSetImageCompose(self.wand,
-      composite_operators:to_int(compose .. "CompositeOp")))
+      composite_operators():to_int(compose .. "CompositeOp")))
 end
 
 _M.set_compression = function(self, compression)
