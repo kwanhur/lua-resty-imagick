@@ -749,7 +749,7 @@ _M.get_delay = function(self)
 end
 
 _M.get_dispose = function(self)
-    return dispose_type:to_str(lib.MagickGetImageDispose(self.wand))
+    return dispose_type():to_str(lib.MagickGetImageDispose(self.wand))
 end
 
 _M.get_endian = function(self)
@@ -1174,7 +1174,7 @@ end
 
 _M.set_dispose = function(self, dispose)
     return handle_result(self, lib.MagickSetImageDispose(self.wand,
-      dispose_type:to_int(dispose .. "Dispose")))
+      dispose_type():to_int(dispose .. "Dispose")))
 end
 
 _M.set_endian = function(self, endian)

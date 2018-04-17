@@ -135,4 +135,13 @@ describe("ImageAttr", function()
         ori = img:get_orientation()
         assert.is_true("TopLeftOrientation" == ori)
     end)
+
+    it("getSetDispose", function()
+        local dis = img:get_dispose()
+        assert.is_true(dis == "UndefinedDispose")
+
+        img:set_dispose("None")
+        dis = img:get_dispose()
+        assert.is_true(dis == "NoneDispose")
+    end)
 end)
