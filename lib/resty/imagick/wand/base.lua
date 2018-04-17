@@ -313,11 +313,9 @@ end
 _M.get_property = function(self, property)
     local res = lib.MagickGetImageProperty(self.wand, property)
     if nil ~= res then
-        do
-            local _with_0 = ffi.string(res)
-            lib.MagickRelinquishMemory(res)
-            return _with_0
-        end
+        local _with_0 = ffi.string(res)
+        lib.MagickRelinquishMemory(res)
+        return _with_0
     else
         local code, msg = get_exception(self.wand)
         return nil, msg, code
@@ -940,7 +938,7 @@ end
 _M.montage = function(self, drawing, tile_geometry, thumbnail_geometry, mode,
              frame)
     return lib.MagickMontageImage(self.wand, drawing, tile_geometry,
-      thumbnail_geometry, montage_mode:to_int(mode .. "Mode"), frame)
+      thumbnail_geometry, montage_mode():to_int(mode .. "Mode"), frame)
 end
 
 _M.morph = function(self, num_frames)
@@ -949,7 +947,7 @@ end
 
 _M.morphology = function(self, method, iterations, kernel)
     return handle_result(self, lib.MagickMorphologyImage(self.wand,
-      morphology_method:to_int(method .. "Morphology"), iterations, kernel))
+      morphology_method():to_int(method .. "Morphology"), iterations, kernel))
 end
 
 _M.motion_blur = function(self, radius, sigma, angle)
