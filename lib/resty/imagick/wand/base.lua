@@ -791,14 +791,14 @@ _M.get_matte_color = function(self, matte_color)
 end
 
 _M.get_page = function(self)
-    local w = ffi.new("size_t[1]", 0)
-    local h = ffi.new("size_t[1]", 0)
-    local x = ffi.new("ssize_t[1]", 0)
-    local y = ffi.new("ssize_t[1]", 0)
+    local w = ffi.new("size_t*")
+    local h = ffi.new("size_t*")
+    local x = ffi.new("ssize_t*")
+    local y = ffi.new("ssize_t*")
     local ok, msg, code = handle_result(self, lib.MagickGetImagePage(self.wand,
       w, h, x, y))
     if ok then
-        return w, h, x, y
+        return tonumber(w), tonumber(h), tonumber(x), tonumber(y)
     else
         return nil, msg, code
     end

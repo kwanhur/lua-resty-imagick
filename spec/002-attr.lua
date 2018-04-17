@@ -153,4 +153,13 @@ describe("ImageAttr", function()
         it = img:get_iterations()
         assert.is_true(it == 1)
     end)
+
+    it("getSetPage", function()
+        local w, h, x, y = img:get_page()
+        assert.is_true(w == 64 and h == 64 and x == 0 and y == 0)
+
+        img:set_page(66, 66, 0, 0)
+        w, h, x, y = img:get_page()
+        assert.is_true(w == 66)
+    end)
 end)

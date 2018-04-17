@@ -27,6 +27,7 @@ ffi.cdef([[
   typedef long long MagickOffsetType;
   typedef unsigned long long MagickSizeType;
   typedef int ExceptionType;
+  typedef int size_t;
   typedef int ssize_t;
   typedef int CompositeOperator;
   typedef int EvaluateOperator;
