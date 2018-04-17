@@ -126,4 +126,13 @@ describe("ImageAttr", function()
         com = img:get_compression()
         assert.is_true("LZWCompression" == com)
     end)
+
+    it("getSetOrientation", function()
+        local ori = img:get_orientation()
+        assert.is_true("UndefinedOrientation" == ori)
+
+        img:set_orientation("TopLeft")
+        ori = img:get_orientation()
+        assert.is_true("TopLeftOrientation" == ori)
+    end)
 end)

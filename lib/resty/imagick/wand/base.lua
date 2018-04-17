@@ -330,11 +330,11 @@ _M.set_property = function(self, property, value)
 end
 
 _M.get_orientation = function(self)
-    return orientation:to_str(lib.MagickGetImageOrientation(self.wand))
+    return orientation():to_str(lib.MagickGetImageOrientation(self.wand))
 end
 
 _M.set_orientation = function(self, otype)
-    otype = assert(orientation:to_int(otype), "invalid orientation type")
+    otype = assert(orientation():to_int(otype .. "Orientation"), "invalid orientation type")
     return lib.MagickSetImageOrientation(self.wand, otype)
 end
 
