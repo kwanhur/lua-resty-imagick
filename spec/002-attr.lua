@@ -144,4 +144,13 @@ describe("ImageAttr", function()
         dis = img:get_dispose()
         assert.is_true(dis == "NoneDispose")
     end)
+
+    it("getSetIterations", function()
+        local it = img:get_iterations()
+        assert.is_true(it == 0)
+
+        img:set_iterations(1)
+        it = img:get_iterations()
+        assert.is_true(it == 1)
+    end)
 end)
