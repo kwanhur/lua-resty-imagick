@@ -117,4 +117,13 @@ describe("ImageAttr", function()
         com = img:get_compose()
         assert.is_true(com == "InCompositeOp")
     end)
+
+    it("getSetCompression", function()
+        local com = img:get_compression()
+        assert.is_true("ZipCompression" == com)
+
+        img:set_compression("LZW")
+        com = img:get_compression()
+        assert.is_true("LZWCompression" == com)
+    end)
 end)
