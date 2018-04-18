@@ -196,4 +196,13 @@ describe("ImageAttr", function()
         delay = img:get_delay()
         assert.is_true(1 == delay)
     end)
+
+    it("getSetFuzz", function()
+        local fuzz = img:get_fuzz()
+        assert.is_true(fuzz == 0)
+
+        img:set_fuzz(1)
+        fuzz = img:get_fuzz()
+        assert.is_true(1 == fuzz)
+    end)
 end)
