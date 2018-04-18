@@ -6,10 +6,12 @@ describe("ImageAttr", function()
     local path = info.source
     path = string.sub(path, 2, -1)
     image_dir = string.match(path, "^.*/")
+    image_name = "test_image.png"
+    image_filename = image_dir .. image_name 
     
     local imagick = require("resty.imagick")
     
-    local img, msg, code = imagick.load_image(image_dir .. "/test_image.png")
+    local img, msg, code = imagick.load_image(image_filename)
     assert.is_true(img ~= nil)
     it("getWidthHeight", function()
         local w = img:get_width()
@@ -161,5 +163,14 @@ describe("ImageAttr", function()
         img:set_page(66, 66, 0, 0)
         w, h, x, y = img:get_page()
         assert.is_true(w == 66)
+    end)
+
+    it("getSetFilename", function()
+        local fn = img:get_filename()
+        assert.is_true(image_filename == fn)
+
+        img:set_filename('spec/test_image.jpg')
+        fn = img:get_filename()
+        assert.is_true(fn == "spec/test_image.jpg")
     end)
 end)
