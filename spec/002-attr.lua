@@ -178,4 +178,8 @@ describe("ImageAttr", function()
         assert.is_true(fn == "spec/test_image.jpg")
     end)
 
+    it("getAlphaChannel", function()
+        local ok, msg, code = img:get_alpha_channel()
+        assert.is_true(not ok)
+    end)
 end)
