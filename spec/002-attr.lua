@@ -187,4 +187,13 @@ describe("ImageAttr", function()
         local num = img:get_colors()
         assert.is_true(num == 2)
     end)
+
+    it("getSetDelay", function()
+        local delay = img:get_delay()
+        assert.is_true(0 == delay)
+
+        img:set_delay(1)
+        delay = img:get_delay()
+        assert.is_true(1 == delay)
+    end)
 end)
