@@ -163,6 +163,10 @@ describe("ImageAttr", function()
         img:set_page(66, 66, 0, 0)
         w, h, x, y = img:get_page()
         assert.is_true(w == 66)
+
+        img:reset_page()
+        w, h, x, y = img:get_page()
+        assert.is_true(w == 0 and h == 0 and x == 0 and y == 0)
     end)
 
     it("getSetFilename", function()
@@ -173,4 +177,5 @@ describe("ImageAttr", function()
         fn = img:get_filename()
         assert.is_true(fn == "spec/test_image.jpg")
     end)
+
 end)
