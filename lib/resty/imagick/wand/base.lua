@@ -718,7 +718,7 @@ _M.get_colormap_color = function(self, color)
     local ok, msg, code = handle_result(self, lib.MagickGetImageColormapColor(
       self.wand,index, color))
     if ok then
-        return index
+        return tonumber(index[0])
     else
         return nil, msg, code
     end
