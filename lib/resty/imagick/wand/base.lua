@@ -112,11 +112,9 @@ end
 _M.get_option = function(self, magick, key)
     local format = magick .. ":" .. key
     local option_str = lib.MagickGetOption(self.wand, format)
-    do
-        local _with_0 = ffi.string(option_str)
-        lib.MagickRelinquishMemory(option_str)
-        return _with_0
-    end
+    local _with_0 = ffi.string(option_str)
+    lib.MagickRelinquishMemory(option_str)
+    return _with_0
 end
 
 _M.set_option = function(self, magick, key, value)
