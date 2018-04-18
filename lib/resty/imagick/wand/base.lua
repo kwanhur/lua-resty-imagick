@@ -422,13 +422,11 @@ _M.clut = function(self, clut, method)
       pixel_interpolate_method():to_int(method .. "InterpolatePixel")))
 end
 
-_M.color_decision_list = function(self)
-    local col = ffi.new("char *[?]")
+_M.color_decision_list = function(self, length)
+    local col = ffi.new("char [?]", length)
     local ok, msg, code = lib.MagickColorDecisionListImage(self.wand, col)
     if ok then
-        local co = ffi.string(col)
-        lib.MagickRelinquishMemory(col)
-        return co
+        return ffi.string(col)
     else
         return nil, msg, code
     end
