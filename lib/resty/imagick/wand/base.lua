@@ -723,7 +723,7 @@ _M.get_colormap_color = function(self, color)
 end
 
 _M.get_colors = function(self)
-    return lib.MagickGetImageColors(self.wand)
+    return tonumber(lib.MagickGetImageColors(self.wand))
 end
 
 _M.get_colorspace = function(self)
@@ -739,7 +739,7 @@ _M.get_compression = function(self)
 end
 
 _M.get_delay = function(self)
-    return lib.MagickGetImageDelay(self.wand)
+    return tonumber(lib.MagickGetImageDelay(self.wand))
 end
 
 _M.get_dispose = function(self)
@@ -848,11 +848,11 @@ _M.get_white_point = function(self, x, y, z)
 end
 
 _M.get_number = function(self)
-    return lib.MagickGetNumberImages(self.wand)
+    return tonumber(lib.MagickGetNumberImages(self.wand))
 end
 
 _M.get_total_ink_density = function(self)
-    return lib.MagickGetImageTotalInkDensity(self.wand)
+    return tonumber(lib.MagickGetImageTotalInkDensity(self.wand))
 end
 
 _M.hald_clut = function(self, hald_wand)
