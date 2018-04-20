@@ -870,7 +870,6 @@ end
 _M.identify = function(self)
     local ide = lib.MagickIdentifyImage(self.wand)
     local iden = ffi.string(ide)
-    lib.MagickRelinquishMemory(ide)
     return iden
 end
 
